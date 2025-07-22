@@ -52,11 +52,10 @@ const Services = () => {
         <ScrollReveal>
           <div className="text-center mb-16">
             <h2 className="text-display font-bold text-primary-dark mb-6">
-              Ce que nous faisons pour transformer{' '}
-              <span className="text-primary-turquoise">vos dashboards</span>
+              {t('services.title')}
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-              Trois approches sur-mesure pour répondre à vos besoins spécifiques, de la refonte rapide à la création complète.
+              {t('services.subtitle')}
             </p>
           </div>
         </ScrollReveal>
