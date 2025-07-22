@@ -191,13 +191,13 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    to={link.path}
-                    className="text-neutral-300 hover:text-primary-turquoise transition-colors duration-300 flex items-center gap-2 group"
+                  <button
+                    onClick={link.action}
+                    className="text-neutral-300 hover:text-primary-turquoise transition-colors duration-300 flex items-center gap-2 group text-left"
                   >
                     <span>{link.name}</span>
                     <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </Link>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -209,13 +209,13 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.ressources.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    to={link.path}
-                    className="text-neutral-300 hover:text-primary-turquoise transition-colors duration-300 flex items-center gap-2 group"
+                  <button
+                    onClick={link.action}
+                    className="text-neutral-300 hover:text-primary-turquoise transition-colors duration-300 flex items-center gap-2 group text-left"
                   >
                     <span>{link.name}</span>
                     <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </Link>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -227,13 +227,13 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.entreprise.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    to={link.path}
-                    className="text-neutral-300 hover:text-primary-turquoise transition-colors duration-300 flex items-center gap-2 group"
+                  <button
+                    onClick={link.action}
+                    className="text-neutral-300 hover:text-primary-turquoise transition-colors duration-300 flex items-center gap-2 group text-left"
                   >
                     <span>{link.name}</span>
                     <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </Link>
+                  </button>
                 </li>
               ))}
             </ul>
