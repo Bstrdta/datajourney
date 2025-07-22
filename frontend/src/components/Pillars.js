@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Palette, BarChart3, Brain, Code, Shield, Zap } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../contexts/LanguageContext';
 import ScrollReveal from './ScrollReveal';
 
 const Pillars = () => {
