@@ -6,8 +6,9 @@ import { useCalendly } from '../contexts/CalendlyContext';
 import AnimatedText from './AnimatedText';
 
 const Hero = () => {
-  const alternatingWords = ['décisions', 'histoires', 'révélations clés'];
-  const [isCalendlyOpen, setIsCalendlyOpen] = React.useState(false);
+  const { t } = useTranslation('home');
+  const { openCalendly } = useCalendly();
+  const alternatingWords = t('hero.title_animated_words', { returnObjects: true });
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-dark via-primary-dark to-blue-900 pb-20">
