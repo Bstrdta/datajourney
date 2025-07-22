@@ -28,10 +28,16 @@ const Hero = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIntroComplete(true);
+      // Signal au header que l'animation est terminée
+      if (window.showHeaderLogo) {
+        setTimeout(() => {
+          window.showHeaderLogo();
+        }, 800); // Synchronisé avec l'animation de transition
+      }
       setTimeout(() => {
         setShowIntro(false);
-      }, 1000); // Délai pour l'animation de sortie
-    }, 3000); // Animation d'intro dure 3 secondes
+      }, 800); // Délai réduit pour transition plus rapide
+    }, 2500); // Animation d'intro plus courte - 2.5 secondes
 
     return () => clearTimeout(timer);
   }, []);
