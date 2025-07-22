@@ -97,6 +97,7 @@ const Blog = () => {
                 
                 <motion.button 
                   className="group inline-flex items-center gap-2 bg-primary-turquoise text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-600 transition-colors duration-300"
+                  onClick={() => window.location.href = '/blog'}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
