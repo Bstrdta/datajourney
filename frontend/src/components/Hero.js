@@ -205,11 +205,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
-            Des dashboards clairs qui racontent votre performance.
-            <br />
-            <span className="text-primary-turquoise font-medium">
-              Spécialistes UX/UI Power BI depuis 2020
-            </span>
+            {t('hero.subtitle')}
           </motion.p>
 
           {/* CTA Button */}
