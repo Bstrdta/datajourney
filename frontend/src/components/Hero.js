@@ -241,15 +241,21 @@ const Hero = () => {
           >
             <div className="text-center">
               <div className="text-3xl font-bold text-primary-turquoise mb-2">150+</div>
-              <div className="text-neutral-400 text-sm">Dashboards transformés</div>
+              <div className="text-neutral-400 text-sm">
+                {t('language.current') === 'English' ? 'Dashboards transformed' : 'Dashboards transformés'}
+              </div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-primary-turquoise mb-2">98%</div>
-              <div className="text-neutral-400 text-sm">Taux de satisfaction</div>
+              <div className="text-neutral-400 text-sm">
+                {t('language.current') === 'English' ? 'Satisfaction rate' : 'Taux de satisfaction'}
+              </div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-primary-turquoise mb-2">5 ans</div>
-              <div className="text-neutral-400 text-sm">D'expertise Power BI</div>
+              <div className="text-neutral-400 text-sm">
+                {t('language.current') === 'English' ? 'Power BI expertise' : 'D\'expertise Power BI'}
+              </div>
             </div>
           </motion.div>
         </div>
