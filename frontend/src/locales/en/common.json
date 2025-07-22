@@ -1,0 +1,40 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "about": "About"
+  },
+  "buttons": {
+    "book_audit": "Book a free audit",
+    "discover_service": "Discover this service",
+    "see_project": "View project",
+    "read_article": "Read article",
+    "download_guide": "Download guide",
+    "contact_us": "Contact us",
+    "send": "Send",
+    "discuss_project": "Discuss my project",
+    "similar_project": "Similar project?"
+  },
+  "footer": {
+    "description": "Transform your data into compelling stories with our custom Power BI solutions.",
+    "quick_links": "Quick links",
+    "services": "Our services",
+    "contact": "Contact",
+    "follow_us": "Follow us",
+    "rights_reserved": "All rights reserved."
+  },
+  "forms": {
+    "name": "Name",
+    "email": "Email",
+    "company": "Company",
+    "message": "Message",
+    "subject": "Subject"
+  },
+  "language": {
+    "switch_to_en": "Switch to English",
+    "switch_to_fr": "Passer au français",
+    "current": "English"
+  }
+}

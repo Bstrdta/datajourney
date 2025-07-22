@@ -1,0 +1,40 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "about": "À propos"
+  },
+  "buttons": {
+    "book_audit": "Réservez un audit gratuit",
+    "discover_service": "Découvrir ce service",
+    "see_project": "Voir le projet",
+    "read_article": "Lire l'article",
+    "download_guide": "Télécharger le guide",
+    "contact_us": "Nous contacter",
+    "send": "Envoyer",
+    "discuss_project": "Discuter de mon projet",
+    "similar_project": "Projet similaire ?"
+  },
+  "footer": {
+    "description": "Transformez vos données en histoires percutantes avec nos solutions Power BI sur mesure.",
+    "quick_links": "Liens rapides",
+    "services": "Nos services",
+    "contact": "Contact",
+    "follow_us": "Suivez-nous",
+    "rights_reserved": "Tous droits réservés."
+  },
+  "forms": {
+    "name": "Nom",
+    "email": "Email",
+    "company": "Entreprise",
+    "message": "Message",
+    "subject": "Sujet"
+  },
+  "language": {
+    "switch_to_en": "Switch to English",
+    "switch_to_fr": "Passer au français",
+    "current": "Français"
+  }
+}
