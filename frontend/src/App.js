@@ -17,6 +17,7 @@ import Blog from './components/Blog';
 import LeadMagnet from './components/LeadMagnet';
 import Contact from './components/Contact';
 import CalendlyModal from './components/CalendlyModal';
+import MouseFollower from './components/MouseFollower';
 
 // Import pages
 import ServicesPage from './pages/ServicesPage';
