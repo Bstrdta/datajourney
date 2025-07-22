@@ -73,26 +73,39 @@ const Header = () => {
           
           {/* Logo */}
           <Link to={currentLang === 'en' ? '/en' : '/'} className="flex items-center gap-3 group">
-            <div className="flex items-center gap-1">
-              <span className={`text-2xl font-bold transition-colors duration-300 ${
-                isScrolled ? 'text-primary-dark' : 'text-white'
-              }`}>
-                Data
-              </span>
-              {/* Toggle Button */}
-              <div className={`relative w-12 h-6 rounded-full transition-all duration-300 ${
-                isScrolled ? 'bg-primary-dark/20' : 'bg-white/20'
-              } flex items-center px-1`}>
-                <div className={`w-4 h-4 rounded-full transition-all duration-300 ${
-                  isScrolled ? 'bg-primary-turquoise' : 'bg-white'
-                } transform translate-x-5`}></div>
-              </div>
-              <span className={`text-2xl font-bold transition-colors duration-300 ${
-                isScrolled ? 'text-primary-dark' : 'text-white'
-              }`}>
-                journey
-              </span>
-            </div>
+            <AnimatePresence>
+              {showHeaderLogo && (
+                <motion.div 
+                  className="flex items-center gap-1"
+                  initial={{ opacity: 0, scale: 0.8, x: -20 }}
+                  animate={{ opacity: 1, scale: 1, x: 0 }}
+                  exit={{ opacity: 0, scale: 0.8, x: -20 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                >
+                  <span className={`text-2xl font-bold transition-colors duration-300 ${
+                    isScrolled ? 'text-primary-dark' : 'text-white'
+                  }`}>
+                    Data
+                  </span>
+                  {/* Toggle Button */}
+                  <div className={`relative w-12 h-6 rounded-full transition-all duration-300 ${
+                    isScrolled ? 'bg-primary-dark/20' : 'bg-white/20'
+                  } flex items-center px-1`}>
+                    <div className={`w-4 h-4 rounded-full transition-all duration-300 ${
+                      isScrolled ? 'bg-primary-turquoise' : 'bg-white'
+                    } transform translate-x-5`}></div>
+                  </div>
+                  <span className={`text-2xl font-bold transition-colors duration-300 ${
+                    isScrolled ? 'text-primary-dark' : 'text-white'
+                  }`}>
+                    journey
+                  </span>
+                </motion.div>
+              )}
+            </AnimatePresence>
+            {!showHeaderLogo && (
+              <div className="w-48 h-8"></div> // Placeholder to maintain layout
+            )}
           </Link>
 
           {/* Desktop Navigation */}
