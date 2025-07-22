@@ -99,7 +99,11 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 rounded-lg transition-colors duration-300 text-white hover:bg-white/10 backdrop-blur-sm"
+            className={`lg:hidden p-2 rounded-lg transition-colors duration-300 ${
+              isScrolled 
+                ? 'text-primary-dark hover:bg-neutral-100' 
+                : 'text-white hover:bg-white/10'
+            }`}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
