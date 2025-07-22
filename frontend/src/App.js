@@ -34,6 +34,7 @@ const Home = () => {
       <Comparison />
       <Pillars />
       <Services />
+      <ProcessFlow />
       <Portfolio />
       <Blog />
       <LeadMagnet />
