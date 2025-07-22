@@ -314,12 +314,6 @@ const ServicesPage = () => {
           </ScrollReveal>
         </div>
       </section>
-
-      {/* Calendly Modal */}
-      <CalendlyModal 
-        isOpen={isCalendlyOpen} 
-        onClose={closeCalendly} 
-      />
     </div>
   );
 };
