@@ -60,7 +60,7 @@ const Comparison = () => {
                 <div className="w-10 h-10 bg-red-500 rounded-xl flex items-center justify-center">
                   <X className="text-white" size={20} />
                 </div>
-                <h3 className="text-xl font-bold text-red-700">AVANT</h3>
+                <h3 className="text-xl font-bold text-red-700">{t('comparison.before')}</h3>
               </div>
               <ul className="space-y-3">
                 {beforeItems.map((item, index) => (
