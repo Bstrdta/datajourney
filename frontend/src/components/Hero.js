@@ -9,7 +9,7 @@ const Hero = () => {
   const [isCalendlyOpen, setIsCalendlyOpen] = React.useState(false);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-dark via-primary-dark to-blue-900">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-dark via-primary-dark to-blue-900 pb-20">
       {/* Background Pattern */}
       <div 
         className="absolute inset-0 opacity-10"
