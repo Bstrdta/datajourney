@@ -44,7 +44,7 @@ const Comparison = () => {
         {/* Before/After Slider */}
         <ScrollReveal className="mb-12">
           <BeforeAfterSlider 
-            beforeImage="https://images.unsplash.com/photo-1529078155058-5d716f45d604?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85"
+            beforeImage="https://i.ibb.co/Xx4pF8Lp/Capture-d-cran-2025-07-22-230712.png"
             afterImage="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85"
             beforeAlt="Rapport Excel complexe et surchargé"
             afterAlt="Dashboard Power BI moderne et intuitif"
