@@ -393,7 +393,7 @@ const ServicesPage = () => {
               </motion.button>
               <motion.button
                 className="bg-white/10 text-white px-8 py-4 rounded-xl font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
-                onClick={() => setIsCalendlyOpen(true)}
+                onClick={openCalendly}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
