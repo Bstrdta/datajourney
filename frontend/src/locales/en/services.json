@@ -1,0 +1,71 @@
+{
+  "title": "Our Services",
+  "subtitle": "Tailored solutions to transform your data into competitive advantage",
+  "service1": {
+    "title": "UX redesign of your existing reports",
+    "description": "Optimize the user experience of your existing Power BI reports to maximize their adoption and impact. We analyze your current reports, identify friction points and propose a complete user-centered redesign.",
+    "price": "Starting from €3,500",
+    "duration": "2-4 weeks",
+    "deliverables_title": "Included deliverables",
+    "deliverables": [
+      "Complete UX audit of your existing reports",
+      "High-fidelity mockups of new interfaces",
+      "Style guide and Power BI design system",
+      "Redesigned and optimized Power BI reports",
+      "Technical documentation and user guide",
+      "Team training on the new interface"
+    ],
+    "benefits": [
+      "70% increase in usage time",
+      "50% reduction in support requests",
+      "Improved user satisfaction"
+    ]
+  },
+  "service2": {
+    "title": "Complete dashboard creation",
+    "description": "Custom design and development of Power BI dashboards, from data strategy to production deployment. A comprehensive approach that integrates your business needs and technical constraints.",
+    "price": "Starting from €7,500",
+    "duration": "4-8 weeks", 
+    "deliverables_title": "Included deliverables",
+    "deliverables": [
+      "Business needs audit and analysis",
+      "Data architecture and modeling",
+      "Interactive mockups and prototypes",
+      "Complete dashboard development",
+      "Testing and validation with end users",
+      "Complete training and documentation",
+      "Post-launch support (1 month included)"
+    ],
+    "benefits": [
+      "100% solution tailored to your needs",
+      "Measurable ROI from the first weeks",
+      "Guaranteed scalability and maintainability"
+    ]
+  },
+  "service3": {
+    "title": "UX coaching for internal teams",
+    "description": "Train and support your internal teams so they can create engaging and user-centered Power BI reports. A complete skills transfer for your autonomy.",
+    "price": "Starting from €2,500",
+    "duration": "1-3 weeks",
+    "deliverables_title": "Included deliverables", 
+    "deliverables": [
+      "UX training applied to Power BI (2 days)",
+      "Co-creation workshop with your teams",
+      "Creation of an internal design system",
+      "Personalized best practices guide",
+      "Reusable templates and components",
+      "Support on a pilot project",
+      "Support and advice for 3 months"
+    ],
+    "benefits": [
+      "Complete autonomy for your teams",
+      "Visual consistency across all your reports",
+      "Continuous skills improvement"
+    ]
+  },
+  "cta": {
+    "title": "Ready to transform your Power BI reports?",
+    "subtitle": "Let's discuss your project and find the solution that best fits your needs.",
+    "button": "Schedule a discovery call"
+  }
+}

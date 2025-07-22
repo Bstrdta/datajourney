@@ -1,0 +1,71 @@
+{
+  "title": "Nos Services",
+  "subtitle": "Des solutions sur mesure pour transformer vos données en avantage concurrentiel",
+  "service1": {
+    "title": "Refonte UX de vos rapports existants",
+    "description": "Optimisez l'expérience utilisateur de vos rapports Power BI existants pour maximiser leur adoption et leur impact. Nous analysons vos rapports actuels, identifions les points de friction et proposons une refonte complète axée sur l'utilisateur final.",
+    "price": "À partir de 3 500€",
+    "duration": "2-4 semaines",
+    "deliverables_title": "Livrables inclus",
+    "deliverables": [
+      "Audit UX complet de vos rapports existants",
+      "Maquettes haute-fidélité des nouvelles interfaces", 
+      "Guide de style et design system Power BI",
+      "Rapports Power BI refontes et optimisés",
+      "Documentation technique et guide utilisateur",
+      "Formation des équipes à la nouvelle interface"
+    ],
+    "benefits": [
+      "Augmentation de 70% du temps d'utilisation",
+      "Réduction de 50% des demandes de support",
+      "Amélioration de la satisfaction utilisateur"
+    ]
+  },
+  "service2": {
+    "title": "Création complète de tableaux de bord",
+    "description": "Conception et développement de tableaux de bord Power BI sur mesure, de la stratégie de données à la mise en production. Une approche complète qui intègre vos besoins métier et vos contraintes techniques.",
+    "price": "À partir de 7 500€", 
+    "duration": "4-8 semaines",
+    "deliverables_title": "Livrables inclus",
+    "deliverables": [
+      "Audit et analyse des besoins métier",
+      "Architecture de données et modélisation",
+      "Maquettes et prototypes interactifs",
+      "Développement complet des tableaux de bord",
+      "Tests et validation avec les utilisateurs finaux",
+      "Formation et documentation complète",
+      "Support post-lancement (1 mois inclus)"
+    ],
+    "benefits": [
+      "Solution 100% adaptée à vos besoins",
+      "ROI mesurable dès les premières semaines",
+      "Évolutivité et maintenabilité garanties"
+    ]
+  },
+  "service3": {
+    "title": "Coaching UX pour équipes internes",
+    "description": "Formez et accompagnez vos équipes internes pour qu'elles puissent créer des rapports Power BI engageants et centrés utilisateur. Un transfert de compétences complet pour votre autonomie.",
+    "price": "À partir de 2 500€",
+    "duration": "1-3 semaines",
+    "deliverables_title": "Livrables inclus",
+    "deliverables": [
+      "Formation UX appliquée à Power BI (2 jours)",
+      "Workshop de co-création avec vos équipes",
+      "Création d'un design system interne",
+      "Guide de bonnes pratiques personnalisé",
+      "Templates et composants réutilisables",
+      "Accompagnement sur un projet pilote",
+      "Support et conseils pendant 3 mois"
+    ],
+    "benefits": [
+      "Autonomie complète de vos équipes",
+      "Cohérence visuelle sur tous vos rapports",
+      "Amélioration continue des compétences"
+    ]
+  },
+  "cta": {
+    "title": "Prêt à transformer vos rapports Power BI ?",
+    "subtitle": "Discutons de votre projet et trouvons ensemble la solution la plus adaptée à vos besoins.",
+    "button": "Planifier un appel découverte"
+  }
+}
