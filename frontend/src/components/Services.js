@@ -43,7 +43,6 @@ const Services = () => {
         ? ['Practice audit', 'Team training', 'Guided co-design', 'Guidelines & documentation']
         : ['Audit des pratiques', 'Formation équipe', 'Co-design guidé', 'Guidelines & documentation'],
       duration: currentLang === 'en' ? '2-4 weeks' : '2-4 semaines',
-      price: t('services.service3.price'),
       image: 'https://images.unsplash.com/photo-1532102235608-dc8fc689c9ab?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwxfHxkYXRhJTIwZGFzaGJvYXJkfGVufDB8fHxibHVlfDE3NTMxNzc1NjZ8MA&ixlib=rb-4.1.0&q=85',
       color: 'from-purple-500 to-pink-500'
     }
