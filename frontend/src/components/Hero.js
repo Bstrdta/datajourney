@@ -20,9 +20,8 @@ const Hero = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   
-  // Calculer la position de l'animation (de -100% à 100%)
-  const logoAnimationProgress = Math.min(scrollY / 500, 1); // 500px de scroll pour animation complète
-  const logoTransform = `translateX(${logoAnimationProgress * 200 - 100}%)`;
+  // Calculer la position du toggle (de gauche vers droite)
+  const toggleProgress = Math.min(scrollY / 500, 1); // 500px de scroll pour animation complète
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-dark via-primary-dark to-blue-900 pb-20">
