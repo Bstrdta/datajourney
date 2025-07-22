@@ -186,8 +186,9 @@ const Blog = () => {
         {/* CTA Section */}
         <ScrollReveal delay={0.6}>
           <div className="mt-16 text-center">
-            <motion.button 
+            <motion.button
               className="inline-flex items-center gap-3 bg-primary-dark text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300"
+              onClick={() => window.location.href = '/blog'}
               whileHover={{ 
                 scale: 1.05,
                 boxShadow: "0 25px 50px -12px rgba(10, 37, 64, 0.4)"
