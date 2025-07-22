@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { RefreshCw, Plus, Users, Clock, Target, Shield, CheckCircle, Star, ArrowRight } from 'lucide-react';
+import { RefreshCw, Plus, Users, Clock, Target, Shield, CheckCircle, Star, ArrowRight, Award } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
 import CalendlyModal from '../components/CalendlyModal';
 
