@@ -188,17 +188,20 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-6">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <div className="text-neutral-400 text-sm">
-              © 2024 Data Journey. Tous droits réservés.
+              {currentLang === 'en' 
+                ? '© 2024 Data Journey. All rights reserved.' 
+                : '© 2024 Data Journey. Tous droits réservés.'
+              }
             </div>
             <div className="flex gap-6 text-sm">
               <Link to="/legal/privacy" className="text-neutral-400 hover:text-primary-turquoise transition-colors duration-300">
-                Politique de confidentialité
+                {currentLang === 'en' ? 'Privacy Policy' : 'Politique de confidentialité'}
               </Link>
               <Link to="/legal/terms" className="text-neutral-400 hover:text-primary-turquoise transition-colors duration-300">
-                Conditions d'utilisation
+                {currentLang === 'en' ? 'Terms of Service' : 'Conditions d\'utilisation'}
               </Link>
               <Link to="/legal/cookies" className="text-neutral-400 hover:text-primary-turquoise transition-colors duration-300">
-                Cookies
+                {currentLang === 'en' ? 'Cookies' : 'Cookies'}
               </Link>
             </div>
           </div>
