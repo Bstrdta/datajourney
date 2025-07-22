@@ -75,7 +75,7 @@ const Footer = () => {
               </div>
               <div>
                 <span className="text-2xl font-bold">Data Journey</span>
-                <div className="text-primary-turquoise font-medium">Power BI UX Experts</div>
+                <div className="text-primary-turquoise font-medium">Experts en transformation BI</div>
               </div>
             </div>
             
