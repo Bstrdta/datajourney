@@ -10,23 +10,27 @@ const Footer = () => {
   const { currentLang } = useLanguage();
   const navigate = useNavigate();
 
-  // Function to handle navigation to sections on the same page
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
-  // Function to handle navigation to different pages with sections
-  const navigateToPageSection = (path, sectionId) => {
-    if (window.location.pathname === path) {
-      // If we're already on the target page, just scroll
-      setTimeout(() => scrollToSection(sectionId), 100);
-    } else {
-      // Navigate to the page first, then scroll
-      navigate(path);
-      setTimeout(() => scrollToSection(sectionId), 500);
+  // Simple navigation handler
+  const handleNavigation = (type, target) => {
+    if (type === 'page') {
+      // Navigate to a different page
+      navigate(target);
+    } else if (type === 'section') {
+      // Scroll to section on current page
+      const element = document.getElementById(target);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } else if (type === 'page-section') {
+      // Navigate to page and then scroll to section
+      const [page, section] = target.split('#');
+      navigate(page);
+      setTimeout(() => {
+        const element = document.getElementById(section);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 500);
     }
   };
 
@@ -34,55 +38,67 @@ const Footer = () => {
     services: [
       { 
         name: currentLang === 'en' ? 'UX Power BI Redesign' : 'Refonte UX Power BI', 
-        action: () => navigate(currentLang === 'en' ? '/en/services' : '/services')
+        type: 'page',
+        target: currentLang === 'en' ? '/en/services' : '/services'
       },
       { 
         name: currentLang === 'en' ? 'Dashboard Creation' : 'Création de Dashboards', 
-        action: () => navigate(currentLang === 'en' ? '/en/services' : '/services')
+        type: 'page',
+        target: currentLang === 'en' ? '/en/services' : '/services'
       },
       { 
         name: currentLang === 'en' ? 'UX Coaching' : 'Coaching UX', 
-        action: () => navigate(currentLang === 'en' ? '/en/services' : '/services')
+        type: 'page',
+        target: currentLang === 'en' ? '/en/services' : '/services'
       },
       { 
         name: currentLang === 'en' ? 'Free Audit' : 'Audit gratuit', 
-        action: () => navigate(currentLang === 'en' ? '/en/services' : '/services')
+        type: 'page',
+        target: currentLang === 'en' ? '/en/services' : '/services'
       }
     ],
     ressources: [
       { 
         name: 'Portfolio', 
-        action: () => navigate(currentLang === 'en' ? '/en/portfolio' : '/portfolio')
+        type: 'page',
+        target: currentLang === 'en' ? '/en/portfolio' : '/portfolio'
       },
       { 
         name: currentLang === 'en' ? 'Blog & Articles' : 'Blog & Articles', 
-        action: () => navigate(currentLang === 'en' ? '/en/blog' : '/blog')
+        type: 'page',
+        target: currentLang === 'en' ? '/en/blog' : '/blog'
       },
       { 
         name: currentLang === 'en' ? 'Free PDF Guide' : 'Guide PDF gratuit', 
-        action: () => navigateToPageSection(currentLang === 'en' ? '/en' : '/', 'lead-magnet')
+        type: window.location.pathname === (currentLang === 'en' ? '/en' : '/') ? 'section' : 'page-section',
+        target: window.location.pathname === (currentLang === 'en' ? '/en' : '/') ? 'lead-magnet' : `${currentLang === 'en' ? '/en' : '/'}#lead-magnet`
       },
       { 
         name: currentLang === 'en' ? 'Case Studies' : 'Cas d\'études', 
-        action: () => navigate(currentLang === 'en' ? '/en/portfolio' : '/portfolio')
+        type: 'page',
+        target: currentLang === 'en' ? '/en/portfolio' : '/portfolio'
       }
     ],
     entreprise: [
       { 
         name: currentLang === 'en' ? 'About Us' : 'À propos', 
-        action: () => navigate(currentLang === 'en' ? '/en/about' : '/about')
+        type: 'page',
+        target: currentLang === 'en' ? '/en/about' : '/about'
       },
       { 
         name: currentLang === 'en' ? 'Our Team' : 'Notre équipe', 
-        action: () => navigateToPageSection(currentLang === 'en' ? '/en/about' : '/about', 'team')
+        type: 'page-section',
+        target: `${currentLang === 'en' ? '/en/about' : '/about'}#team`
       },
       { 
         name: currentLang === 'en' ? 'Our Values' : 'Nos valeurs', 
-        action: () => navigateToPageSection(currentLang === 'en' ? '/en/about' : '/about', 'values')
+        type: 'page-section',
+        target: `${currentLang === 'en' ? '/en/about' : '/about'}#values`
       },
       { 
         name: 'Contact', 
-        action: () => navigateToPageSection(currentLang === 'en' ? '/en' : '/', 'contact')
+        type: window.location.pathname === (currentLang === 'en' ? '/en' : '/') ? 'section' : 'page-section',
+        target: window.location.pathname === (currentLang === 'en' ? '/en' : '/') ? 'contact' : `${currentLang === 'en' ? '/en' : '/'}#contact`
       }
     ]
   };
