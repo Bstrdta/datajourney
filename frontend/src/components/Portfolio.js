@@ -178,6 +178,7 @@ const Portfolio = () => {
           <div className="text-center">
             <motion.button 
               className="inline-flex items-center gap-3 bg-primary-turquoise text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300"
+              onClick={() => window.location.href = '/portfolio'}
               whileHover={{ 
                 scale: 1.05,
                 boxShadow: "0 25px 50px -12px rgba(26, 188, 156, 0.4)"
