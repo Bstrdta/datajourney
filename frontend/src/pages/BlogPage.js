@@ -302,6 +302,7 @@ const BlogPage = () => {
                       
                       <motion.button
                         className="text-primary-turquoise font-semibold flex items-center gap-2 hover:gap-3 transition-all duration-300"
+                        onClick={() => window.location.href = '/blog'}
                         whileHover={{ scale: 1.05 }}
                       >
                         Lire l'article
