@@ -250,5 +250,89 @@ export const blogArticles = [
         ]
       }
     }
+  },
+  {
+    id: 4,
+    slug: 'migration-excel-power-bi-guide-complet',
+    title: 'Migration Excel vers Power BI : Guide complet',
+    excerpt: 'Transformez vos fichiers Excel complexes en dashboards Power BI performants grâce à notre méthode éprouvée.',
+    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwxfHxleGNlbCUyMGRhdGF8ZW58MHx8fGJsdWV8MTc1MzE3NzU2Nnww&ixlib=rb-4.1.0&q=85',
+    date: '22 Février 2024',
+    readTime: '15 min',
+    category: 'Migration',
+    featured: false,
+    color: 'from-green-500 to-emerald-600',
+    content: {
+      fr: {
+        introduction: "Passer d'Excel à Power BI peut sembler complexe, mais avec la bonne méthode, cette migration devient une opportunité d'améliorer drastiquement vos analyses de données.",
+        sections: [
+          {
+            title: "1. Audit de l'existant Excel",
+            content: "► Inventorier tous les fichiers Excel utilisés.\n► Identifier les sources de données et les calculs critiques.\n► Analyser les besoins métier actuels."
+          },
+          {
+            title: "2. Nettoyage et structuration des données",
+            content: "► Éliminer les doublons et erreurs.\n► Standardiser les formats de données.\n► Créer une architecture de données cohérente."
+          },
+          {
+            title: "3. Création du modèle de données Power BI",
+            content: "► Importer les données nettoyées.\n► Définir les relations entre les tables.\n► Optimiser les performances avec DAX."
+          },
+          {
+            title: "4. Reconstruction des visualisations",
+            content: "► Reproduire les graphiques Excel essentiels.\n► Améliorer l'expérience utilisateur.\n► Ajouter l'interactivité manquante dans Excel."
+          },
+          {
+            title: "5. Formation et accompagnement",
+            content: "► Former les utilisateurs aux nouvelles interfaces.\n► Documenter les changements et nouveautés.\n► Planifier un support post-migration."
+          }
+        ],
+        conseils: [
+          "Commencez par migrer un fichier pilote pour valider la méthode.",
+          "Impliquez les utilisateurs finaux dans le processus de validation.",
+          "Conservez une période de transition avec Excel et Power BI en parallèle."
+        ],
+        points_retenir: [
+          "Une migration réussie nécessite une préparation minutieuse.",
+          "La valeur ajoutée de Power BI va au-delà de la simple reproduction d'Excel.",
+          "L'accompagnement utilisateur est crucial pour l'adoption."
+        ]
+      },
+      en: {
+        introduction: "Moving from Excel to Power BI may seem complex, but with the right method, this migration becomes an opportunity to drastically improve your data analysis.",
+        sections: [
+          {
+            title: "1. Audit of existing Excel files",
+            content: "► Inventory all Excel files in use.\n► Identify data sources and critical calculations.\n► Analyze current business needs."
+          },
+          {
+            title: "2. Data cleaning and structuring",
+            content: "► Eliminate duplicates and errors.\n► Standardize data formats.\n► Create a consistent data architecture."
+          },
+          {
+            title: "3. Creating the Power BI data model",
+            content: "► Import cleaned data.\n► Define relationships between tables.\n► Optimize performance with DAX."
+          },
+          {
+            title: "4. Rebuilding visualizations",
+            content: "► Reproduce essential Excel charts.\n► Improve user experience.\n► Add interactivity missing in Excel."
+          },
+          {
+            title: "5. Training and support",
+            content: "► Train users on new interfaces.\n► Document changes and new features.\n► Plan post-migration support."
+          }
+        ],
+        conseils: [
+          "Start by migrating a pilot file to validate the method.",
+          "Involve end users in the validation process.",
+          "Keep a transition period with Excel and Power BI in parallel."
+        ],
+        points_retenir: [
+          "Successful migration requires careful preparation.",
+          "Power BI's added value goes beyond simple Excel reproduction.",
+          "User support is crucial for adoption."
+        ]
+      }
+    }
   }
 ];
