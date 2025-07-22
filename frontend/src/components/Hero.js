@@ -198,7 +198,7 @@ const Hero = () => {
 
           {/* Main Heading - Second Part with Animation */}
           <motion.h2 
-            className="text-hero font-bold text-white mb-8 leading-tight"
+            className="text-hero font-bold text-white mb-6 leading-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
@@ -206,6 +206,18 @@ const Hero = () => {
             {t('language.current') === 'English' ? 'We transform them into' : 'Nous les transformons en'}{' '}
             <AnimatedText words={alternatingWords} className="text-primary-turquoise" />
           </motion.h2>
+
+          {/* Specialist description - repositionné juste après le titre */}
+          <motion.p 
+            className="text-xl text-neutral-300 mb-8 font-light leading-relaxed text-center max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+          >
+            {t('language.current') === 'English' 
+              ? 'Specialists in Power BI UX/UI report redesign to make your data irresistible and your decisions obvious.'
+              : 'Spécialistes de la refonte UX/UI de rapports Power BI pour rendre vos données irrésistibles et vos décisions évidentes.'}
+          </motion.p>
 
           {/* Brand Intro Animation */}
           <motion.div
