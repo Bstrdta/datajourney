@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Users, DollarSign, TrendingUp, Building, ShoppingCart, Truck, Heart, Filter, Eye, ExternalLink, Clock, Target, Award } from 'lucide-react';
+import { Users, DollarSign, TrendingUp, Building, ShoppingCart, Truck, Heart, Filter, Eye, ExternalLink, Clock, Target, Award, CheckCircle, X, Shield } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
 
 const PortfolioPage = () => {
