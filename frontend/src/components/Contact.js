@@ -245,6 +245,7 @@ const Contact = () => {
                     Analysons ensemble vos dashboards actuels et identifions les axes d'amélioration prioritaires.
                   </p>
                   <motion.button 
+                    onClick={() => setIsCalendlyOpen(true)}
                     className="w-full bg-primary-turquoise text-white py-3 rounded-xl font-semibold hover:bg-green-600 transition-colors duration-300"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
