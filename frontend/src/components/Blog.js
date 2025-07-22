@@ -58,11 +58,10 @@ const Blog = () => {
         <ScrollReveal>
           <div className="text-center mb-16">
             <h2 className="text-display font-bold text-primary-dark mb-6">
-              Nos insights{' '}
-              <span className="text-primary-turquoise">Power BI & UX</span>
+              {t('blog.title')}
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-              Découvrez nos guides, retours d'expérience et bonnes pratiques pour transformer vos dashboards en outils de pilotage efficaces.
+              {t('blog.subtitle')}
             </p>
           </div>
         </ScrollReveal>
