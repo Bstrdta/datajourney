@@ -450,7 +450,8 @@ const BlogPage = () => {
                       </div>
                       
                       <motion.div
-                        className="w-8 h-8 bg-neutral-100 rounded-full flex items-center justify-center group-hover:bg-primary-turquoise group-hover:text-white transition-all duration-300"
+                        className="w-8 h-8 bg-neutral-100 rounded-full flex items-center justify-center group-hover:bg-primary-turquoise group-hover:text-white transition-all duration-300 cursor-pointer"
+                        onClick={() => window.location.href = '/blog'}
                         whileHover={{ scale: 1.1 }}
                       >
                         <ArrowRight size={16} />
