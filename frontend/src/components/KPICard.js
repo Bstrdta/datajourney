@@ -198,69 +198,159 @@ const KPISlideshow = () => {
     </div>
   );
 
-  // Completion Rate KPI Component
-  const CompletionKPI = () => (
-    <div className="bg-white rounded-3xl shadow-xl border border-neutral-100 overflow-hidden relative p-8 h-96">
-      <div className="flex items-center justify-between mb-6">
-        <h3 className="font-bold text-primary-dark text-2xl">Completion Rate</h3>
-        <PieChart className="text-primary-turquoise" size={24} />
-      </div>
+  // Animated Gauge KPI Component
+  const GaugeKPI = () => {
+    const gaugeValue = 78; // Percentage value
+    const maxValue = 100;
+    
+    return (
+      <div className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-3xl shadow-xl border border-blue-100 overflow-hidden relative p-8 h-96">
+        <div className="flex items-center justify-between mb-6">
+          <h3 className="font-bold text-slate-900 text-2xl">Performance Gauge</h3>
+          <Target className="text-blue-600" size={24} />
+        </div>
 
-      <div className="relative flex items-center justify-center mb-8">
-        <svg viewBox="0 0 120 120" className="w-32 h-32 transform -rotate-90">
-          <defs>
-            <linearGradient id="slideDonutGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#1ABC9C" />
-              <stop offset="100%" stopColor="#16A085" />
-            </linearGradient>
-            <linearGradient id="slideDonutGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#3498DB" />
-              <stop offset="100%" stopColor="#2980B9" />
-            </linearGradient>
-          </defs>
-          
-          <circle cx="60" cy="60" r="45" stroke="#f1f5f9" strokeWidth="12" fill="none" />
-          
-          <motion.circle
-            cx="60"
-            cy="60"
-            r="45"
-            stroke="url(#slideDonutGradient1)"
-            strokeWidth="12"
-            fill="none"
-            strokeLinecap="round"
-            strokeDasharray="283"
-            initial={{ strokeDashoffset: 283 }}
-            animate={{ strokeDashoffset: 283 - (283 * 0.92) }}
-            transition={{ duration: 2, delay: 0.5 }}
-          />
-        </svg>
-
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary-dark">92%</div>
-            <div className="text-sm text-neutral-500">Success Rate</div>
+        <div className="mb-8">
+          <div className="text-5xl font-bold text-slate-900 mb-2">{gaugeValue}%</div>
+          <div className="text-sm text-blue-600 flex items-center gap-2">
+            <TrendingUp size={16} />
+            System Efficiency
           </div>
         </div>
-      </div>
 
-      <div className="space-y-3 mb-6">
-        <div className="flex items-center gap-3 text-sm">
-          <div className="w-4 h-3 bg-primary-turquoise rounded-full"></div>
-          <span className="text-neutral-600">Completed Projects: 92%</span>
-        </div>
-        <div className="flex items-center gap-3 text-sm">
-          <div className="w-4 h-3 bg-blue-500 rounded-full"></div>
-          <span className="text-neutral-600">In Progress: 8%</span>
-        </div>
-      </div>
+        {/* Main Gauge Container */}
+        <div className="relative mb-8">
+          {/* Gauge Background Arc */}
+          <div className="relative w-48 h-24 mx-auto">
+            <svg viewBox="0 0 200 100" className="w-full h-full">
+              <defs>
+                <linearGradient id="gaugeTrack" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#e2e8f0" />
+                  <stop offset="100%" stopColor="#cbd5e1" />
+                </linearGradient>
+                <linearGradient id="gaugeProgress" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#3b82f6" />
+                  <stop offset="50%" stopColor="#1d4ed8" />
+                  <stop offset="100%" stopColor="#1e40af" />
+                </linearGradient>
+                <filter id="gaugeShadow">
+                  <feDropShadow dx="0" dy="2" stdDeviation="4" floodColor="#1e40af" floodOpacity="0.3"/>
+                </filter>
+              </defs>
+              
+              {/* Background Arc */}
+              <path
+                d="M 20 80 A 80 80 0 0 1 180 80"
+                stroke="url(#gaugeTrack)"
+                strokeWidth="12"
+                fill="none"
+                strokeLinecap="round"
+              />
+              
+              {/* Animated Progress Arc */}
+              <motion.path
+                d="M 20 80 A 80 80 0 0 1 180 80"
+                stroke="url(#gaugeProgress)"
+                strokeWidth="12"
+                fill="none"
+                strokeLinecap="round"
+                filter="url(#gaugeShadow)"
+                strokeDasharray="251.2"
+                initial={{ strokeDashoffset: 251.2 }}
+                animate={{ strokeDashoffset: 251.2 - (251.2 * (gaugeValue / 100)) }}
+                transition={{ duration: 2, delay: 0.5, ease: "easeOut" }}
+              />
+              
+              {/* Center value display */}
+              <text x="100" y="75" textAnchor="middle" className="text-2xl font-bold fill-slate-900">
+                {gaugeValue}%
+              </text>
+            </svg>
+            
+            {/* Animated Gauge Needle */}
+            <motion.div 
+              className="absolute bottom-0 left-1/2 origin-bottom"
+              style={{ 
+                width: '4px', 
+                height: '60px', 
+                background: 'linear-gradient(to top, #ef4444, #dc2626)',
+                borderRadius: '2px 2px 0 0',
+                transformOrigin: 'bottom center'
+              }}
+              initial={{ rotate: -90, x: '-50%' }}
+              animate={{ rotate: (gaugeValue / 100 * 180) - 90, x: '-50%' }}
+              transition={{ duration: 2.5, delay: 0.8, ease: "easeOut" }}
+            >
+              {/* Needle tip */}
+              <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-red-500 rounded-full"></div>
+            </motion.div>
+            
+            {/* Center pivot */}
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-slate-700 rounded-full border-2 border-white shadow-lg"></div>
+          </div>
 
-      <div className="text-center pt-6 border-t border-neutral-100">
-        <div className="text-2xl font-semibold text-primary-dark">1,247</div>
-        <div className="text-sm text-neutral-500">Total Projects</div>
+          {/* Gauge Labels */}
+          <div className="flex justify-between text-xs text-slate-500 mt-4 px-6">
+            <span>0%</span>
+            <span>25%</span>
+            <span>50%</span>
+            <span>75%</span>
+            <span>100%</span>
+          </div>
+        </div>
+
+        {/* Status Indicators */}
+        <div className="grid grid-cols-3 gap-4 mb-6">
+          {[
+            { label: 'Optimal', value: 'High', color: 'bg-green-500', status: gaugeValue >= 70 },
+            { label: 'Warning', value: 'Med', color: 'bg-yellow-500', status: gaugeValue >= 40 && gaugeValue < 70 },
+            { label: 'Critical', value: 'Low', color: 'bg-red-500', status: gaugeValue < 40 }
+          ].map((item, index) => (
+            <div key={index} className={`text-center p-2 rounded-lg ${item.status ? 'bg-white shadow-md' : 'opacity-50'}`}>
+              <div className={`w-3 h-3 ${item.color} rounded-full mx-auto mb-1 ${item.status ? 'animate-pulse' : ''}`}></div>
+              <div className="text-xs font-semibold text-slate-700">{item.label}</div>
+              <div className="text-xs text-slate-500">{item.value}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom Stats */}
+        <div className="grid grid-cols-2 gap-4 text-center text-sm">
+          <div>
+            <div className="text-xl font-bold text-slate-900">2.4s</div>
+            <div className="text-slate-600">Response Time</div>
+          </div>
+          <div>
+            <div className="text-xl font-bold text-slate-900">99.2%</div>
+            <div className="text-slate-600">Uptime</div>
+          </div>
+        </div>
+
+        {/* Animated particles for enhancement */}
+        <div className="absolute top-4 right-4">
+          {[...Array(3)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-1 h-1 bg-blue-400 rounded-full"
+              style={{ right: `${i * 8}px`, top: `${i * 6}px` }}
+              animate={{ 
+                scale: [1, 1.5, 1],
+                opacity: [0.3, 0.8, 0.3]
+              }}
+              transition={{ 
+                duration: 2, 
+                delay: i * 0.3, 
+                repeat: Infinity 
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Decorative gradient */}
+        <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-blue-300/20 to-transparent rounded-bl-full"></div>
       </div>
-    </div>
-  );
+    );
+  };
 
   // Activity Heat KPI Component  
   const ActivityKPI = () => {
