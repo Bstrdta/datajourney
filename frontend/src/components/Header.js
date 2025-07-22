@@ -161,6 +161,12 @@ const Header = () => {
           )}
         </AnimatePresence>
       </div>
+
+      {/* Calendly Modal */}
+      <CalendlyModal 
+        isOpen={isCalendlyOpen} 
+        onClose={() => setIsCalendlyOpen(false)} 
+      />
     </motion.header>
   );
 };
