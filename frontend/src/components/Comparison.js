@@ -87,7 +87,7 @@ const Comparison = () => {
                 <div className="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center">
                   <Check className="text-white" size={20} />
                 </div>
-                <h3 className="text-xl font-bold text-green-700">APRÈS</h3>
+                <h3 className="text-xl font-bold text-green-700">{t('comparison.after')}</h3>
               </div>
               <ul className="space-y-3">
                 {afterItems.map((item, index) => (
