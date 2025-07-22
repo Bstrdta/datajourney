@@ -86,6 +86,7 @@ const Contact = () => {
             
             <motion.button 
               className="bg-primary-turquoise text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300"
+              onClick={() => setIsCalendlyOpen(true)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
