@@ -35,6 +35,7 @@ const Home = () => {
       <Hero />
       <Comparison />
       <KPISlideshow />
+      <DashboardShowcase />
       <Pillars />
       <Services />
       <ProcessFlow />
