@@ -49,26 +49,28 @@ function App() {
         <BrowserRouter>
           <LanguageProvider>
             <CalendlyProvider>
-              <Header />
-              <Routes>
-                {/* French routes */}
-                <Route path="/" element={<Home />} />
-                <Route path="/services" element={<ServicesPage />} />
-                <Route path="/portfolio" element={<PortfolioPage />} />
-                <Route path="/blog" element={<BlogPage />} />
-                <Route path="/blog/:slug" element={<ArticleDetailPage />} />
-                <Route path="/about" element={<AboutPage />} />
-                
-                {/* English routes */}
-                <Route path="/en" element={<Home />} />
-                <Route path="/en/services" element={<ServicesPage />} />
-                <Route path="/en/portfolio" element={<PortfolioPage />} />
-                <Route path="/en/blog" element={<BlogPage />} />
-                <Route path="/en/blog/:slug" element={<ArticleDetailPage />} />
-                <Route path="/en/about" element={<AboutPage />} />
-              </Routes>
-              <Footer />
-              <CalendlyModal />
+              <LogoAnimationProvider>
+                <Header />
+                <Routes>
+                  {/* French routes */}
+                  <Route path="/" element={<Home />} />
+                  <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/portfolio" element={<PortfolioPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/blog/:slug" element={<ArticleDetailPage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  
+                  {/* English routes */}
+                  <Route path="/en" element={<Home />} />
+                  <Route path="/en/services" element={<ServicesPage />} />
+                  <Route path="/en/portfolio" element={<PortfolioPage />} />
+                  <Route path="/en/blog" element={<BlogPage />} />
+                  <Route path="/en/blog/:slug" element={<ArticleDetailPage />} />
+                  <Route path="/en/about" element={<AboutPage />} />
+                </Routes>
+                <Footer />
+                <CalendlyModal />
+              </LogoAnimationProvider>
             </CalendlyProvider>
           </LanguageProvider>
         </BrowserRouter>
