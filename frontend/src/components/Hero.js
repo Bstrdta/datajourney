@@ -20,8 +20,8 @@ const Hero = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   
-  // Calculer la position du toggle (de gauche vers droite)
-  const toggleProgress = Math.min(scrollY / 500, 1); // 500px de scroll pour animation complète
+  // Calculer la position du toggle (de gauche vers droite) - plus rapide
+  const toggleProgress = Math.min(scrollY / 200, 1); // 200px de scroll pour animation complète (plus rapide)
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-dark via-primary-dark to-blue-900 pb-20">
