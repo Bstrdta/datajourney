@@ -6,6 +6,7 @@ import CalendlyModal from './CalendlyModal';
 
 const Hero = () => {
   const alternatingWords = ['décisions', 'histoires', 'révélations clés'];
+  const [isCalendlyOpen, setIsCalendlyOpen] = React.useState(false);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-dark via-primary-dark to-blue-900">
