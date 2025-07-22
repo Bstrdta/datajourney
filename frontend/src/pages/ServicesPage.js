@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { RefreshCw, Plus, Users, Clock, Target, Shield, CheckCircle, Star, ArrowRight, Award } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../contexts/LanguageContext';
+import { useCalendly } from '../contexts/CalendlyContext';
 import ScrollReveal from '../components/ScrollReveal';
-import CalendlyModal from '../components/CalendlyModal';
 
 const ServicesPage = () => {
   const [isCalendlyOpen, setIsCalendlyOpen] = React.useState(false);
