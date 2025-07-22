@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import CalendlyModal from './CalendlyModal';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
