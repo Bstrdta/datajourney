@@ -637,6 +637,7 @@ const PortfolioPage = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 className="bg-primary-turquoise text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl hover:bg-green-600 transition-all duration-300"
+                onClick={() => setIsCalendlyOpen(true)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
