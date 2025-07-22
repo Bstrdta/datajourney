@@ -186,30 +186,26 @@ const Hero = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center pt-32">
         <div className="max-w-4xl mx-auto">
-          {/* Main Heading */}
+          {/* Main Heading - First Part */}
           <motion.h1 
-            className="text-hero font-bold text-white mb-6 leading-tight"
+            className="text-hero font-bold text-white mb-4 leading-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             {t('hero.title')}
-            <br />
-            {t('language.current') === 'English' ? 'We transform them into' : 'Nous les transformons en'}{' '}
-            <AnimatedText words={alternatingWords} className="text-primary-turquoise" />
           </motion.h1>
 
-          {/* Specialist description */}
-          <motion.p 
-            className="text-xl text-neutral-300 mb-8 font-light leading-relaxed text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
+          {/* Main Heading - Second Part with Animation */}
+          <motion.h2 
+            className="text-hero font-bold text-white mb-8 leading-tight"
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
-            {t('language.current') === 'English' 
-              ? 'Specialists in Power BI UX/UI report redesign to make your data irresistible and your decisions obvious.'
-              : 'Spécialistes de la refonte UX/UI de rapports Power BI pour rendre vos données irrésistibles et vos décisions évidentes.'}
-          </motion.p>
+            {t('language.current') === 'English' ? 'We transform them into' : 'Nous les transformons en'}{' '}
+            <AnimatedText words={alternatingWords} className="text-primary-turquoise" />
+          </motion.h2>
 
           {/* Brand Intro Animation */}
           <motion.div
