@@ -124,7 +124,7 @@ const Footer = () => {
 
           {/* Services Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Services</h4>
+            <h4 className="text-lg font-semibold mb-6">{currentLang === 'en' ? 'Services' : 'Services'}</h4>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
@@ -142,7 +142,7 @@ const Footer = () => {
 
           {/* Resources Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Ressources</h4>
+            <h4 className="text-lg font-semibold mb-6">{currentLang === 'en' ? 'Resources' : 'Ressources'}</h4>
             <ul className="space-y-3">
               {footerLinks.ressources.map((link) => (
                 <li key={link.name}>
@@ -160,7 +160,7 @@ const Footer = () => {
 
           {/* Company Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Entreprise</h4>
+            <h4 className="text-lg font-semibold mb-6">{currentLang === 'en' ? 'Company' : 'Entreprise'}</h4>
             <ul className="space-y-3">
               {footerLinks.entreprise.map((link) => (
                 <li key={link.name}>
