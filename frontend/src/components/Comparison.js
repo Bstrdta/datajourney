@@ -1,0 +1,140 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { X, Check, TrendingUp, Users, Navigation, Palette, Heart } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
+import BeforeAfterSlider from './BeforeAfterSlider';
+
+const Comparison = () => {
+  const beforeItems = [
+    { icon: X, text: 'Tableaux illisibles', color: 'text-red-500' },
+    { icon: X, text: 'Trop d\'infos par page', color: 'text-red-500' },
+    { icon: X, text: 'Navigation confuse', color: 'text-red-500' },
+    { icon: X, text: 'Couleurs agressives', color: 'text-red-500' },
+    { icon: X, text: 'Faible adoption', color: 'text-red-500' },
+  ];
+
+  const afterItems = [
+    { icon: Check, text: 'Visualisation claire', color: 'text-green-500' },
+    { icon: Check, text: 'Hiérarchisation visuelle', color: 'text-green-500' },
+    { icon: Check, text: 'UX fluide', color: 'text-green-500' },
+    { icon: Check, text: 'Palette cohérente', color: 'text-green-500' },
+    { icon: Check, text: 'Engagement renforcé', color: 'text-green-500' },
+  ];
+
+  return (
+    <section className="py-20 bg-gradient-to-b from-neutral-50 to-white">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        {/* Section Title */}
+        <ScrollReveal>
+          <div className="text-center mb-16">
+            <h2 className="text-display font-bold text-primary-dark mb-6">
+              Ce que change une{' '}
+              <span className="text-primary-turquoise">refonte UX réussie</span>
+            </h2>
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
+              Découvrez la transformation radicale de vos dashboards Power BI avec notre approche UX/Design
+            </p>
+          </div>
+        </ScrollReveal>
+
+        {/* Before/After Slider */}
+        <ScrollReveal className="mb-16">
+          <BeforeAfterSlider 
+            beforeImage="https://images.unsplash.com/photo-1662460149539-5d37b87e2f92?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwyfHxhbmFseXRpY3MlMjBpbnRlcmZhY2V8ZW58MHx8fGJsdWV8MTc1MzE3NzU3M3ww&ixlib=rb-4.1.0&q=85"
+            afterImage="https://images.unsplash.com/photo-1662460149857-2759c9b2c6f5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwxfHxhbmFseXRpY3MlMjBpbnRlcmZhY2V8ZW58MHx8fGJsdWV8MTc1MzE3NzU3M3ww&ixlib=rb-4.1.0&q=85"
+            beforeAlt="Dashboard avant refonte - interface complexe"
+            afterAlt="Dashboard après refonte - interface claire"
+          />
+        </ScrollReveal>
+
+        {/* Comparison Grid */}
+        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          {/* Before Column */}
+          <ScrollReveal direction="left" delay={0.2}>
+            <div className="bg-red-50 rounded-3xl p-8 border border-red-100">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-12 h-12 bg-red-500 rounded-2xl flex items-center justify-center">
+                  <X className="text-white" size={24} />
+                </div>
+                <h3 className="text-2xl font-bold text-red-700">AVANT</h3>
+              </div>
+              <ul className="space-y-4">
+                {beforeItems.map((item, index) => (
+                  <motion.li 
+                    key={index}
+                    className="flex items-center gap-3 text-gray-700"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <item.icon className={item.color} size={20} />
+                    <span className="font-medium">{item.text}</span>
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
+          </ScrollReveal>
+
+          {/* After Column */}
+          <ScrollReveal direction="right" delay={0.4}>
+            <div className="bg-green-50 rounded-3xl p-8 border border-green-100">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-12 h-12 bg-green-500 rounded-2xl flex items-center justify-center">
+                  <Check className="text-white" size={24} />
+                </div>
+                <h3 className="text-2xl font-bold text-green-700">APRÈS</h3>
+              </div>
+              <ul className="space-y-4">
+                {afterItems.map((item, index) => (
+                  <motion.li 
+                    key={index}
+                    className="flex items-center gap-3 text-gray-700"
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <item.icon className={item.color} size={20} />
+                    <span className="font-medium">{item.text}</span>
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
+          </ScrollReveal>
+        </div>
+
+        {/* Impact Metrics */}
+        <ScrollReveal delay={0.6}>
+          <div className="mt-20 bg-gradient-to-r from-primary-dark to-blue-900 rounded-3xl p-8 md:p-12 text-white text-center">
+            <h3 className="text-2xl font-bold mb-8">Impact mesurable de nos refontes</h3>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <div className="space-y-2">
+                <TrendingUp className="mx-auto text-primary-turquoise mb-4" size={32} />
+                <div className="text-3xl font-bold text-primary-turquoise">+40%</div>
+                <div className="text-neutral-300">Utilisation quotidienne</div>
+              </div>
+              <div className="space-y-2">
+                <Users className="mx-auto text-primary-turquoise mb-4" size={32} />
+                <div className="text-3xl font-bold text-primary-turquoise">-65%</div>
+                <div className="text-neutral-300">Temps de formation</div>
+              </div>
+              <div className="space-y-2">
+                <Navigation className="mx-auto text-primary-turquoise mb-4" size={32} />
+                <div className="text-3xl font-bold text-primary-turquoise">+85%</div>
+                <div className="text-neutral-300">Facilité navigation</div>
+              </div>
+              <div className="space-y-2">
+                <Heart className="mx-auto text-primary-turquoise mb-4" size={32} />
+                <div className="text-3xl font-bold text-primary-turquoise">9.2/10</div>
+                <div className="text-neutral-300">Satisfaction utilisateur</div>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+  );
+};
+
+export default Comparison;
