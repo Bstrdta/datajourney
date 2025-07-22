@@ -465,26 +465,16 @@ const Hero = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center pt-32">
         <div className="max-w-4xl mx-auto">
-          {/* Main Heading - First Part */}
+          {/* Main Heading avec animation */}
           <motion.h1 
-            className="text-hero font-bold text-white mb-4 leading-tight"
+            className="text-hero font-bold text-white mb-6 leading-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            {t('hero.title')}
-          </motion.h1>
-
-          {/* Main Heading - Second Part with Animation */}
-          <motion.h2 
-            className="text-hero font-bold text-white mb-6 leading-tight"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          >
-            {t('language.current') === 'English' ? 'We transform them into' : 'Nous les transformons en'}{' '}
+            {t('hero.title')}{' '}
             <AnimatedText words={alternatingWords} className="text-primary-turquoise" />
-          </motion.h2>
+          </motion.h1>
 
           {/* Specialist description - repositionné juste après le titre */}
           <motion.p 
