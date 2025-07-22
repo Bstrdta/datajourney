@@ -11,18 +11,32 @@ const Header = () => {
   const { t } = useTranslation('common');
   const { currentLang, switchLanguage, isInitialized } = useLanguage();
   const { openCalendly } = useCalendly();
+  const { isAnimationComplete } = useLogoAnimation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showHeaderLogo, setShowHeaderLogo] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      // Show header logo after scroll animation completes
+      if (window.scrollY > 200 && isAnimationComplete) {
+        setShowHeaderLogo(true);
+      }
+    };
+
+    // Global function for Hero component to call
+    window.showHeaderLogo = () => {
+      setShowHeaderLogo(true);
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      delete window.showHeaderLogo;
+    };
+  }, [isAnimationComplete]);
 
   const menuItems = [
     { name: t('nav.home'), path: currentLang === 'en' ? '/en' : '/' },
