@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Users, DollarSign, TrendingUp, Building, Eye } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../contexts/LanguageContext';
 import ScrollReveal from './ScrollReveal';
 
 const Portfolio = () => {
