@@ -147,9 +147,12 @@ const Header = () => {
                 
                 {/* Mobile CTA */}
                 <motion.button
+                  onClick={() => {
+                    setIsCalendlyOpen(true);
+                    setIsMenuOpen(false);
+                  }}
                   className="w-full mt-4 bg-primary-turquoise text-white px-6 py-3 rounded-xl font-semibold shadow-lg"
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => setIsMenuOpen(false)}
                 >
                   Réservez un audit gratuit
                 </motion.button>
