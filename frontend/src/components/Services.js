@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { RefreshCw, Plus, Users, ArrowRight, Clock, Target, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../contexts/LanguageContext';
 import ScrollReveal from './ScrollReveal';
 
 const Services = () => {
