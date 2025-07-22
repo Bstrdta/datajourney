@@ -10,7 +10,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Comparison from './components/Comparison';
-import KPISection from './components/KPICard';
+import KPISlideshow from './components/KPICard';
 import Pillars from './components/Pillars';
 import Services from './components/Services';
 import ProcessFlow from './components/ProcessFlow';
