@@ -217,6 +217,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           >
             <motion.button 
+              onClick={() => setIsCalendlyOpen(true)}
               className="group inline-flex items-center gap-3 bg-primary-turquoise text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300"
               whileHover={{ 
                 scale: 1.05,
