@@ -294,14 +294,6 @@ const PortfolioPage = () => {
                 Découvrez comment nous avons transformé les dashboards de nos clients en véritables outils de pilotage stratégique. 
                 Résultats mesurables, ROI démontré.
               </p>
-              
-              {/* Certification Badge */}
-              <div className="flex justify-center mb-8">
-                <div className="bg-gradient-to-r from-green-400 to-green-500 text-white px-4 py-2 rounded-lg text-sm font-bold shadow-lg flex items-center gap-2">
-                  <span className="text-lg">✓</span>
-                  POWER BI CERTIFIED EXPERTS
-                </div>
-              </div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-primary-turquoise mb-2">150+</div>
