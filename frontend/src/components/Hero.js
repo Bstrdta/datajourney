@@ -498,9 +498,9 @@ const Hero = () => {
               : 'Spécialistes de la refonte UX/UI de rapports Power BI pour rendre vos données irrésistibles et vos décisions évidentes.'}
           </motion.p>
 
-          {/* Brand Intro Animation */}
+          {/* Brand Intro Animation - responsive */}
           <motion.div
-            className="flex justify-center mb-8"
+            className="flex justify-center mb-4 sm:mb-8 px-4 sm:px-0"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.05, ease: "easeOut" }}
@@ -513,7 +513,7 @@ const Hero = () => {
           >
             <div 
               id="logo-animation"
-              className="flex items-center gap-3 text-6xl font-bold"
+              className="flex items-center gap-2 sm:gap-3 text-4xl sm:text-6xl font-bold"
               style={{
                 '--data-highlight': 'rgba(26, 188, 156, 0.8)',
                 '--journey-highlight': 'rgba(26, 188, 156, 0.8)',
@@ -535,18 +535,18 @@ const Hero = () => {
                 Data
               </motion.span>
               
-              {/* Toggle/Transition Effect */}
-              <div className="relative w-20 h-10 bg-white/20 rounded-full border border-white/30 flex items-center px-2">
+              {/* Toggle/Transition Effect - responsive */}
+              <div className="relative w-12 sm:w-20 h-6 sm:h-10 bg-white/20 rounded-full border border-white/30 flex items-center px-1 sm:px-2">
                 <motion.div 
-                  className="w-6 h-6 bg-primary-turquoise rounded-full shadow-lg"
+                  className="w-4 sm:w-6 h-4 sm:h-6 bg-primary-turquoise rounded-full shadow-lg"
                   initial={{ x: 0, boxShadow: '0 0 15px rgba(26, 188, 156, 0.6)' }}
                   animate={{ 
-                    x: scrollY > 50 ? 48 : 0,
+                    x: scrollY > 50 ? (window.innerWidth < 640 ? 32 : 48) : 0,
                     boxShadow: scrollY > 50 ? '0 0 25px rgba(26, 188, 156, 0.8)' : '0 0 15px rgba(26, 188, 156, 0.6)'
                   }}
                   transition={{ duration: 0.8, ease: "easeInOut" }}
                   onAnimationComplete={(definition) => {
-                    if (definition.x === 48) {
+                    if (definition.x === (window.innerWidth < 640 ? 32 : 48)) {
                       // Animation vers Journey complétée, déclencher la shrink animation
                       setTimeout(() => {
                         if (window.completeLogoAnimation) {
@@ -561,10 +561,10 @@ const Hero = () => {
                 
                 {/* Trail effect */}
                 <motion.div
-                  className="absolute w-6 h-6 bg-primary-turquoise/40 rounded-full"
-                  style={{ left: 8 }}
+                  className="absolute w-4 sm:w-6 h-4 sm:h-6 bg-primary-turquoise/40 rounded-full"
+                  style={{ left: 4 }}
                   animate={{ 
-                    x: scrollY > 50 ? 48 : 0,
+                    x: scrollY > 50 ? (window.innerWidth < 640 ? 32 : 48) : 0,
                     opacity: scrollY > 50 ? [0, 0.6, 0] : 0
                   }}
                   transition={{ duration: 0.8, ease: "easeInOut", delay: 0.1 }}
@@ -596,12 +596,12 @@ const Hero = () => {
               transition={{ duration: 0.4 }}
             >
               <motion.div
-                className="flex items-center gap-2 text-2xl font-bold text-white"
+                className="flex items-center gap-1 sm:gap-2 text-lg sm:text-2xl font-bold text-white"
                 initial={{ scale: 1, y: 0 }}
                 animate={{ 
                   scale: scrollY > 200 ? 0.4 : 1,
                   y: scrollY > 200 ? -400 : 0,
-                  x: scrollY > 200 ? -600 : 0
+                  x: scrollY > 200 ? (window.innerWidth < 640 ? -300 : -600) : 0
                 }}
                 transition={{ duration: 1, ease: "easeInOut" }}
                 onAnimationComplete={() => {
@@ -611,8 +611,8 @@ const Hero = () => {
                 }}
               >
                 <span>Data</span>
-                <div className="w-12 h-6 bg-white/20 rounded-full flex items-center px-1">
-                  <div className="w-4 h-4 bg-primary-turquoise rounded-full transform translate-x-5"></div>
+                <div className="w-8 sm:w-12 h-4 sm:h-6 bg-white/20 rounded-full flex items-center px-0.5 sm:px-1">
+                  <div className="w-3 sm:w-4 h-3 sm:h-4 bg-primary-turquoise rounded-full transform translate-x-3 sm:translate-x-5"></div>
                 </div>
                 <span>Journey</span>
               </motion.div>
