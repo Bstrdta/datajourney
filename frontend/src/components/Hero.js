@@ -53,6 +53,27 @@ const Hero = () => {
             </span>
           </motion.p>
 
+          {/* Certifications Badges */}
+          <motion.div
+            className="flex flex-wrap justify-center gap-4 mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+          >
+            <div className="bg-gradient-to-r from-green-400 to-green-500 text-white px-4 py-2 rounded-lg text-sm font-bold shadow-lg flex items-center gap-2">
+              <span className="text-lg">✓</span>
+              POWER BI CERTIFIED
+            </div>
+            <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-bold shadow-lg flex items-center gap-2">
+              <span className="text-lg">★</span>
+              MICROSOFT MVP
+            </div>
+            <div className="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-bold shadow-lg flex items-center gap-2">
+              <span className="text-lg">🎨</span>
+              UX CERTIFIED
+            </div>
+          </motion.div>
+
           {/* CTA Button */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
