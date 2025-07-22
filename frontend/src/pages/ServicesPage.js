@@ -122,6 +122,14 @@ const ServicesPage = () => {
         'Guidelines entreprise',
         'Ressources & templates',
         'Suivi 3 mois'
+      ],
+      deliverables: [
+        'Rapport d\'audit des pratiques UX Power BI',
+        'Programme de formation personnalisé',
+        'Sessions de mentoring & co-design',
+        'Documentation UX interne (guidelines, checklists)',
+        'Référentiel de bonnes pratiques Power BI',
+        'Support post-formation (Q&A, coaching ponctuel)'
       ]
     }
   ];
