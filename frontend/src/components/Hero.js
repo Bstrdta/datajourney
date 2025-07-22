@@ -24,11 +24,11 @@ const Hero = () => {
         }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center pt-20">
         <div className="max-w-4xl mx-auto">
           {/* Main Heading */}
           <motion.h1 
-            className="text-hero font-bold text-white mb-8 leading-tight"
+            className="text-hero font-bold text-white mb-6 leading-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -38,6 +38,18 @@ const Hero = () => {
             Nous les transformons en{' '}
             <AnimatedText words={alternatingWords} className="text-primary-turquoise" />
           </motion.h1>
+
+          {/* Minimalist Badge */}
+          <motion.div
+            className="flex justify-center mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+          >
+            <div className="bg-primary-turquoise/10 border border-primary-turquoise/30 text-primary-turquoise px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
+              🏆 Experts Power BI certifiés
+            </div>
+          </motion.div>
 
           {/* Subtitle */}
           <motion.p 
@@ -52,27 +64,6 @@ const Hero = () => {
               Spécialistes UX/UI Power BI depuis 2020
             </span>
           </motion.p>
-
-          {/* Certifications Badges */}
-          <motion.div
-            className="flex flex-wrap justify-center gap-4 mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          >
-            <div className="bg-gradient-to-r from-green-400 to-green-500 text-white px-4 py-2 rounded-lg text-sm font-bold shadow-lg flex items-center gap-2">
-              <span className="text-lg">✓</span>
-              POWER BI CERTIFIED
-            </div>
-            <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-bold shadow-lg flex items-center gap-2">
-              <span className="text-lg">★</span>
-              MICROSOFT MVP
-            </div>
-            <div className="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-bold shadow-lg flex items-center gap-2">
-              <span className="text-lg">🎨</span>
-              UX CERTIFIED
-            </div>
-          </motion.div>
 
           {/* CTA Button */}
           <motion.div
