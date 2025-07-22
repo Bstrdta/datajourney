@@ -1,7 +1,7 @@
 {
   "hero": {
-    "title": "Nous transformons vos reportings actuels en",
-    "title_animated_words": ["expériences analytiques claires", "intuitives", "orientées décision"],
+    "title": "Nous transformons vos reportings actuels en expériences analytiques",
+    "title_animated_words": ["claires", "intuitives", "orientées décision"],
     "subtitle": "Spécialistes de la refonte UX/UI de rapports Power BI pour rendre vos données irrésistibles et vos décisions évidentes.",
     "cta": "Réservez un audit gratuit",
     "kpis": {
