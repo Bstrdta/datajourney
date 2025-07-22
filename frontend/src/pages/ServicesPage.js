@@ -7,308 +7,205 @@ import { useCalendly } from '../contexts/CalendlyContext';
 import ScrollReveal from '../components/ScrollReveal';
 
 const ServicesPage = () => {
-  const { t } = useTranslation('services');
+  const { t } = useTranslation(['services', 'common']);
   const { openCalendly } = useCalendly();
   const { currentLang } = useLanguage();
-  const services = [
-    {
-      id: 'refonte',
-      icon: RefreshCw,
-      title: t('service1.title'),
-      subtitle: currentLang === 'en' ? 'Existing reports enhancement' : 'Revalorisation de rapports existants',
-      description: t('service1.description'),
-      duration: t('service1.duration'),
-      price: t('service1.price'),
-      image: 'https://images.unsplash.com/photo-1661028191560-3aa1f664f397?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwzfHxhbmFseXRpY3MlMjBpbnRlcmZhY2V8ZW58MHx8fGJsdWV8MTc1MzE3NzU3M3ww&ixlib=rb-4.1.0&q=85',
-      color: 'from-blue-500 to-primary-dark',
-      deliverables: t('service1.deliverables', { returnObjects: true })
-    },
-    {
-      id: 'creation',
-      icon: Plus,
-      title: t('service2.title'),
-      subtitle: currentLang === 'en' ? 'From modeling to visualization' : 'De la stratégie data à la visualisation',
-      description: t('service2.description'),
-      duration: t('service2.duration'),
-      price: t('service2.price'),
-      image: 'https://images.unsplash.com/photo-1648134859182-98df6e93ef58?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxkYXRhJTIwZGFzaGJvYXJkfGVufDB8fHxibHVlfDE3NTMxNzc1NjZ8MA&ixlib=rb-4.1.0&q=85',
-      color: 'from-primary-turquoise to-green-500',
-      deliverables: t('service2.deliverables', { returnObjects: true })
-    },
-    {
-      id: 'coaching',
-      icon: Users,
-      title: t('service3.title'),
-      subtitle: currentLang === 'en' ? 'Internal teams coaching' : 'Accompagnement d\'équipes internes',
-      description: t('service3.description'),
-      duration: t('service3.duration'),
-      price: t('service3.price'),
-      image: 'https://images.unsplash.com/photo-1532102235608-dc8fc689c9ab?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwxfHxkYXRhJTIwZGFzaGJvYXJkfGVufDB8fHxibHVlfDE3NTMxNzc1NjZ8MA&ixlib=rb-4.1.0&q=85',
-      color: 'from-purple-500 to-pink-500',
-      deliverables: t('service3.deliverables', { returnObjects: true })
-    }
-  ];
-
-  const testimonials = [
-    {
-      quote: "Data Journey a transformé notre approche de la Business Intelligence. Nos dashboards sont maintenant utilisés quotidiennement par 300+ managers.",
-      author: "Marie Dubois",
-      position: "Directrice Data",
-      company: "TechCorp France",
-      rating: 5
-    },
-    {
-      quote: "L'accompagnement coaching nous a permis d'acquérir une véritable expertise UX en interne. ROI exceptionnel sur ce type d'investissement.",
-      author: "Thomas Martin",
-      position: "Head of BI",
-      company: "FinanceGroup",
-      rating: 5
-    },
-    {
-      quote: "Délais respectés, qualité au rendez-vous. L'équipe Data Journey maîtrise parfaitement l'écosystème Power BI et l'approche UX.",
-      author: "Sophie Blanc",
-      position: "Responsable Analytics",
-      company: "RetailPro",
-      rating: 5
-    }
-  ];
 
   return (
-    <div className="pt-20 min-h-screen bg-gradient-to-b from-neutral-50 to-white">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-primary-dark via-primary-dark to-blue-900 text-white">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+    <div className="min-h-screen bg-neutral-50">
+      {/* Header */}
+      <div className="bg-gradient-to-br from-primary-dark via-primary-dark to-blue-900 text-white py-20 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div 
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231ABC9C' fill-opacity='0.4'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            }}
+            className="w-full h-full"
+          />
+        </div>
+        
+        <div className="max-w-6xl mx-auto px-6 sm:px-8 relative">
           <ScrollReveal>
-            <div className="text-center max-w-4xl mx-auto">
+            <div className="text-center mb-12">
               <h1 className="text-hero font-bold mb-6 leading-tight">
-                {t('title')}
+                {currentLang === 'en' ? 'Our Services' : 'Nos Services'}
               </h1>
               <p className="text-xl text-neutral-300 mb-8 leading-relaxed">
-                {t('subtitle')}
+                {currentLang === 'en' 
+                  ? 'Tailored solutions to transform your data into competitive advantage'
+                  : 'Des solutions sur mesure pour transformer vos données en avantage concurrentiel'
+                }
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-primary-turquoise mb-2">150+</div>
-                  <div className="text-neutral-400">Dashboards transformés</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-primary-turquoise mb-2">98%</div>
-                  <div className="text-neutral-400">Satisfaction client</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-primary-turquoise mb-2">5 ans</div>
-                  <div className="text-neutral-400">Expertise Power BI</div>
-                </div>
-              </div>
             </div>
           </ScrollReveal>
         </div>
-      </section>
+      </div>
 
-      {/* Services Detailed */}
+      {/* Services Grid */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="space-y-20">
-            {services.map((service, index) => (
-              <div key={service.id} id={service.id}>
-                <ScrollReveal delay={index * 0.2}>
-                  <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    {/* Content */}
-                    <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                      <div className="flex items-center gap-4 mb-6">
-                        <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center`}>
-                          <service.icon className="text-white" size={32} />
-                        </div>
-                        <div>
-                          <h2 className="text-3xl font-bold text-primary-dark mb-2">
-                            {service.title}
-                          </h2>
-                          <p className="text-primary-turquoise font-semibold">
-                            {service.subtitle}
-                          </p>
-                        </div>
-                      </div>
-
-                      <p className="text-xl text-neutral-600 mb-6 leading-relaxed">
-                        {service.description}
-                      </p>
-
-                      <p className="text-neutral-700 mb-8 leading-relaxed">
-                        {service.longDescription}
-                      </p>
-
-                      {/* Process */}
-                      <div className="mb-8">
-                        <h3 className="text-xl font-semibold text-primary-dark mb-4 flex items-center gap-2">
-                          <Target className="text-primary-turquoise" size={20} />
-                          Notre processus
-                        </h3>
-                        <div className="space-y-4">
-                          {service.process.map((step, idx) => (
-                            <div key={idx} className="flex gap-4">
-                              <div className="w-8 h-8 bg-primary-turquoise/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                <span className="text-primary-turquoise font-bold text-sm">{idx + 1}</span>
-                              </div>
-                              <div>
-                                <div className="font-semibold text-primary-dark">{step.step}</div>
-                                <div className="text-neutral-600 text-sm">{step.detail}</div>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* Benefits */}
-                      <div className="mb-8">
-                        <h3 className="text-xl font-semibold text-primary-dark mb-4">
-                          Résultats mesurés
-                        </h3>
-                        <div className="grid grid-cols-2 gap-3">
-                          {service.benefits.map((benefit, idx) => (
-                            <div key={idx} className="flex items-center gap-2">
-                              <CheckCircle className="text-green-500 flex-shrink-0" size={16} />
-                              <span className="text-neutral-700 text-sm">{benefit}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* Deliverables */}
-                      {service.deliverables && (
-                        <div className="mb-8">
-                          <h3 className="text-xl font-semibold text-primary-dark mb-4 flex items-center gap-2">
-                            <Award className="text-primary-turquoise" size={20} />
-                            Livrables inclus
-                          </h3>
-                          <div className="bg-neutral-50 rounded-2xl p-6">
-                            <div className="grid grid-cols-1 gap-3">
-                              {service.deliverables.map((deliverable, idx) => (
-                                <div key={idx} className="flex items-start gap-3">
-                                  <div className="w-6 h-6 bg-primary-turquoise rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <span className="text-white text-xs font-bold">{idx + 1}</span>
-                                  </div>
-                                  <span className="text-neutral-800 font-medium leading-relaxed">{deliverable}</span>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-                      )}
-
-                      {/* Pricing */}
-                      <div className="flex flex-wrap gap-6 mb-8">
-                        <div className="flex items-center gap-2">
-                          <Clock className="text-primary-turquoise" size={18} />
-                          <span className="font-semibold text-primary-dark">{service.duration}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Shield className="text-primary-turquoise" size={18} />
-                          <span className="font-bold text-primary-dark">{service.price}</span>
-                        </div>
-                      </div>
-
-                      <motion.button
-                        className="bg-primary-turquoise text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl hover:bg-green-600 transition-all duration-300 flex items-center gap-2"
-                        onClick={openCalendly}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        Demander un devis
-                        <ArrowRight size={20} />
-                      </motion.button>
-                    </div>
-
-                    {/* Image */}
-                    <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                      <div className="relative">
-                        <img
-                          src={service.image}
-                          alt={service.title}
-                          className="w-full h-96 object-cover rounded-2xl shadow-premium"
-                        />
-                        <div className={`absolute inset-0 bg-gradient-to-t ${service.color} opacity-10 rounded-2xl`} />
-                        
-                        {/* Included Features Overlay */}
-                        <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-xl p-4">
-                          <h4 className="font-semibold text-primary-dark mb-2">Inclus dans ce service:</h4>
-                          <div className="grid grid-cols-2 gap-1 text-xs">
-                            {service.included.slice(0, 4).map((item, idx) => (
-                              <div key={idx} className="flex items-center gap-1">
-                                <CheckCircle className="text-green-500" size={12} />
-                                <span className="text-neutral-700">{item}</span>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </ScrollReveal>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20 bg-neutral-50">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <ScrollReveal>
-            <h2 className="text-display font-bold text-center text-primary-dark mb-16">
-              Ce que disent nos clients
-            </h2>
-          </ScrollReveal>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <ScrollReveal key={index} delay={index * 0.1}>
-                <div className="bg-white p-8 rounded-2xl shadow-lg border border-neutral-100 hover:shadow-xl transition-all duration-300">
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="text-yellow-400 fill-current" size={18} />
-                    ))}
-                  </div>
-                  <p className="text-neutral-700 mb-6 italic leading-relaxed">
-                    "{testimonial.quote}"
-                  </p>
-                  <div>
-                    <div className="font-semibold text-primary-dark">{testimonial.author}</div>
-                    <div className="text-sm text-neutral-600">{testimonial.position}</div>
-                    <div className="text-sm text-primary-turquoise font-medium">{testimonial.company}</div>
-                  </div>
+        <div className="max-w-6xl mx-auto px-6 sm:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            {/* Service 1 */}
+            <ScrollReveal delay={0.1}>
+              <motion.div
+                className="bg-white rounded-2xl p-8 shadow-lg border border-neutral-100 hover:shadow-2xl transition-all duration-500"
+                whileHover={{ y: -8 }}
+              >
+                <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                  <RefreshCw className="text-blue-600" size={32} />
                 </div>
-              </ScrollReveal>
-            ))}
+                
+                <h3 className="text-2xl font-bold text-primary-dark mb-4">
+                  {currentLang === 'en' 
+                    ? 'UX redesign of your existing reports'
+                    : 'Refonte UX de vos rapports existants'
+                  }
+                </h3>
+                
+                <p className="text-neutral-600 mb-6 leading-relaxed">
+                  {currentLang === 'en'
+                    ? 'User experience optimization of your existing Power BI reports for maximum adoption.'
+                    : 'Optimisation de l\'expérience utilisateur de vos rapports Power BI existants pour une adoption maximale.'
+                  }
+                </p>
+                
+                <div className="flex items-center justify-between mb-6">
+                  <span className="text-lg font-semibold text-primary-turquoise">
+                    {currentLang === 'en' ? 'Starting from €3,500' : 'À partir de 3 500€'}
+                  </span>
+                  <span className="text-sm text-neutral-500">
+                    {currentLang === 'en' ? '2-4 weeks' : '2-4 semaines'}
+                  </span>
+                </div>
+
+                <motion.button 
+                  onClick={openCalendly}
+                  className="w-full bg-primary-turquoise text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-600 transition-colors duration-300"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  {currentLang === 'en' ? 'Discover this service' : 'Découvrir ce service'}
+                </motion.button>
+              </motion.div>
+            </ScrollReveal>
+
+            {/* Service 2 */}
+            <ScrollReveal delay={0.2}>
+              <motion.div
+                className="bg-white rounded-2xl p-8 shadow-lg border border-neutral-100 hover:shadow-2xl transition-all duration-500"
+                whileHover={{ y: -8 }}
+              >
+                <div className="w-16 h-16 bg-primary-turquoise/10 rounded-xl flex items-center justify-center mb-6">
+                  <Plus className="text-primary-turquoise" size={32} />
+                </div>
+                
+                <h3 className="text-2xl font-bold text-primary-dark mb-4">
+                  {currentLang === 'en'
+                    ? 'Complete dashboard creation'
+                    : 'Création complète de tableaux de bord'
+                  }
+                </h3>
+                
+                <p className="text-neutral-600 mb-6 leading-relaxed">
+                  {currentLang === 'en'
+                    ? 'Custom design and development of Power BI dashboards from A to Z.'
+                    : 'Conception et développement de tableaux de bord Power BI sur mesure, de A à Z.'
+                  }
+                </p>
+                
+                <div className="flex items-center justify-between mb-6">
+                  <span className="text-lg font-semibold text-primary-turquoise">
+                    {currentLang === 'en' ? 'Starting from €7,500' : 'À partir de 7 500€'}
+                  </span>
+                  <span className="text-sm text-neutral-500">
+                    {currentLang === 'en' ? '4-8 weeks' : '4-8 semaines'}
+                  </span>
+                </div>
+
+                <motion.button 
+                  onClick={openCalendly}
+                  className="w-full bg-primary-turquoise text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-600 transition-colors duration-300"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  {currentLang === 'en' ? 'Discover this service' : 'Découvrir ce service'}
+                </motion.button>
+              </motion.div>
+            </ScrollReveal>
+
+            {/* Service 3 */}
+            <ScrollReveal delay={0.3}>
+              <motion.div
+                className="bg-white rounded-2xl p-8 shadow-lg border border-neutral-100 hover:shadow-2xl transition-all duration-500"
+                whileHover={{ y: -8 }}
+              >
+                <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
+                  <Users className="text-purple-600" size={32} />
+                </div>
+                
+                <h3 className="text-2xl font-bold text-primary-dark mb-4">
+                  {currentLang === 'en'
+                    ? 'UX coaching for internal teams'
+                    : 'Coaching UX pour équipes internes'
+                  }
+                </h3>
+                
+                <p className="text-neutral-600 mb-6 leading-relaxed">
+                  {currentLang === 'en'
+                    ? 'Training and support for your teams to create engaging reports.'
+                    : 'Formation et accompagnement de vos équipes pour créer des rapports engageants.'
+                  }
+                </p>
+                
+                <div className="flex items-center justify-between mb-6">
+                  <span className="text-lg font-semibold text-primary-turquoise">
+                    {currentLang === 'en' ? 'Starting from €2,500' : 'À partir de 2 500€'}
+                  </span>
+                  <span className="text-sm text-neutral-500">
+                    {currentLang === 'en' ? '1-3 weeks' : '1-3 semaines'}
+                  </span>
+                </div>
+
+                <motion.button 
+                  onClick={openCalendly}
+                  className="w-full bg-primary-turquoise text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-600 transition-colors duration-300"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  {currentLang === 'en' ? 'Discover this service' : 'Découvrir ce service'}
+                </motion.button>
+              </motion.div>
+            </ScrollReveal>
+            
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-primary-dark to-blue-900 text-white">
-        <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
+        <div className="max-w-4xl mx-auto text-center px-6 sm:px-8">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold mb-6">
-              Prêt à transformer vos dashboards ?
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+              {currentLang === 'en'
+                ? 'Ready to transform your Power BI reports?'
+                : 'Prêt à transformer vos rapports Power BI ?'
+              }
             </h2>
-            <p className="text-xl text-neutral-300 mb-8">
-              Planifions un audit gratuit de 30 minutes pour identifier le service le plus adapté à vos besoins.
+            <p className="text-xl text-white/90 mb-8">
+              {currentLang === 'en'
+                ? "Let's discuss your project and find the solution that best fits your needs."
+                : 'Discutons de votre projet et trouvons ensemble la solution la plus adaptée à vos besoins.'
+              }
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                className="bg-primary-turquoise text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl hover:bg-green-600 transition-all duration-300"
+                className="bg-primary-turquoise text-white px-8 py-4 rounded-xl font-semibold hover:bg-green-600 transition-all duration-300"
                 onClick={openCalendly}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Réserver un audit gratuit
-              </motion.button>
-              <motion.button
-                className="bg-white/10 text-white px-8 py-4 rounded-xl font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
-                onClick={openCalendly}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Télécharger notre guide
+                {currentLang === 'en' ? 'Book a free audit' : 'Réserver un audit gratuit'}
               </motion.button>
             </div>
           </ScrollReveal>
