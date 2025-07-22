@@ -194,7 +194,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
           >
             <div className="bg-primary-turquoise/10 border border-primary-turquoise/30 text-primary-turquoise px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
-              🏆 Experts Power BI certifiés
+              🏆 {t('language.current') === 'English' ? 'Certified Power BI Experts' : 'Experts Power BI certifiés'}
             </div>
           </motion.div>
 
