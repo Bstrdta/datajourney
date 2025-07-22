@@ -42,7 +42,7 @@ const Comparison = () => {
         </ScrollReveal>
 
         {/* Before/After Slider */}
-        <ScrollReveal className="mb-12">
+        <ScrollReveal className="mb-16">
           <BeforeAfterSlider 
             beforeImage="https://i.ibb.co/Xx4pF8Lp/Capture-d-cran-2025-07-22-230712.png"
             afterImage="https://i.ibb.co/Xf9mSf49/Light-Dashboard-2.png"
