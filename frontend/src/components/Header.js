@@ -4,14 +4,14 @@ import { Menu, X, Globe } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from '../contexts/LanguageContext';
-import CalendlyModal from './CalendlyModal';
+import { useCalendly } from '../contexts/CalendlyContext';
 
 const Header = () => {
   const { t } = useTranslation('common');
   const { currentLang, switchLanguage, isInitialized } = useLanguage();
+  const { openCalendly } = useCalendly();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -128,7 +128,7 @@ const Header = () => {
 
             {/* CTA Button */}
             <motion.button
-              onClick={() => setIsCalendlyOpen(true)}
+              onClick={openCalendly}
               className="bg-primary-turquoise text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl hover:bg-green-600 transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -194,7 +194,7 @@ const Header = () => {
                 {/* Mobile CTA */}
                 <motion.button
                   onClick={() => {
-                    setIsCalendlyOpen(true);
+                    openCalendly();
                     setIsMenuOpen(false);
                   }}
                   className="w-full mt-4 bg-primary-turquoise text-white px-6 py-3 rounded-xl font-semibold shadow-lg"
@@ -207,12 +207,6 @@ const Header = () => {
           )}
         </AnimatePresence>
       </div>
-
-      {/* Calendly Modal */}
-      <CalendlyModal 
-        isOpen={isCalendlyOpen} 
-        onClose={() => setIsCalendlyOpen(false)} 
-      />
     </motion.header>
   );
 };
