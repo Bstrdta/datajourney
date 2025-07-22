@@ -5,6 +5,7 @@ import ScrollReveal from '../components/ScrollReveal';
 import CalendlyModal from '../components/CalendlyModal';
 
 const ServicesPage = () => {
+  const [isCalendlyOpen, setIsCalendlyOpen] = React.useState(false);
   const services = [
     {
       id: 'refonte',
