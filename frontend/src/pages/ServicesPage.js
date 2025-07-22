@@ -170,12 +170,10 @@ const ServicesPage = () => {
           <ScrollReveal>
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-hero font-bold mb-6 leading-tight">
-                Nos services{' '}
-                <span className="text-primary-turquoise">Power BI & UX</span>
+                {t('title')}
               </h1>
               <p className="text-xl text-neutral-300 mb-8 leading-relaxed">
-                Trois approches expertes pour transformer vos dashboards en véritables outils de pilotage. 
-                Du quick win à la transformation complète.
+                {t('subtitle')}
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
                 <div className="text-center">
