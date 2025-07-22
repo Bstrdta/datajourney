@@ -24,6 +24,149 @@ const Hero = () => {
         }}
       />
 
+      {/* Animated Visual Elements - Left Side */}
+      <div className="absolute left-8 top-1/2 transform -translate-y-1/2 hidden xl:block">
+        <div className="space-y-6">
+          {/* KPI Card */}
+          <motion.div
+            className="bg-white/10 backdrop-blur-lg rounded-2xl p-4 border border-white/20 w-48"
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <div className="flex items-center justify-between mb-3">
+              <span className="text-white/80 text-sm">Adoption Rate</span>
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+            </div>
+            <div className="flex items-end gap-2">
+              <span className="text-2xl font-bold text-white">+75%</span>
+              <span className="text-green-400 text-sm">↗</span>
+            </div>
+            <div className="w-full bg-white/20 rounded-full h-2 mt-2">
+              <motion.div
+                className="bg-green-400 h-2 rounded-full"
+                initial={{ width: "0%" }}
+                animate={{ width: "75%" }}
+                transition={{ duration: 2, delay: 1 }}
+              />
+            </div>
+          </motion.div>
+
+          {/* Mini Chart */}
+          <motion.div
+            className="bg-white/10 backdrop-blur-lg rounded-2xl p-4 border border-white/20 w-48"
+            animate={{ scale: [1, 1.05, 1] }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <div className="text-white/80 text-sm mb-3">Performance Trends</div>
+            <div className="flex items-end justify-between h-16">
+              {[40, 60, 45, 80, 70, 90, 85].map((height, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-primary-turquoise rounded-t"
+                  style={{ width: '8px' }}
+                  initial={{ height: '8px' }}
+                  animate={{ height: `${height}%` }}
+                  transition={{ duration: 1.5, delay: index * 0.1 }}
+                />
+              ))}
+            </div>
+          </motion.div>
+
+          {/* ROI Indicator */}
+          <motion.div
+            className="bg-white/10 backdrop-blur-lg rounded-2xl p-4 border border-white/20 w-48"
+            animate={{ x: [0, 5, 0] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <div className="text-white/80 text-sm mb-2">ROI Projections</div>
+            <div className="text-xl font-bold text-primary-turquoise">€2.5M</div>
+            <div className="text-green-400 text-sm">Économies générées</div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Animated Visual Elements - Right Side */}
+      <div className="absolute right-8 top-1/2 transform -translate-y-1/2 hidden xl:block">
+        <div className="space-y-6">
+          {/* Efficiency Gauge */}
+          <motion.div
+            className="bg-white/10 backdrop-blur-lg rounded-2xl p-4 border border-white/20 w-48"
+            animate={{ rotate: [0, 2, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <div className="text-white/80 text-sm mb-3">Efficiency Gain</div>
+            <div className="relative w-24 h-24 mx-auto">
+              <svg className="w-24 h-24 transform -rotate-90">
+                <circle
+                  cx="48"
+                  cy="48"
+                  r="40"
+                  stroke="rgba(255,255,255,0.2)"
+                  strokeWidth="8"
+                  fill="none"
+                />
+                <motion.circle
+                  cx="48"
+                  cy="48"
+                  r="40"
+                  stroke="#1ABC9C"
+                  strokeWidth="8"
+                  fill="none"
+                  strokeLinecap="round"
+                  initial={{ strokeDasharray: "251.2", strokeDashoffset: "251.2" }}
+                  animate={{ strokeDashoffset: "62.8" }}
+                  transition={{ duration: 2, delay: 0.5 }}
+                />
+              </svg>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <span className="text-xl font-bold text-white">+65%</span>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Time Saved */}
+          <motion.div
+            className="bg-white/10 backdrop-blur-lg rounded-2xl p-4 border border-white/20 w-48"
+            animate={{ y: [0, -8, 0] }}
+            transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          >
+            <div className="text-white/80 text-sm mb-2">Time Saved</div>
+            <div className="flex items-center gap-2">
+              <div className="text-2xl font-bold text-white">-60%</div>
+              <div className="flex space-x-1">
+                <div className="w-2 h-2 bg-primary-turquoise rounded-full animate-bounce"></div>
+                <div className="w-2 h-2 bg-primary-turquoise rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                <div className="w-2 h-2 bg-primary-turquoise rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+              </div>
+            </div>
+            <div className="text-primary-turquoise text-sm">Reporting time</div>
+          </motion.div>
+
+          {/* User Satisfaction */}
+          <motion.div
+            className="bg-white/10 backdrop-blur-lg rounded-2xl p-4 border border-white/20 w-48"
+            animate={{ scale: [1, 1.02, 1] }}
+            transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          >
+            <div className="text-white/80 text-sm mb-2">User Satisfaction</div>
+            <div className="flex items-center gap-1 mb-2">
+              {[1, 2, 3, 4, 5].map((star) => (
+                <motion.div
+                  key={star}
+                  className="text-yellow-400"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: star * 0.1 }}
+                >
+                  ★
+                </motion.div>
+              ))}
+            </div>
+            <div className="text-xl font-bold text-white">9.2/10</div>
+          </motion.div>
+        </div>
+      </div>
+
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center pt-32">
         <div className="max-w-4xl mx-auto">
           {/* Main Heading */}
