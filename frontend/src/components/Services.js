@@ -19,7 +19,6 @@ const Services = () => {
         ? ['Comprehensive UX/UI audit', 'Figma design', 'Power BI development', 'Team training']
         : ['Audit UX/UI approfondi', 'Conception sur Figma', 'Développement Power BI', 'Formation équipe'],
       duration: currentLang === 'en' ? '4-8 weeks' : '4-8 semaines',
-      price: t('services.service1.price'),
       image: 'https://images.unsplash.com/photo-1661028191560-3aa1f664f397?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwzfHxhbmFseXRpY3MlMjBpbnRlcmZhY2V8ZW58MHx8fGJsdWV8MTc1MzE3NzU3M3ww&ixlib=rb-4.1.0&q=85',
       color: 'from-blue-500 to-primary-dark'
     },
