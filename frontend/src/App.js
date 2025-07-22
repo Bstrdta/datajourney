@@ -33,7 +33,7 @@ const Home = () => {
     <div className="min-h-screen bg-neutral-50">
       <Hero />
       <Comparison />
-      <KPICard />
+      <KPISection />
       <Pillars />
       <Services />
       <ProcessFlow />
