@@ -47,7 +47,7 @@ const Header = () => {
               <span className={`text-2xl font-bold transition-colors duration-300 ${
                 isScrolled ? 'text-primary-dark' : 'text-white'
               }`}>
-                data
+                Data
               </span>
               {/* Toggle Button */}
               <div className={`relative w-12 h-6 rounded-full transition-all duration-300 ${
@@ -62,11 +62,6 @@ const Header = () => {
               }`}>
                 journey
               </span>
-            </div>
-            <div className="hidden lg:block">
-              <div className="text-sm font-medium transition-colors duration-300 text-primary-turquoise ml-3">
-                Power BI UX Experts
-              </div>
             </div>
           </Link>
 
