@@ -14,127 +14,38 @@ const ServicesPage = () => {
     {
       id: 'refonte',
       icon: RefreshCw,
-      title: 'Refonte UX de rapports Power BI',
-      subtitle: 'Revalorisation de rapports existants',
-      description: 'Transformez vos dashboards existants en outils de pilotage efficaces grâce à notre expertise UX/UI combinée à la maîtrise technique Power BI.',
-      longDescription: 'Nos refontes UX ne sont pas de simples restylings. Nous analysons en profondeur l\'usage réel de vos rapports, identifions les points de friction, et reconstruisons l\'expérience utilisateur pour maximiser l\'adoption et l\'efficacité décisionnelle.',
-      process: [
-        { step: 'Audit UX/UI approfondi', detail: '2-3 jours d\'analyse utilisateurs, workflows et pain points' },
-        { step: 'Conception sur Figma', detail: 'Prototypes interactifs haute-fidélité avec tests utilisateurs' },
-        { step: 'Développement Power BI', detail: 'Implémentation technique optimisée (DAX, performance, sécurité)' },
-        { step: 'Formation équipe', detail: 'Accompagnement change management et bonnes pratiques' }
-      ],
-      duration: '4-8 semaines',
-      price: 'À partir de 5 000€',
+      title: t('service1.title'),
+      subtitle: currentLang === 'en' ? 'Existing reports enhancement' : 'Revalorisation de rapports existants',
+      description: t('service1.description'),
+      duration: t('service1.duration'),
+      price: t('service1.price'),
       image: 'https://images.unsplash.com/photo-1661028191560-3aa1f664f397?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwzfHxhbmFseXRpY3MlMjBpbnRlcmZhY2V8ZW58MHx8fGJsdWV8MTc1MzE3NzU3M3ww&ixlib=rb-4.1.0&q=85',
       color: 'from-blue-500 to-primary-dark',
-      benefits: [
-        '+40% d\'utilisation quotidienne moyenne',
-        '-60% du temps de formation nécessaire',
-        '9.2/10 de satisfaction utilisateur',
-        'ROI mesuré sous 3 mois'
-      ],
-      included: [
-        'Audit complet existant',
-        'Wireframes & prototypes Figma',
-        'Refonte complète Power BI',
-        'Guide de style & documentation',
-        'Formation équipe (4h)',
-        'Support 3 mois inclus'
-      ],
-      deliverables: [
-        'Rapport d\'audit UX/UI (PDF)',
-        'Prototype interactif Figma',
-        'Rapport Power BI optimisé (PBIX)',
-        'Documentation technique (DAX, modèle, sécurité)',
-        'Kit de formation & bonnes pratiques',
-        'Rapport de tests utilisateurs',
-        'Suivi post-livraison (usage, ROI, adoption)'
-      ]
+      deliverables: t('service1.deliverables', { returnObjects: true })
     },
     {
       id: 'creation',
       icon: Plus,
-      title: 'Création complète de dashboards',
-      subtitle: 'De la stratégie data à la visualisation',
-      description: 'Conception et développement de dashboards Power BI from scratch, alignés sur vos objectifs métier et optimisés pour l\'expérience utilisateur.',
-      longDescription: 'Nous ne créons pas seulement des rapports, nous concevons des expériences data complètes. De la définition de votre stratégie de données à la mise en production, nous assurons une approche holistique qui garantit l\'adoption et la valeur métier.',
-      process: [
-        { step: 'Cadrage métier & KPIs', detail: 'Workshops stratégiques avec stakeholders et définition OKRs' },
-        { step: 'Architecture de données', detail: 'Modélisation optimale, sources, transformations, sécurité' },
-        { step: 'Design UX complet', detail: 'User journeys, wireframes, design system, prototypage' },
-        { step: 'Déploiement & monitoring', detail: 'Mise en production, tests utilisateurs, plan de déploiement' }
-      ],
-      duration: '6-12 semaines',
-      price: 'À partir de 8 000€',
+      title: t('service2.title'),
+      subtitle: currentLang === 'en' ? 'From modeling to visualization' : 'De la stratégie data à la visualisation',
+      description: t('service2.description'),
+      duration: t('service2.duration'),
+      price: t('service2.price'),
       image: 'https://images.unsplash.com/photo-1648134859182-98df6e93ef58?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxkYXRhJTIwZGFzaGJvYXJkfGVufDB8fHxibHVlfDE3NTMxNzc1NjZ8MA&ixlib=rb-4.1.0&q=85',
       color: 'from-primary-turquoise to-green-500',
-      benefits: [
-        'Time-to-insight divisé par 5',
-        'Adoption > 85% dès le lancement',
-        'Architecture scalable long-terme',
-        'Réduction 70% temps de reporting'
-      ],
-      included: [
-        'Cadrage métier complet',
-        'Architecture données optimale',
-        'Design system personnalisé',
-        'Développement Power BI avancé',
-        'Plan de déploiement',
-        'Formation & documentation',
-        'Support 6 mois inclus'
-      ],
-      deliverables: [
-        'Plan stratégique & mapping des KPIs',
-        'Modèle de données Power BI (PBIX + schéma)',
-        'Architecture technique documentée',
-        'Prototypes UX (wireframes + design system)',
-        'Dashboard Power BI finalisé & déployé',
-        'Kit de déploiement + guide d\'utilisation',
-        'Rapport de tests utilisateurs & plan d\'adoption',
-        'Suivi des KPIs post-lancement (optionnel)'
-      ]
+      deliverables: t('service2.deliverables', { returnObjects: true })
     },
     {
       id: 'coaching',
       icon: Users,
-      title: 'Coaching UX & montée en compétences',
-      subtitle: 'Autonomisez vos équipes internes',
-      description: 'Accompagnement personnalisé de vos équipes pour maîtriser les bonnes pratiques UX Power BI et créer une culture data-driven.',
-      longDescription: 'Le coaching le plus efficace est celui qui rend vos équipes autonomes. Nous transmettons notre expertise à travers un accompagnement pratique, du mentoring individuel et la co-création de vos propres guidelines UX.',
-      process: [
-        { step: 'Audit des pratiques', detail: 'Évaluation competences actuelles et identification des gaps' },
-        { step: 'Formation sur-mesure', detail: 'Programme adapté aux besoins et niveau de chaque participant' },
-        { step: 'Co-design guidé', detail: 'Accompagnement hands-on sur vos projets réels en cours' },
-        { step: 'Guidelines & documentation', detail: 'Création de votre propre référentiel de bonnes pratiques' }
-      ],
-      duration: '2-4 semaines',
-      price: 'À partir de 3 000€',
+      title: t('service3.title'),
+      subtitle: currentLang === 'en' ? 'Internal teams coaching' : 'Accompagnement d\'équipes internes',
+      description: t('service3.description'),
+      duration: t('service3.duration'),
+      price: t('service3.price'),
       image: 'https://images.unsplash.com/photo-1532102235608-dc8fc689c9ab?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwxfHxkYXRhJTIwZGFzaGJvYXJkfGVufDB8fHxibHVlfDE3NTMxNzc1NjZ8MA&ixlib=rb-4.1.0&q=85',
       color: 'from-purple-500 to-pink-500',
-      benefits: [
-        'Équipes 100% autonomes',
-        'Qualité UX constante',
-        'Réduction délais projets -50%',
-        'Culture data renforcée'
-      ],
-      included: [
-        'Assessment compétences',
-        'Formation personnalisée',
-        'Mentoring individuel',
-        'Co-design projets réels',
-        'Guidelines entreprise',
-        'Ressources & templates',
-        'Suivi 3 mois'
-      ],
-      deliverables: [
-        'Rapport d\'audit des pratiques UX Power BI',
-        'Programme de formation personnalisé',
-        'Sessions de mentoring & co-design',
-        'Documentation UX interne (guidelines, checklists)',
-        'Référentiel de bonnes pratiques Power BI',
-        'Support post-formation (Q&A, coaching ponctuel)'
-      ]
+      deliverables: t('service3.deliverables', { returnObjects: true })
     }
   ];
 
