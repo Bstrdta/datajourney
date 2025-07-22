@@ -101,7 +101,7 @@ const Services = () => {
                     <div className="mb-8">
                       <h4 className="font-semibold text-primary-dark mb-4 flex items-center gap-2">
                         <Target size={18} className="text-primary-turquoise" />
-                        Notre processus
+                        {currentLang === 'en' ? 'Our process' : 'Notre processus'}
                       </h4>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         {service.process.map((step, idx) => (
