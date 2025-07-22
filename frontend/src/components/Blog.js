@@ -147,6 +147,7 @@ const Blog = () => {
                   </div>
                 </div>
               </motion.article>
+              </Link>
             </ScrollReveal>
           ))}
         </div>
