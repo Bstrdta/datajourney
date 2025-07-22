@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Search, ArrowRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { useCalendly } from '../contexts/CalendlyContext';
 import AnimatedText from './AnimatedText';
-import CalendlyModal from './CalendlyModal';
 
 const Hero = () => {
   const alternatingWords = ['décisions', 'histoires', 'révélations clés'];
