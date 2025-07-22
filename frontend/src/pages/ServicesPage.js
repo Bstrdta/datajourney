@@ -79,6 +79,16 @@ const ServicesPage = () => {
         'Plan de déploiement',
         'Formation & documentation',
         'Support 6 mois inclus'
+      ],
+      deliverables: [
+        'Plan stratégique & mapping des KPIs',
+        'Modèle de données Power BI (PBIX + schéma)',
+        'Architecture technique documentée',
+        'Prototypes UX (wireframes + design system)',
+        'Dashboard Power BI finalisé & déployé',
+        'Kit de déploiement + guide d\'utilisation',
+        'Rapport de tests utilisateurs & plan d\'adoption',
+        'Suivi des KPIs post-lancement (optionnel)'
       ]
     },
     {
