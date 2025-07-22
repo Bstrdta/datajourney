@@ -43,14 +43,10 @@ const Header = () => {
               <span className="text-white font-bold text-xl">DJ</span>
             </div>
             <div className="hidden sm:block">
-              <span className={`text-2xl font-bold transition-colors duration-300 ${
-                isScrolled ? 'text-primary-dark' : 'text-white'
-              }`}>
+              <span className="text-2xl font-bold transition-colors duration-300 text-white">
                 Data Journey
               </span>
-              <div className={`text-sm font-medium transition-colors duration-300 ${
-                isScrolled ? 'text-primary-turquoise' : 'text-primary-turquoise'
-              }`}>
+              <div className="text-sm font-medium transition-colors duration-300 text-primary-turquoise">
                 Power BI UX Experts
               </div>
             </div>
