@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Users, DollarSign, TrendingUp, Building, ShoppingCart, Truck, Heart, Filter, Eye, ExternalLink, Clock, Target, Award, CheckCircle, X, Shield } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
+import CalendlyModal from '../components/CalendlyModal';
 
 const PortfolioPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
