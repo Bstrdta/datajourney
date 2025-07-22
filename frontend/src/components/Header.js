@@ -7,6 +7,7 @@ import CalendlyModal from './CalendlyModal';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
