@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock, Tag, CheckCircle } from 'lucide-react';
@@ -12,6 +12,11 @@ const ArticleDetailPage = () => {
   const { t } = useTranslation('blog');
   const { currentLang } = useLanguage();
   const { openCalendly } = useCalendly();
+  
+  // Scroll to top when component mounts or slug changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
   
   // Find article by slug
   const article = blogArticles.find(a => a.slug === slug);
