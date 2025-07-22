@@ -316,7 +316,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-5"
         style={{
-          backgroundImage: `url('https://i.ibb.co/RTSPQyb/image.png')`
+          backgroundImage: `url('https://i.ibb.co/Xx4pF8Lp/Capture-d-cran-2025-07-22-230712.png')`
         }}
       />
 
