@@ -10,48 +10,9 @@ import ScrollReveal from './ScrollReveal';
 const Blog = () => {
   const { t } = useTranslation('home');
   const { currentLang } = useLanguage();
-  const articles = [
-    {
-      title: 'Les 5 erreurs UX fatales dans Power BI',
-      excerpt: 'Découvrez les pièges les plus fréquents qui ruinent l\'expérience utilisateur de vos dashboards et comment les éviter.',
-      image: 'https://images.unsplash.com/photo-1662460149539-5d37b87e2f92?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwyfHxhbmFseXRpY3MlMjBpbnRlcmZhY2V8ZW58MHx8fGJsdWV8MTc1MzE3NzU3M3ww&ixlib=rb-4.1.0&q=85',
-      date: '15 Mars 2024',
-      readTime: '8 min',
-      category: 'UX Design',
-      featured: true,
-      color: 'from-red-500 to-pink-500'
-    },
-    {
-      title: 'Pourquoi vos dashboards ne sont pas utilisés ?',
-      excerpt: 'Analysez les causes profondes du faible taux d\'adoption de vos rapports et les solutions pour y remédier.',
-      image: 'https://images.unsplash.com/photo-1661028191560-3aa1f664f397?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwzfHxhbmFseXRpY3MlMjBpbnRlcmZhY2V8ZW58MHx8fGJsdWV8MTc1MzE3NzU3M3ww&ixlib=rb-4.1.0&q=85',
-      date: '8 Mars 2024',
-      readTime: '12 min',
-      category: 'Stratégie',
-      featured: false,
-      color: 'from-blue-500 to-primary-dark'
-    },
-    {
-      title: 'Figma + Power BI : le duo gagnant',
-      excerpt: 'Comment utiliser Figma pour concevoir des interfaces Power BI qui convertissent vraiment.',
-      image: 'https://images.unsplash.com/photo-1648134859182-98df6e93ef58?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxkYXRhJTIwZGFzaGJvYXJkfGVufDB8fHxibHVlfDE3NTMxNzc1NjZ8MA&ixlib=rb-4.1.0&q=85',
-      date: '1 Mars 2024',
-      readTime: '10 min',
-      category: 'Outils',
-      featured: false,
-      color: 'from-primary-turquoise to-green-500'
-    },
-    {
-      title: 'Data Storytelling : raconter avec vos données',
-      excerpt: 'Maîtrisez l\'art de transformer vos insights en histoires captivantes qui poussent à l\'action.',
-      image: 'https://images.unsplash.com/photo-1532102235608-dc8fc689c9ab?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwxfHxkYXRhJTIwZGFzaGJvYXJkfGVufDB8fHxibHVlfDE3NTMxNzc1NjZ8MA&ixlib=rb-4.1.0&q=85',
-      date: '22 Février 2024',
-      readTime: '15 min',
-      category: 'Storytelling',
-      featured: true,
-      color: 'from-purple-500 to-indigo-500'
-    }
-  ];
+  
+  // Use the imported articles
+  const articles = blogArticles;
 
   return (
     <section className="py-20 bg-gradient-to-b from-neutral-50 to-white">
