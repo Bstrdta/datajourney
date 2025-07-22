@@ -424,7 +424,7 @@ const KPISlideshow = () => {
     switch (currentSlide) {
       case 0: return <PerformanceKPI />;
       case 1: return <AnalyticsKPI />;
-      case 2: return <CompletionKPI />;
+      case 2: return <GaugeKPI />;
       case 3: return <ActivityKPI />;
       default: return <PerformanceKPI />;
     }
