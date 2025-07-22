@@ -144,16 +144,6 @@ const ServicesPage = () => {
                 Trois approches expertes pour transformer vos dashboards en véritables outils de pilotage. 
                 Du quick win à la transformation complète.
               </p>
-              
-              {/* Certification Badges */}
-              <div className="flex flex-wrap justify-center gap-3 mb-8">
-                <div className="bg-gradient-to-r from-green-400 to-green-500 text-white px-3 py-1 rounded-lg text-xs font-bold shadow-lg flex items-center gap-1">
-                  <span>✓</span> POWER BI CERTIFIED
-                </div>
-                <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-3 py-1 rounded-lg text-xs font-bold shadow-lg flex items-center gap-1">
-                  <span>★</span> MICROSOFT MVP
-                </div>
-              </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-primary-turquoise mb-2">150+</div>
