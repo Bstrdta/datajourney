@@ -127,10 +127,10 @@ const Services = () => {
 
                     {/* CTA */}
                     <Link 
-                      to="/services" 
+                      to={currentLang === 'en' ? '/en/services' : '/services'} 
                       className="group/btn inline-flex items-center gap-2 bg-primary-turquoise text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-600 transition-colors duration-300"
                     >
-                      Découvrir ce service
+                      {currentLang === 'en' ? 'Discover this service' : 'Découvrir ce service'}
                       <ArrowRight 
                         size={16} 
                         className="group-hover/btn:translate-x-1 transition-transform duration-300"
