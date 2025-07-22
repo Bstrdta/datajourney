@@ -92,10 +92,11 @@ const Blog = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {articles.slice(1).map((article, index) => (
             <ScrollReveal key={index} delay={index * 0.1}>
-              <motion.article
-                className="group bg-white rounded-2xl overflow-hidden shadow-lg border border-neutral-100 hover:shadow-2xl transition-all duration-500 hover-lift"
-                whileHover={{ y: -8 }}
-              >
+              <Link to={currentLang === 'en' ? `/en/blog/${article.slug}` : `/blog/${article.slug}`}>
+                <motion.article
+                  className="group bg-white rounded-2xl overflow-hidden shadow-lg border border-neutral-100 hover:shadow-2xl transition-all duration-500 hover-lift cursor-pointer"
+                  whileHover={{ y: -8 }}
+                >
                 {/* Article Image */}
                 <div className="relative h-48 overflow-hidden">
                   <img 
