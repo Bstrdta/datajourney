@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, Calendar, Mail, Phone, MapPin, Clock, CheckCircle } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
+import CalendlyModal from './CalendlyModal';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
