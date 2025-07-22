@@ -7,20 +7,23 @@ import ScrollReveal from './ScrollReveal';
 import BeforeAfterSlider from './BeforeAfterSlider';
 
 const Comparison = () => {
+  const { t } = useTranslation('home');
+  const { currentLang } = useLanguage();
+
   const beforeItems = [
-    { icon: X, text: 'Tableaux illisibles', color: 'text-red-500' },
-    { icon: X, text: 'Trop d\'infos par page', color: 'text-red-500' },
-    { icon: X, text: 'Navigation confuse', color: 'text-red-500' },
-    { icon: X, text: 'Couleurs agressives', color: 'text-red-500' },
-    { icon: X, text: 'Faible adoption', color: 'text-red-500' },
+    { icon: X, text: currentLang === 'en' ? 'Unreadable tables' : 'Tableaux illisibles', color: 'text-red-500' },
+    { icon: X, text: currentLang === 'en' ? 'Too much info per page' : 'Trop d\'infos par page', color: 'text-red-500' },
+    { icon: X, text: currentLang === 'en' ? 'Confusing navigation' : 'Navigation confuse', color: 'text-red-500' },
+    { icon: X, text: currentLang === 'en' ? 'Aggressive colors' : 'Couleurs agressives', color: 'text-red-500' },
+    { icon: X, text: currentLang === 'en' ? 'Low adoption' : 'Faible adoption', color: 'text-red-500' },
   ];
 
   const afterItems = [
-    { icon: Check, text: 'Visualisation claire', color: 'text-green-500' },
-    { icon: Check, text: 'Hiérarchisation visuelle', color: 'text-green-500' },
-    { icon: Check, text: 'UX fluide', color: 'text-green-500' },
-    { icon: Check, text: 'Palette cohérente', color: 'text-green-500' },
-    { icon: Check, text: 'Engagement renforcé', color: 'text-green-500' },
+    { icon: Check, text: currentLang === 'en' ? 'Clear visualization' : 'Visualisation claire', color: 'text-green-500' },
+    { icon: Check, text: currentLang === 'en' ? 'Visual hierarchy' : 'Hiérarchisation visuelle', color: 'text-green-500' },
+    { icon: Check, text: currentLang === 'en' ? 'Smooth UX' : 'UX fluide', color: 'text-green-500' },
+    { icon: Check, text: currentLang === 'en' ? 'Cohesive palette' : 'Palette cohérente', color: 'text-green-500' },
+    { icon: Check, text: currentLang === 'en' ? 'Enhanced engagement' : 'Engagement renforcé', color: 'text-green-500' },
   ];
 
   return (
