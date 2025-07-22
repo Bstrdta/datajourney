@@ -40,7 +40,156 @@ const Hero = () => {
   const toggleProgress = Math.min(scrollY / 200, 1); // 200px de scroll pour animation complète (plus rapide)
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-dark via-primary-dark to-blue-900 pb-20">
+    <>
+      {/* Full Screen Intro Animation */}
+      {showIntro && (
+        <motion.div
+          className="fixed inset-0 z-[100] bg-gradient-to-br from-primary-dark via-primary-dark to-blue-900 flex items-center justify-center"
+          initial={{ opacity: 1 }}
+          animate={{ opacity: introComplete ? 0 : 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+        >
+          {/* Background Pattern */}
+          <div 
+            className="absolute inset-0 opacity-10"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231ABC9C' fill-opacity='0.4'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            }}
+          />
+
+          {/* Full Screen Logo */}
+          <motion.div
+            className="flex items-center gap-8 text-white"
+            initial={{ scale: 0.5, opacity: 0 }}
+            animate={{ 
+              scale: introComplete ? 0.2 : 1, 
+              opacity: introComplete ? 0 : 1,
+              y: introComplete ? -300 : 0,
+              x: introComplete ? -400 : 0
+            }}
+            transition={{ 
+              duration: introComplete ? 1 : 0.8, 
+              ease: introComplete ? "easeInOut" : "easeOut",
+              delay: introComplete ? 0 : 0.5
+            }}
+          >
+            {/* Data part */}
+            <motion.span 
+              className="text-8xl font-bold tracking-wide"
+              initial={{ 
+                textShadow: '0 0 30px rgba(26, 188, 156, 0.8), 0 0 60px rgba(26, 188, 156, 0.6)',
+              }}
+              animate={{
+                textShadow: [
+                  '0 0 30px rgba(26, 188, 156, 0.8), 0 0 60px rgba(26, 188, 156, 0.6)',
+                  '0 0 20px rgba(26, 188, 156, 1), 0 0 40px rgba(26, 188, 156, 0.8)',
+                  '0 0 30px rgba(26, 188, 156, 0.8), 0 0 60px rgba(26, 188, 156, 0.6)'
+                ]
+              }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            >
+              Data
+            </motion.span>
+            
+            {/* Toggle animé grand */}
+            <div className="relative w-32 h-16 bg-white/20 rounded-full border-2 border-white/30 flex items-center px-3">
+              <motion.div 
+                className="w-10 h-10 bg-primary-turquoise rounded-full shadow-2xl"
+                initial={{ x: 0, boxShadow: '0 0 25px rgba(26, 188, 156, 0.8)' }}
+                animate={{ 
+                  x: [0, 76, 0],
+                  boxShadow: [
+                    '0 0 25px rgba(26, 188, 156, 0.8)',
+                    '0 0 40px rgba(26, 188, 156, 1)',
+                    '0 0 25px rgba(26, 188, 156, 0.8)'
+                  ]
+                }}
+                transition={{ 
+                  duration: 2.5, 
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
+                <div className="w-full h-full bg-primary-turquoise rounded-full animate-pulse"></div>
+              </motion.div>
+              
+              {/* Trail effect pour l'intro */}
+              <motion.div
+                className="absolute w-10 h-10 bg-primary-turquoise/60 rounded-full"
+                style={{ left: 12 }}
+                animate={{ 
+                  x: [0, 76, 0],
+                  opacity: [0, 0.8, 0]
+                }}
+                transition={{ 
+                  duration: 2.5, 
+                  repeat: Infinity,
+                  ease: "easeInOut", 
+                  delay: 0.2
+                }}
+              />
+            </div>
+            
+            {/* Journey part */}
+            <motion.span 
+              className="text-8xl font-bold tracking-wide"
+              initial={{ 
+                textShadow: '0 0 20px rgba(26, 188, 156, 0.4)',
+              }}
+              animate={{
+                textShadow: [
+                  '0 0 20px rgba(26, 188, 156, 0.4)',
+                  '0 0 30px rgba(26, 188, 156, 0.8), 0 0 60px rgba(26, 188, 156, 0.6)',
+                  '0 0 20px rgba(26, 188, 156, 0.4)'
+                ]
+              }}
+              transition={{ 
+                duration: 2, 
+                repeat: Infinity, 
+                ease: "easeInOut",
+                delay: 1
+              }}
+            >
+              Journey
+            </motion.span>
+          </motion.div>
+
+          {/* Loading indicator */}
+          <motion.div
+            className="absolute bottom-20 left-1/2 transform -translate-x-1/2"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1 }}
+          >
+            <div className="flex space-x-2">
+              {[0, 1, 2].map((i) => (
+                <motion.div
+                  key={i}
+                  className="w-3 h-3 bg-primary-turquoise rounded-full"
+                  animate={{
+                    scale: [1, 1.5, 1],
+                    opacity: [0.5, 1, 0.5]
+                  }}
+                  transition={{
+                    duration: 1.5,
+                    repeat: Infinity,
+                    delay: i * 0.2
+                  }}
+                />
+              ))}
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
+
+      {/* Main Hero Content - only show after intro */}
+      <motion.section 
+        className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-dark via-primary-dark to-blue-900 pb-20"
+        initial={{ opacity: showIntro ? 0 : 1 }}
+        animate={{ opacity: showIntro ? 0 : 1 }}
+        transition={{ duration: 0.5, delay: showIntro ? 0 : 1 }}
+      >
       {/* Background Pattern */}
       <div 
         className="absolute inset-0 opacity-10"
