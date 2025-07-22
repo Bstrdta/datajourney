@@ -7,6 +7,7 @@ import CalendlyModal from '../components/CalendlyModal';
 const PortfolioPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedProject, setSelectedProject] = useState(null);
+  const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
 
   const categories = [
     { id: 'all', name: 'Tous les projets', count: 8 },
