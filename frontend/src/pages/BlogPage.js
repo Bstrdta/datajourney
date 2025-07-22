@@ -23,131 +23,18 @@ const BlogPage = () => {
 
   // Use the imported articles from blogArticles.js
   const articles = blogArticles;
-      category: 'power-bi',
-      categoryLabel: 'Power BI',
-      featured: false,
-      tags: ['Adoption', 'Change Management', 'ROI', 'Strategy'],
-      color: 'from-blue-500 to-primary-dark',
-      views: '1.8k',
-      likes: '89'
-    },
-    {
-      id: 3,
-      title: 'Figma + Power BI : le duo gagnant',
-      slug: 'figma-power-bi-workflow',
-      excerpt: 'Découvrez comment utiliser Figma pour concevoir des interfaces Power BI qui convertissent vraiment et accélèrent le développement.',
-      content: 'L\'intégration Figma/Power BI révolutionne le processus de conception...',
-      image: 'https://images.unsplash.com/photo-1648134859182-98df6e93ef58?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxkYXRhJTIwZGFzaGJvYXJkfGVufDB8fHxibHVlfDE3NTMxNzc1NjZ8MA&ixlib=rb-4.1.0&q=85',
-      author: 'Thomas Leroy',
-      authorRole: 'Senior BI Developer',
-      authorImage: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
-      date: '1 Mars 2024',
-      readTime: '10 min',
-      category: 'ux-design',
-      categoryLabel: 'UX Design',
-      featured: false,
-      tags: ['Figma', 'Prototyping', 'Workflow', 'Tools'],
-      color: 'from-primary-turquoise to-green-500',
-      views: '3.2k',
-      likes: '156'
-    },
-    {
-      id: 4,
-      title: 'Data Storytelling : raconter avec vos données',
-      slug: 'data-storytelling-guide',
-      excerpt: 'Maîtrisez l\'art de transformer vos insights en histoires captivantes qui poussent vraiment à l\'action décisionnelle.',
-      content: 'Le storytelling transforme des données froides en narratifs engageants...',
-      image: 'https://images.unsplash.com/photo-1532102235608-dc8fc689c9ab?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwxfHxkYXRhJTIwZGFzaGJvYXJkfGVufDB8fHxibHVlfDE3NTMxNzc1NjZ8MA&ixlib=rb-4.1.0&q=85',
-      author: 'Marie Dubois',
-      authorRole: 'Data Storytelling Expert',
-      authorImage: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face',
-      date: '22 Février 2024',
-      readTime: '15 min',
-      category: 'data-viz',
-      categoryLabel: 'Data Visualization',
-      featured: true,
-      tags: ['Storytelling', 'Narrative', 'Insights', 'Communication'],
-      color: 'from-purple-500 to-indigo-500',
-      views: '4.1k',
-      likes: '203'
-    },
-    {
-      id: 5,
-      title: 'Performance Power BI : optimiser pour la vitesse',
-      slug: 'performance-power-bi-optimisation',
-      excerpt: 'Guide complet pour optimiser les performances de vos rapports Power BI : DAX, modèle de données, et bonnes pratiques.',
-      content: 'La performance peut faire la différence entre adoption et abandon...',
-      image: 'https://images.unsplash.com/photo-1662460149857-2759c9b2c6f5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwxfHxhbmFseXRpY3MlMjBpbnRlcmZhY2V8ZW58MHx8fGJsdWV8MTc1MzE3NzU3M3ww&ixlib=rb-4.1.0&q=85',
-      author: 'Pierre Moreau',
-      authorRole: 'Power BI Architect',
-      authorImage: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face',
-      date: '14 Février 2024',
-      readTime: '18 min',
-      category: 'power-bi',
-      categoryLabel: 'Power BI',
-      featured: false,
-      tags: ['Performance', 'DAX', 'Optimization', 'Architecture'],
-      color: 'from-orange-500 to-red-500',
-      views: '2.9k',
-      likes: '134'
-    },
-    {
-      id: 6,
-      title: 'Cas d\'étude : Transformation BI chez TechCorp',
-      slug: 'case-study-techcorp-transformation',
-      excerpt: 'Retour d\'expérience détaillé sur la transformation complète de l\'écosystème BI chez TechCorp : défis, solutions, résultats.',
-      content: 'TechCorp avait des défis BI majeurs que nous avons transformés...',
-      image: 'https://images.unsplash.com/photo-1661028191560-3aa1f664f397?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwzfHxhbmFseXRpY3MlMjBpbnRlcmZhY2V8ZW58MHx8fGJsdWV8MTc1MzE3NzU3M3ww&ixlib=rb-4.1.0&q=85',
-      author: 'Laurent Dubois',
-      authorRole: 'BI Consultant Senior',
-      authorImage: 'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=150&h=150&fit=crop&crop=face',
-      date: '5 Février 2024',
-      readTime: '20 min',
-      category: 'case-studies',
-      categoryLabel: 'Cas d\'étude',
-      featured: false,
-      tags: ['Case Study', 'Transformation', 'ROI', 'Enterprise'],
-      color: 'from-teal-500 to-cyan-500',
-      views: '1.7k',
-      likes: '95'
-    },
-    // Plus d'articles pour remplir
-    {
-      id: 7,
-      title: 'Mobile-First Design pour Power BI',
-      slug: 'mobile-first-power-bi',
-      excerpt: 'Concevez des dashboards Power BI optimisés pour mobile dès la conception. Stratégies et bonnes pratiques.',
-      image: 'https://images.unsplash.com/photo-1648134859182-98df6e93ef58?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxkYXRhJTIwZGFzaGJvYXJkfGVufDB8fHxibHVlfDE3NTMxNzc1NjZ8MA&ixlib=rb-4.1.0&q=85',
-      author: 'Julie Chen',
-      authorRole: 'Mobile UX Designer',
-      authorImage: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face',
-      date: '28 Janvier 2024',
-      readTime: '9 min',
-      category: 'ux-design',
-      categoryLabel: 'UX Design',
-      featured: false,
-      tags: ['Mobile', 'Responsive', 'UX', 'Design'],
-      color: 'from-indigo-500 to-purple-500',
-      views: '1.4k',
-      likes: '76'
-    },
-    {
-      id: 8,
-      title: 'Sécurité et gouvernance des données BI',
-      slug: 'securite-gouvernance-power-bi',
-      excerpt: 'Implémentez une gouvernance robuste de vos données Power BI : sécurité, compliance, et bonnes pratiques.',
-      image: 'https://images.unsplash.com/photo-1662460149539-5d37b87e2f92?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwyfHxhbmFseXRpY3MlMjBpbnRlcmZhY2V8ZW58MHx8fGJsdWV8MTc1MzE3NzU3M3ww&ixlib=rb-4.1.0&q=85',
-      author: 'David Wilson',
-      authorRole: 'Data Governance Expert',
-      authorImage: 'https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=150&h=150&fit=crop&crop=face',
-      date: '20 Janvier 2024',
-      readTime: '14 min',
-      category: 'power-bi',
-      categoryLabel: 'Power BI',
-      featured: false,
-      tags: ['Security', 'Governance', 'Compliance', 'Best Practices'],
-      color: 'from-gray-600 to-gray-800',
-      views: '2.1k',
+
+  // Filter articles based on search and category
+  const filteredArticles = articles.filter(article => {
+    const matchesSearch = searchTerm === '' || 
+      article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      article.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+    
+    const matchesCategory = selectedCategory === 'all' || 
+      article.category.toLowerCase().includes(selectedCategory.toLowerCase());
+    
+    return matchesSearch && matchesCategory;
+  });
       likes: '112'
     }
   ];
