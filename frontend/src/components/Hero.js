@@ -215,7 +215,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           >
             <motion.button 
-              onClick={() => setIsCalendlyOpen(true)}
+              onClick={openCalendly}
               className="group inline-flex items-center gap-3 bg-primary-turquoise text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300"
               whileHover={{ 
                 scale: 1.05,
@@ -224,7 +224,7 @@ const Hero = () => {
               whileTap={{ scale: 0.98 }}
             >
               <Search size={24} />
-              Réservez un audit gratuit
+              {t('hero.cta')}
               <ArrowRight 
                 size={20} 
                 className="group-hover:translate-x-1 transition-transform duration-300"
