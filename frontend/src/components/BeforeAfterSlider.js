@@ -25,7 +25,7 @@ const BeforeAfterSlider = ({ beforeImage, afterImage, beforeAlt, afterAlt }) => 
 
   return (
     <div 
-      className="relative w-full h-96 rounded-2xl overflow-hidden cursor-col-resize select-none shadow-premium"
+      className="relative w-full h-[500px] rounded-2xl overflow-hidden cursor-col-resize select-none shadow-premium"
       onMouseMove={handleMouseMove}
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
