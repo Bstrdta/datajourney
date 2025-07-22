@@ -69,92 +69,140 @@ const Hero = () => {
             className="flex items-center gap-8 text-white"
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ 
-              scale: introComplete ? 0.2 : 1, 
-              opacity: introComplete ? 0 : 1,
-              y: introComplete ? -300 : 0,
-              x: introComplete ? -400 : 0
+              scale: introComplete ? 0.15 : 1, 
+              opacity: introComplete ? 0.9 : 1,
+              y: introComplete ? -350 : 0,
+              x: introComplete ? -800 : 0
             }}
             transition={{ 
-              duration: introComplete ? 1 : 0.8, 
-              ease: introComplete ? "easeInOut" : "easeOut",
-              delay: introComplete ? 0 : 0.5
+              duration: introComplete ? 0.8 : 0.6, 
+              ease: introComplete ? [0.25, 0.1, 0.25, 1] : "easeOut",
+              delay: introComplete ? 0 : 0.3
             }}
           >
             {/* Data part */}
             <motion.span 
-              className="text-8xl font-bold tracking-wide"
+              className="font-bold tracking-wide"
+              style={{
+                fontSize: introComplete ? "2rem" : "8rem"
+              }}
               initial={{ 
                 textShadow: '0 0 30px rgba(26, 188, 156, 0.8), 0 0 60px rgba(26, 188, 156, 0.6)',
               }}
               animate={{
-                textShadow: [
-                  '0 0 30px rgba(26, 188, 156, 0.8), 0 0 60px rgba(26, 188, 156, 0.6)',
-                  '0 0 20px rgba(26, 188, 156, 1), 0 0 40px rgba(26, 188, 156, 0.8)',
-                  '0 0 30px rgba(26, 188, 156, 0.8), 0 0 60px rgba(26, 188, 156, 0.6)'
-                ]
+                textShadow: introComplete 
+                  ? '0 0 0px transparent'
+                  : [
+                      '0 0 30px rgba(26, 188, 156, 0.8), 0 0 60px rgba(26, 188, 156, 0.6)',
+                      '0 0 20px rgba(26, 188, 156, 1), 0 0 40px rgba(26, 188, 156, 0.8)',
+                      '0 0 30px rgba(26, 188, 156, 0.8), 0 0 60px rgba(26, 188, 156, 0.6)'
+                    ]
               }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              transition={{ 
+                fontSize: { duration: introComplete ? 0.8 : 0 },
+                textShadow: { duration: introComplete ? 0.3 : 2, repeat: introComplete ? 0 : Infinity, ease: "easeInOut" }
+              }}
             >
               Data
             </motion.span>
             
-            {/* Toggle animé grand */}
-            <div className="relative w-32 h-16 bg-white/20 rounded-full border-2 border-white/30 flex items-center px-3">
+            {/* Toggle animé */}
+            <motion.div 
+              className="relative bg-white/20 rounded-full border-2 border-white/30 flex items-center"
+              style={{
+                width: introComplete ? "3rem" : "8rem",
+                height: introComplete ? "1.5rem" : "4rem",
+                padding: introComplete ? "0.25rem" : "0.75rem"
+              }}
+              transition={{ 
+                width: { duration: 0.8 },
+                height: { duration: 0.8 },
+                padding: { duration: 0.8 }
+              }}
+            >
               <motion.div 
-                className="w-10 h-10 bg-primary-turquoise rounded-full shadow-2xl"
+                className="bg-primary-turquoise rounded-full shadow-2xl"
+                style={{
+                  width: introComplete ? "1rem" : "2.5rem",
+                  height: introComplete ? "1rem" : "2.5rem"
+                }}
                 initial={{ x: 0, boxShadow: '0 0 25px rgba(26, 188, 156, 0.8)' }}
                 animate={{ 
-                  x: [0, 76, 0],
-                  boxShadow: [
-                    '0 0 25px rgba(26, 188, 156, 0.8)',
-                    '0 0 40px rgba(26, 188, 156, 1)',
-                    '0 0 25px rgba(26, 188, 156, 0.8)'
-                  ]
+                  x: introComplete ? "1.25rem" : [0, "4.75rem", 0], // Position finale pour le header
+                  boxShadow: introComplete 
+                    ? '0 0 10px rgba(26, 188, 156, 0.6)'
+                    : [
+                        '0 0 25px rgba(26, 188, 156, 0.8)',
+                        '0 0 40px rgba(26, 188, 156, 1)',
+                        '0 0 25px rgba(26, 188, 156, 0.8)'
+                      ]
                 }}
                 transition={{ 
-                  duration: 2.5, 
-                  repeat: Infinity,
-                  ease: "easeInOut"
+                  width: { duration: 0.8 },
+                  height: { duration: 0.8 },
+                  x: { 
+                    duration: introComplete ? 0.8 : 2.5, 
+                    repeat: introComplete ? 0 : Infinity,
+                    ease: introComplete ? [0.25, 0.1, 0.25, 1] : "easeInOut"
+                  },
+                  boxShadow: { 
+                    duration: introComplete ? 0.3 : 2.5, 
+                    repeat: introComplete ? 0 : Infinity 
+                  }
                 }}
               >
                 <div className="w-full h-full bg-primary-turquoise rounded-full animate-pulse"></div>
               </motion.div>
               
-              {/* Trail effect pour l'intro */}
-              <motion.div
-                className="absolute w-10 h-10 bg-primary-turquoise/60 rounded-full"
-                style={{ left: 12 }}
-                animate={{ 
-                  x: [0, 76, 0],
-                  opacity: [0, 0.8, 0]
-                }}
-                transition={{ 
-                  duration: 2.5, 
-                  repeat: Infinity,
-                  ease: "easeInOut", 
-                  delay: 0.2
-                }}
-              />
-            </div>
+              {/* Trail effect - disparaît pendant la transition */}
+              {!introComplete && (
+                <motion.div
+                  className="absolute bg-primary-turquoise/60 rounded-full"
+                  style={{ 
+                    left: "0.75rem",
+                    width: "2.5rem", 
+                    height: "2.5rem" 
+                  }}
+                  animate={{ 
+                    x: [0, "4.75rem", 0],
+                    opacity: [0, 0.8, 0]
+                  }}
+                  transition={{ 
+                    duration: 2.5, 
+                    repeat: Infinity,
+                    ease: "easeInOut", 
+                    delay: 0.2
+                  }}
+                />
+              )}
+            </motion.div>
             
             {/* Journey part */}
             <motion.span 
-              className="text-8xl font-bold tracking-wide"
+              className="font-bold tracking-wide"
+              style={{
+                fontSize: introComplete ? "2rem" : "8rem"
+              }}
               initial={{ 
                 textShadow: '0 0 20px rgba(26, 188, 156, 0.4)',
               }}
               animate={{
-                textShadow: [
-                  '0 0 20px rgba(26, 188, 156, 0.4)',
-                  '0 0 30px rgba(26, 188, 156, 0.8), 0 0 60px rgba(26, 188, 156, 0.6)',
-                  '0 0 20px rgba(26, 188, 156, 0.4)'
-                ]
+                textShadow: introComplete 
+                  ? '0 0 0px transparent'
+                  : [
+                      '0 0 20px rgba(26, 188, 156, 0.4)',
+                      '0 0 30px rgba(26, 188, 156, 0.8), 0 0 60px rgba(26, 188, 156, 0.6)',
+                      '0 0 20px rgba(26, 188, 156, 0.4)'
+                    ]
               }}
               transition={{ 
-                duration: 2, 
-                repeat: Infinity, 
-                ease: "easeInOut",
-                delay: 1
+                fontSize: { duration: introComplete ? 0.8 : 0 },
+                textShadow: { 
+                  duration: introComplete ? 0.3 : 2, 
+                  repeat: introComplete ? 0 : Infinity, 
+                  ease: "easeInOut",
+                  delay: introComplete ? 0 : 1
+                }
               }}
             >
               Journey
