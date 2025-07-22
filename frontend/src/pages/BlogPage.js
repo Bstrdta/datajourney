@@ -1,53 +1,28 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, Tag, User, ArrowRight, Search, Filter, Star, BookOpen } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../contexts/LanguageContext';
+import { blogArticles } from '../data/blogArticles';
 import ScrollReveal from '../components/ScrollReveal';
 
 const BlogPage = () => {
+  const { t } = useTranslation('blog');
+  const { currentLang } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
   const categories = [
-    { id: 'all', name: 'Tous les articles', count: 12 },
-    { id: 'ux-design', name: 'UX Design', count: 4 },
-    { id: 'power-bi', name: 'Power BI', count: 4 },
-    { id: 'data-viz', name: 'Data Visualization', count: 2 },
-    { id: 'case-studies', name: 'Cas d\'études', count: 2 }
+    { id: 'all', name: currentLang === 'en' ? 'All articles' : 'Tous les articles', count: blogArticles.length },
+    { id: 'ux-design', name: 'UX Design', count: 2 },
+    { id: 'power-bi', name: 'Power BI', count: 2 },
+    { id: 'tools', name: currentLang === 'en' ? 'Tools' : 'Outils', count: 1 },
+    { id: 'strategy', name: currentLang === 'en' ? 'Strategy' : 'Stratégie', count: 1 }
   ];
 
-  const articles = [
-    {
-      id: 1,
-      title: 'Les 5 erreurs UX fatales dans Power BI',
-      slug: 'erreurs-ux-power-bi',
-      excerpt: 'Découvrez les pièges les plus fréquents qui ruinent l\'expérience utilisateur de vos dashboards et comment les éviter définitivement.',
-      content: 'Ces erreurs peuvent transformer votre dashboard en véritable cauchemar utilisateur...',
-      image: 'https://images.unsplash.com/photo-1662460149539-5d37b87e2f92?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwyfHxhbmFseXRpY3MlMjBpbnRlcmZhY2V8ZW58MHx8fGJsdWV8MTc1MzE3NzU3M3ww&ixlib=rb-4.1.0&q=85',
-      author: 'Jean-Marc Dupont',
-      authorRole: 'UX Designer Senior',
-      authorImage: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face',
-      date: '15 Mars 2024',
-      readTime: '8 min',
-      category: 'ux-design',
-      categoryLabel: 'UX Design',
-      featured: true,
-      tags: ['UX', 'Power BI', 'Best Practices', 'Design'],
-      color: 'from-red-500 to-pink-500',
-      views: '2.5k',
-      likes: '127'
-    },
-    {
-      id: 2,
-      title: 'Pourquoi vos dashboards ne sont pas utilisés ?',
-      slug: 'adoption-dashboards-power-bi',
-      excerpt: 'Analysez les causes profondes du faible taux d\'adoption de vos rapports Power BI et les solutions concrètes pour y remédier.',
-      content: 'L\'adoption des dashboards est un enjeu critique pour le ROI de vos projets BI...',
-      image: 'https://images.unsplash.com/photo-1661028191560-3aa1f664f397?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwzfHxhbmFseXRpY3MlMjBpbnRlcmZhY2V8ZW58MHx8fGJsdWV8MTc1MzE3NzU3M3ww&ixlib=rb-4.1.0&q=85',
-      author: 'Sophie Martin',
-      authorRole: 'Product Owner BI',
-      authorImage: 'https://images.unsplash.com/photo-1494790108755-2616b612b830?w=150&h=150&fit=crop&crop=face',
-      date: '8 Mars 2024',
-      readTime: '12 min',
+  // Use the imported articles from blogArticles.js
+  const articles = blogArticles;
       category: 'power-bi',
       categoryLabel: 'Power BI',
       featured: false,
