@@ -89,10 +89,10 @@ const Header = () => {
                   </span>
                   {/* Toggle Button */}
                   <div className={`relative w-12 h-6 rounded-full transition-all duration-300 ${
-                    isScrolled ? 'bg-primary-dark/20' : 'bg-white/20'
+                    isScrolled ? 'bg-primary-dark/20' : 'bg-white/30 border border-white/50'
                   } flex items-center px-1`}>
                     <div className={`w-4 h-4 rounded-full transition-all duration-300 ${
-                      isScrolled ? 'bg-primary-turquoise' : 'bg-white'
+                      isScrolled ? 'bg-primary-turquoise' : 'bg-white shadow-sm'
                     } transform translate-x-5`}></div>
                   </div>
                   <span className={`text-2xl font-bold transition-colors duration-300 ${
