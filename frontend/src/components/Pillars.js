@@ -6,29 +6,38 @@ import { useLanguage } from '../contexts/LanguageContext';
 import ScrollReveal from './ScrollReveal';
 
 const Pillars = () => {
+  const { t } = useTranslation('home');
+  const { currentLang } = useLanguage();
+
   const pillars = [
     {
       icon: Palette,
-      title: 'UX/UI Design',
-      subtitle: 'Clarté, hiérarchie, esthétique',
-      description: 'Nous transformons vos données complexes en visualisations intuitives et élégantes qui favorisent la prise de décision.',
-      features: ['Design System cohérent', 'Hiérarchie visuelle claire', 'Palette de couleurs optimisée', 'Interface responsive'],
+      title: t('pillars.ux_ui.title'),
+      subtitle: currentLang === 'en' ? 'Clarity, hierarchy, aesthetics' : 'Clarté, hiérarchie, esthétique',
+      description: t('pillars.ux_ui.description'),
+      features: currentLang === 'en' 
+        ? ['Consistent Design System', 'Clear visual hierarchy', 'Optimized color palette', 'Responsive interface']
+        : ['Design System cohérent', 'Hiérarchie visuelle claire', 'Palette de couleurs optimisée', 'Interface responsive'],
       color: 'from-purple-500 to-purple-600'
     },
     {
       icon: BarChart3,
-      title: 'Power BI Expert',
-      subtitle: 'DAX, sécurité, performance',
-      description: 'Maîtrise technique complète de Power BI : optimisation des requêtes, sécurité des données et architecture performante.',
-      features: ['Optimisation DAX avancée', 'Sécurité Row Level', 'Architecture scalable', 'Performance monitoring'],
+      title: t('pillars.power_bi.title'),
+      subtitle: currentLang === 'en' ? 'DAX, security, performance' : 'DAX, sécurité, performance',
+      description: t('pillars.power_bi.description'),
+      features: currentLang === 'en'
+        ? ['Advanced DAX optimization', 'Row Level Security', 'Scalable architecture', 'Performance monitoring']
+        : ['Optimisation DAX avancée', 'Sécurité Row Level', 'Architecture scalable', 'Performance monitoring'],
       color: 'from-primary-turquoise to-green-500'
     },
     {
       icon: Brain,
-      title: 'Data Storytelling',
-      subtitle: 'Données qui racontent une histoire',
-      description: 'Nous structurons vos données pour créer des narratifs clairs qui guident naturellement vers l\'action.',
-      features: ['Narrative data-driven', 'KPIs métier alignés', 'Call-to-action intégrés', 'Insights automatisés'],
+      title: t('pillars.storytelling.title'),
+      subtitle: currentLang === 'en' ? 'Data that tells a story' : 'Données qui racontent une histoire',
+      description: t('pillars.storytelling.description'),
+      features: currentLang === 'en'
+        ? ['Data-driven narrative', 'Aligned business KPIs', 'Integrated call-to-action', 'Automated insights']
+        : ['Narrative data-driven', 'KPIs métier alignés', 'Call-to-action intégrés', 'Insights automatisés'],
       color: 'from-blue-500 to-primary-dark'
     }
   ];
