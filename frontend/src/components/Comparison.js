@@ -33,11 +33,10 @@ const Comparison = () => {
         <ScrollReveal>
           <div className="text-center mb-16">
             <h2 className="text-display font-bold text-primary-dark mb-6">
-              Ce que change une{' '}
-              <span className="text-primary-turquoise">refonte UX réussie</span>
+              {t('comparison.title')}
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-              Découvrez la transformation radicale de vos dashboards Power BI avec notre approche UX/Design
+              {t('comparison.subtitle')}
             </p>
           </div>
         </ScrollReveal>
