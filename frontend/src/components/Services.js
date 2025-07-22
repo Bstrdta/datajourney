@@ -143,7 +143,7 @@ const Services = () => {
                 </div>
 
                 {/* Hover Border Effect */}
-                <div className="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-primary-turquoise/20 transition-colors duration-300" />
+                <div className="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-primary-turquoise/20 transition-colors duration-300 pointer-events-none" />
               </motion.div>
             </ScrollReveal>
           ))}
