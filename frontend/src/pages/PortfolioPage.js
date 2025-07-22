@@ -610,6 +610,7 @@ const PortfolioPage = () => {
                     {/* CTA */}
                     <motion.button
                       className="w-full bg-primary-turquoise text-white py-4 rounded-xl font-semibold hover:bg-green-600 transition-colors duration-300 flex items-center justify-center gap-2"
+                      onClick={() => setIsCalendlyOpen(true)}
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                     >
