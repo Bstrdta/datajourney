@@ -543,6 +543,35 @@ const PortfolioPage = () => {
                       </ul>
                     </div>
 
+                    {/* Power BI Dashboard Demo - uniquement pour le projet RH */}
+                    {selectedProject.id === 1 && (
+                      <div>
+                        <h3 className="text-2xl font-bold text-primary-dark mb-4 flex items-center gap-2">
+                          <ExternalLink className="text-primary-turquoise" size={24} />
+                          Aperçu du dashboard
+                        </h3>
+                        <div className="bg-neutral-50 p-4 rounded-xl">
+                          <p className="text-sm text-neutral-600 mb-4">
+                            Voici un exemple interactif du dashboard RH développé pour ce projet :
+                          </p>
+                          <div className="w-full overflow-hidden rounded-lg shadow-lg">
+                            <iframe 
+                              title="Sea Green Shades_Light" 
+                              width="100%" 
+                              height="400" 
+                              src="https://app.powerbi.com/view?r=eyJrIjoiZDZiZjY5YmYtY2ZjZi00OWYxLWIwY2YtODAyNTJlM2I3YTdlIiwidCI6ImMzOTA5YzMzLWZhYzEtNDE5OS04MTNhLWFmMzVlNWQwNmE1ZSJ9" 
+                              frameborder="0" 
+                              allowFullScreen="true"
+                              className="w-full"
+                            />
+                          </div>
+                          <p className="text-xs text-neutral-500 mt-2">
+                            Dashboard interactif - Vous pouvez cliquer et explorer les données
+                          </p>
+                        </div>
+                      </div>
+                    )}
+
                     {/* Testimonial */}
                     <div className="bg-neutral-50 rounded-2xl p-6">
                       <p className="text-neutral-700 italic text-lg mb-4 leading-relaxed">
