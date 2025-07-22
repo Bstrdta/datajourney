@@ -49,11 +49,10 @@ const Pillars = () => {
         <ScrollReveal>
           <div className="text-center mb-16">
             <h2 className="text-display font-bold text-primary-dark mb-6">
-              Une approche unique, au croisement de la{' '}
-              <span className="text-primary-turquoise">data et du design</span>
+              {t('pillars.title')}
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-              Notre expertise combine compétences techniques Power BI et vision UX pour créer des dashboards qui transforment vraiment votre activité.
+              {t('pillars.subtitle')}
             </p>
           </div>
         </ScrollReveal>
