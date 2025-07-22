@@ -3,6 +3,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from './contexts/LanguageContext';
 import { CalendlyProvider } from './contexts/CalendlyContext';
+import { LogoAnimationProvider } from './contexts/LogoAnimationContext';
 
 // Import components
 import Header from './components/Header';
