@@ -143,7 +143,7 @@ const Header = () => {
               className={`flex items-center gap-2 px-3 py-2 rounded-lg font-medium transition-all duration-300 ${
                 isScrolled
                   ? 'text-neutral-700 hover:bg-neutral-100'
-                  : 'text-primary-dark hover:bg-white/10'
+                  : 'text-white hover:bg-white/20 shadow-sm'
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
