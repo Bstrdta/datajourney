@@ -8,7 +8,7 @@ import ScrollReveal from '../components/ScrollReveal';
 
 const ServicesPage = () => {
   const { t } = useTranslation('services');
-  const { openCalendly } = useCalendly();
+  const { openCalendly, isCalendlyOpen, closeCalendly } = useCalendly();
   const { currentLang } = useLanguage();
   const services = [
     {
