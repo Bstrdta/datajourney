@@ -10,22 +10,22 @@ const Footer = () => {
   const { currentLang } = useLanguage();
   const footerLinks = {
     services: [
-      { name: 'Refonte UX Power BI', path: '/services#refonte' },
-      { name: 'Création de Dashboards', path: '/services#creation' },
-      { name: 'Coaching UX', path: '/services#coaching' },
-      { name: 'Audit gratuit', path: '/services#audit' }
+      { name: currentLang === 'en' ? 'UX Power BI Redesign' : 'Refonte UX Power BI', path: currentLang === 'en' ? '/en/services' : '/services' },
+      { name: currentLang === 'en' ? 'Dashboard Creation' : 'Création de Dashboards', path: currentLang === 'en' ? '/en/services' : '/services' },
+      { name: currentLang === 'en' ? 'UX Coaching' : 'Coaching UX', path: currentLang === 'en' ? '/en/services' : '/services' },
+      { name: currentLang === 'en' ? 'Free Audit' : 'Audit gratuit', path: currentLang === 'en' ? '/en/services' : '/services' }
     ],
     ressources: [
-      { name: 'Portfolio', path: '/portfolio' },
-      { name: 'Blog & Articles', path: '/blog' },
-      { name: 'Guide PDF gratuit', path: '/#lead-magnet' },
-      { name: 'Cas d\'études', path: '/portfolio' }
+      { name: 'Portfolio', path: currentLang === 'en' ? '/en/portfolio' : '/portfolio' },
+      { name: currentLang === 'en' ? 'Blog & Articles' : 'Blog & Articles', path: currentLang === 'en' ? '/en/blog' : '/blog' },
+      { name: currentLang === 'en' ? 'Free PDF Guide' : 'Guide PDF gratuit', path: currentLang === 'en' ? '/en#lead-magnet' : '/#lead-magnet' },
+      { name: currentLang === 'en' ? 'Case Studies' : 'Cas d\'études', path: currentLang === 'en' ? '/en/portfolio' : '/portfolio' }
     ],
     entreprise: [
-      { name: 'À propos', path: '/about' },
-      { name: 'Notre équipe', path: '/about#team' },
-      { name: 'Nos valeurs', path: '/about#values' },
-      { name: 'Contact', path: '/#contact' }
+      { name: currentLang === 'en' ? 'About Us' : 'À propos', path: currentLang === 'en' ? '/en/about' : '/about' },
+      { name: currentLang === 'en' ? 'Our Team' : 'Notre équipe', path: currentLang === 'en' ? '/en/about#team' : '/about#team' },
+      { name: currentLang === 'en' ? 'Our Values' : 'Nos valeurs', path: currentLang === 'en' ? '/en/about#values' : '/about#values' },
+      { name: 'Contact', path: currentLang === 'en' ? '/en#contact' : '/#contact' }
     ]
   };
 
