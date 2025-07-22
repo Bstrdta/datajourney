@@ -60,12 +60,8 @@ const Header = () => {
                 to={item.path}
                 className={`relative px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
                   isActive(item.path)
-                    ? isScrolled 
-                      ? 'text-primary-turquoise bg-primary-turquoise/10' 
-                      : 'text-primary-turquoise bg-white/20'
-                    : isScrolled
-                      ? 'text-neutral-700 hover:text-primary-turquoise hover:bg-neutral-100'
-                      : 'text-white hover:text-primary-turquoise hover:bg-white/10'
+                    ? 'text-primary-turquoise bg-white/20 shadow-lg backdrop-blur-sm'
+                    : 'text-white hover:text-primary-turquoise hover:bg-white/10 backdrop-blur-sm'
                 }`}
               >
                 {item.name}
