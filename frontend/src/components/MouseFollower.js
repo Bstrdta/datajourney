@@ -164,31 +164,6 @@ const MouseFollower = () => {
           }}
         />
       ))}
-
-      {/* Speed indicator ripple */}
-      {mouseSpeed > 3 && (
-        <motion.div
-          className="fixed pointer-events-none z-30"
-          style={{
-            left: mousePosition.x,
-            top: mousePosition.y,
-            width: 60 + mouseSpeed * 20,
-            height: 60 + mouseSpeed * 20,
-            marginLeft: -(30 + mouseSpeed * 10),
-            marginTop: -(30 + mouseSpeed * 10),
-            border: `2px solid rgba(26, 188, 156, ${0.3 + mouseSpeed * 0.1})`,
-            borderRadius: '50%',
-          }}
-          animate={{
-            scale: [1, 2],
-            opacity: [0.6, 0],
-          }}
-          transition={{
-            duration: 0.6,
-            ease: "easeOut"
-          }}
-        />
-      )}
     </>
   );
 };
