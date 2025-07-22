@@ -61,18 +61,19 @@ const Blog = () => {
                   </div>
                 </div>
                 
-                <motion.button 
-                  className="group inline-flex items-center gap-2 bg-primary-turquoise text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-600 transition-colors duration-300"
-                  onClick={() => window.location.href = '/blog'}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  Lire l'article
-                  <ArrowRight 
-                    size={16} 
-                    className="group-hover:translate-x-1 transition-transform duration-300"
-                  />
-                </motion.button>
+                <Link to={currentLang === 'en' ? `/en/blog/${articles[0].slug}` : `/blog/${articles[0].slug}`}>
+                  <motion.button 
+                    className="group inline-flex items-center gap-2 bg-primary-turquoise text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-600 transition-colors duration-300"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {currentLang === 'en' ? 'Read article' : 'Lire l\'article'}
+                    <ArrowRight 
+                      size={16} 
+                      className="group-hover:translate-x-1 transition-transform duration-300"
+                    />
+                  </motion.button>
+                </Link>
               </div>
               
               <div className="relative h-64 lg:h-full">
