@@ -1,0 +1,89 @@
+{
+  "hero": {
+    "title": "Transformez vos données en",
+    "title_animated_words": ["décisions", "histoires", "révélations clés"],
+    "subtitle": "Spécialistes de la refonte UX/UI de rapports Power BI pour rendre vos données irrésistibles et vos décisions évidentes.",
+    "cta": "Réservez un audit gratuit",
+    "kpis": {
+      "satisfaction": "+95% de satisfaction client",
+      "time_saved": "70% de temps gagné en analyse",
+      "adoption": "+300% d'adoption utilisateur"
+    }
+  },
+  "comparison": {
+    "title": "De tableaux illisibles à des visualisations limpides",
+    "subtitle": "Découvrez comment nous transformons vos rapports Power BI",
+    "before": "Avant",
+    "after": "Après",
+    "before_description": "Tableaux Excel complexes et données dispersées",
+    "after_description": "Dashboard Power BI intuitif et visuellement impactant"
+  },
+  "pillars": {
+    "title": "Nos 3 piliers d'expertise",
+    "subtitle": "Une approche complète pour transformer vos données en avantage concurrentiel",
+    "ux_ui": {
+      "title": "UX/UI Design",
+      "description": "Design d'interfaces intuitives qui rendent vos données accessibles à tous"
+    },
+    "power_bi": {
+      "title": "Expert Power BI",
+      "description": "Maîtrise technique avancée de Power BI et de l'écosystème Microsoft"
+    },
+    "storytelling": {
+      "title": "Data Storytelling",
+      "description": "Transformation de vos données brutes en récits percutants et actionnables"
+    }
+  },
+  "services": {
+    "title": "Nos services",
+    "subtitle": "Des solutions sur mesure pour valoriser vos données",
+    "service1": {
+      "title": "Refonte UX de vos rapports existants",
+      "description": "Optimisation de l'expérience utilisateur de vos rapports Power BI pour une adoption maximale.",
+      "price": "À partir de 3 500€"
+    },
+    "service2": {
+      "title": "Création complète de tableaux de bord",
+      "description": "Conception et développement de tableaux de bord Power BI sur mesure, de A à Z.",
+      "price": "À partir de 7 500€"
+    },
+    "service3": {
+      "title": "Coaching UX pour équipes internes",
+      "description": "Formation et accompagnement de vos équipes pour créer des rapports engageants.",
+      "price": "À partir de 2 500€"
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Découvrez nos réalisations les plus emblématiques",
+    "view_all": "Voir tout le portfolio"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Conseils et insights pour optimiser vos données",
+    "view_all": "Voir tous les articles"
+  },
+  "lead_magnet": {
+    "title": "Guide gratuit : Checklist UX Power BI",
+    "description": "Téléchargez notre guide complet avec 25 points de contrôle pour améliorer l'UX de vos rapports Power BI.",
+    "form": {
+      "email_placeholder": "Votre adresse email",
+      "download": "Télécharger gratuitement"
+    }
+  },
+  "contact": {
+    "title": "Prêt à transformer vos données ?",
+    "subtitle": "Discutons de votre projet et découvrons ensemble le potentiel de vos données.",
+    "form": {
+      "name_placeholder": "Votre nom",
+      "email_placeholder": "Votre email",
+      "company_placeholder": "Votre entreprise",
+      "message_placeholder": "Parlez-nous de votre projet..."
+    },
+    "info": {
+      "phone": "+33 1 23 45 67 89",
+      "email": "contact@datajourney.fr",
+      "address": "Paris, France"
+    }
+  }
+}

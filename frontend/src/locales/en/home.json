@@ -1,0 +1,89 @@
+{
+  "hero": {
+    "title": "Transform your data into",
+    "title_animated_words": ["decisions", "stories", "key insights"],
+    "subtitle": "Specialists in Power BI UX/UI report redesign to make your data irresistible and your decisions obvious.",
+    "cta": "Book a free audit",
+    "kpis": {
+      "satisfaction": "+95% client satisfaction",
+      "time_saved": "70% time saved in analysis",
+      "adoption": "+300% user adoption"
+    }
+  },
+  "comparison": {
+    "title": "From unreadable tables to crystal-clear visualizations",
+    "subtitle": "Discover how we transform your Power BI reports",
+    "before": "Before",
+    "after": "After", 
+    "before_description": "Complex Excel tables and scattered data",
+    "after_description": "Intuitive and visually impactful Power BI dashboard"
+  },
+  "pillars": {
+    "title": "Our 3 pillars of expertise",
+    "subtitle": "A comprehensive approach to transform your data into competitive advantage",
+    "ux_ui": {
+      "title": "UX/UI Design",
+      "description": "Design of intuitive interfaces that make your data accessible to everyone"
+    },
+    "power_bi": {
+      "title": "Power BI Expert",
+      "description": "Advanced technical mastery of Power BI and the Microsoft ecosystem"
+    },
+    "storytelling": {
+      "title": "Data Storytelling",
+      "description": "Transformation of your raw data into compelling and actionable narratives"
+    }
+  },
+  "services": {
+    "title": "Our services",
+    "subtitle": "Tailored solutions to enhance your data",
+    "service1": {
+      "title": "UX redesign of your existing reports",
+      "description": "User experience optimization of your Power BI reports for maximum adoption.",
+      "price": "Starting from €3,500"
+    },
+    "service2": {
+      "title": "Complete dashboard creation",
+      "description": "Custom design and development of Power BI dashboards from A to Z.",
+      "price": "Starting from €7,500"
+    },
+    "service3": {
+      "title": "UX coaching for internal teams",
+      "description": "Training and support for your teams to create engaging reports.",
+      "price": "Starting from €2,500"
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Discover our most iconic achievements",
+    "view_all": "View full portfolio"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Tips and insights to optimize your data",
+    "view_all": "View all articles"
+  },
+  "lead_magnet": {
+    "title": "Free guide: Power BI UX Checklist",
+    "description": "Download our comprehensive guide with 25 checkpoints to improve the UX of your Power BI reports.",
+    "form": {
+      "email_placeholder": "Your email address",
+      "download": "Download for free"
+    }
+  },
+  "contact": {
+    "title": "Ready to transform your data?",
+    "subtitle": "Let's discuss your project and discover the potential of your data together.",
+    "form": {
+      "name_placeholder": "Your name",
+      "email_placeholder": "Your email",
+      "company_placeholder": "Your company",
+      "message_placeholder": "Tell us about your project..."
+    },
+    "info": {
+      "phone": "+33 1 23 45 67 89",
+      "email": "contact@datajourney.fr",
+      "address": "Paris, France"
+    }
+  }
+}
