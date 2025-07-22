@@ -119,10 +119,6 @@ const Services = () => {
                         <Clock size={16} className="text-primary-turquoise" />
                         <span className="text-sm font-medium">{service.duration}</span>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <Shield size={16} className="text-primary-turquoise" />
-                        <span className="text-sm font-bold text-primary-dark">{service.price}</span>
-                      </div>
                     </div>
 
                     {/* CTA */}
