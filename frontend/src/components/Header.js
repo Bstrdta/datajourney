@@ -5,6 +5,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useCalendly } from '../contexts/CalendlyContext';
+import { useLogoAnimation } from '../contexts/LogoAnimationContext';
 
 const Header = () => {
   const { t } = useTranslation('common');
