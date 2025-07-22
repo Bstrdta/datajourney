@@ -407,13 +407,6 @@ const ServicesPage = () => {
                           className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
                         />
                       </div>
-                      {/* Floating Badge */}
-                      <div className="absolute -top-4 -right-4 bg-white p-3 rounded-xl shadow-lg">
-                        <div className="flex items-center gap-2">
-                          <Star className="text-yellow-500" size={20} fill="currentColor" />
-                          <span className="font-bold text-primary-dark">4.9/5</span>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </ScrollReveal>
