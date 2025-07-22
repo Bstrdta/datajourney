@@ -9,6 +9,20 @@ const Hero = () => {
   const { t } = useTranslation('home');
   const { openCalendly } = useCalendly();
   const alternatingWords = t('hero.title_animated_words', { returnObjects: true });
+  
+  // State pour l'animation de scroll
+  const [scrollY, setScrollY] = useState(0);
+  
+  // Effect pour écouter le scroll
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
+  // Calculer la position de l'animation (de -100% à 100%)
+  const logoAnimationProgress = Math.min(scrollY / 500, 1); // 500px de scroll pour animation complète
+  const logoTransform = `translateX(${logoAnimationProgress * 200 - 100}%)`;
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-dark via-primary-dark to-blue-900 pb-20">
