@@ -1,0 +1,32 @@
+{
+  "title": "Portfolio", 
+  "subtitle": "Discover our achievements and the transformative impact of our Power BI solutions",
+  "filters": {
+    "all": "All projects",
+    "redesign": "UX Redesign",
+    "creation": "Complete Creation",
+    "coaching": "Coaching"
+  },
+  "projects": {
+    "project1": {
+      "title": "HR Dashboard - Tech Multinational",
+      "category": "UX Redesign",
+      "description": "Complete redesign of HR dashboard to improve manager engagement",
+      "challenge": "Complex interface with low adoption (15% of managers)",
+      "solution": "User-centered redesign with HR data storytelling",
+      "results": ["85% adoption", "70% less support questions", "95% satisfaction"]
+    },
+    "project2": {
+      "title": "Sales Dashboard - Retail",
+      "category": "Complete Creation", 
+      "description": "Creation of a dashboard ecosystem for a retail chain",
+      "challenge": "Data scattered across 15 different systems",
+      "solution": "Unified architecture with intuitive multi-level interface",
+      "results": ["300% adoption", "50% time savings", "400% ROI"]
+    }
+  },
+  "cta": {
+    "title": "Have a similar project in mind?",
+    "subtitle": "Let's talk about your challenge and discover the right solution together"
+  }
+}

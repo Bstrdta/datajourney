@@ -1,0 +1,32 @@
+{
+  "title": "Portfolio",
+  "subtitle": "Découvrez nos réalisations et l'impact transformateur de nos solutions Power BI",
+  "filters": {
+    "all": "Tous les projets",
+    "redesign": "Refonte UX",
+    "creation": "Création complète", 
+    "coaching": "Coaching"
+  },
+  "projects": {
+    "project1": {
+      "title": "Dashboard RH - Multinational Tech",
+      "category": "Refonte UX",
+      "description": "Refonte complète du tableau de bord RH pour améliorer l'engagement des managers",
+      "challenge": "Interface complexe avec faible adoption (15% des managers)",
+      "solution": "Redesign centré utilisateur avec storytelling des données RH",
+      "results": ["85% d'adoption", "70% moins de questions support", "95% de satisfaction"]
+    },
+    "project2": {
+      "title": "Tableau de Bord Commercial - Retail",
+      "category": "Création complète",
+      "description": "Création d'un ecosystème de dashboards pour une chaîne de magasins",
+      "challenge": "Données dispersées sur 15 systèmes différents",
+      "solution": "Architecture unifiée avec interface intuitive multi-niveaux",
+      "results": ["300% d'adoption", "50% de gain de temps", "ROI de 400%"]
+    }
+  },
+  "cta": {
+    "title": "Un projet similaire en tête ?",
+    "subtitle": "Parlons de votre défi et découvrons ensemble la solution adaptée"
+  }
+}

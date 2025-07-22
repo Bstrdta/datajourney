@@ -1,0 +1,14 @@
+{
+  "title": "Blog",
+  "subtitle": "Tips, insights and best practices to optimize your data",
+  "search_placeholder": "Search for an article...",
+  "categories": {
+    "all": "All articles",
+    "ux": "UX Design", 
+    "powerbi": "Power BI",
+    "data": "Data Analytics"
+  },
+  "read_time": "min read",
+  "no_results": "No articles found",
+  "load_more": "Load more articles"
+}

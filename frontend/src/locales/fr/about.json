@@ -1,0 +1,30 @@
+{
+  "title": "À propos de Data Journey",
+  "subtitle": "Notre mission : rendre vos données irrésistibles",
+  "mission": {
+    "title": "Notre mission",
+    "description": "Nous croyons que chaque donnée a une histoire à raconter. Notre mission est de transformer vos données complexes en récits visuels percutants qui inspirent l'action et facilitent la prise de décision."
+  },
+  "team": {
+    "title": "L'équipe",
+    "description": "Une équipe passionnée d'experts UX et Power BI"
+  },
+  "values": {
+    "title": "Nos valeurs",
+    "value1": {
+      "title": "Excellence technique",
+      "description": "Maîtrise parfaite de Power BI et des dernières innovations"
+    },
+    "value2": {
+      "title": "Centré utilisateur",
+      "description": "Chaque décision design est guidée par l'expérience utilisateur"
+    },
+    "value3": {
+      "title": "Impact mesurable",
+      "description": "Nous nous engageons sur des résultats concrets et mesurables"
+    }
+  },
+  "timeline": {
+    "title": "Notre parcours"
+  }
+}
