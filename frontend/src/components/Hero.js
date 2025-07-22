@@ -13,11 +13,27 @@ const Hero = () => {
   // State pour l'animation de scroll
   const [scrollY, setScrollY] = useState(0);
   
+  // State pour l'animation d'introduction
+  const [showIntro, setShowIntro] = useState(true);
+  const [introComplete, setIntroComplete] = useState(false);
+  
   // Effect pour écouter le scroll
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
+  // Effect pour gérer l'animation d'introduction
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIntroComplete(true);
+      setTimeout(() => {
+        setShowIntro(false);
+      }, 1000); // Délai pour l'animation de sortie
+    }, 3000); // Animation d'intro dure 3 secondes
+
+    return () => clearTimeout(timer);
   }, []);
   
   // Calculer la position du toggle (de gauche vers droite) - plus rapide
