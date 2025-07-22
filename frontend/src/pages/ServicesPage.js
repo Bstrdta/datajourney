@@ -407,7 +407,7 @@ const ServicesPage = () => {
       {/* Calendly Modal */}
       <CalendlyModal 
         isOpen={isCalendlyOpen} 
-        onClose={() => setIsCalendlyOpen(false)} 
+        onClose={closeCalendly} 
       />
     </div>
   );
