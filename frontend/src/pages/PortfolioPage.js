@@ -656,6 +656,12 @@ const PortfolioPage = () => {
           </ScrollReveal>
         </div>
       </section>
+
+      {/* Calendly Modal */}
+      <CalendlyModal 
+        isOpen={isCalendlyOpen} 
+        onClose={() => setIsCalendlyOpen(false)} 
+      />
     </div>
   );
 };
