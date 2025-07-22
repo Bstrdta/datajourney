@@ -175,7 +175,6 @@ const ServicesPage = () => {
         { step: 'Autonomisation progressive', detail: 'Transfert complet des méthodes et outils' }
       ],
       duration: currentLang === 'en' ? '2-4 weeks' : '2-4 semaines',
-      price: currentLang === 'en' ? 'Starting from €3,000' : 'À partir de 3 000€',
       image: 'https://images.unsplash.com/photo-1532102235608-dc8fc689c9ab?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwxfHxkYXRhJTIwZGFzaGJvYXJkfGVufDB8fHxibHVlfDE3NTMxNzc1NjZ8MA&ixlib=rb-4.1.0&q=85',
       color: 'from-purple-500 to-pink-500',
       benefits: currentLang === 'en' ? [
