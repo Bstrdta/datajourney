@@ -199,21 +199,29 @@ const Hero = () => {
             <AnimatedText words={alternatingWords} className="text-primary-turquoise" />
           </motion.h1>
 
-          {/* Logo DataJourney avec animation de scroll */}
+          {/* Logo DataJourney avec toggle animé */}
           <motion.div
-            className="flex justify-center mb-6 overflow-hidden"
+            className="flex justify-center mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.05, ease: "easeOut" }}
           >
-            <div 
-              className="relative w-full max-w-md h-16 flex items-center justify-center"
-              style={{ transform: logoTransform, transition: 'transform 0.1s ease-out' }}
-            >
-              <div className="bg-gradient-to-r from-primary-turquoise to-blue-400 bg-clip-text text-transparent text-2xl font-bold tracking-wide">
-                DataJourney
+            <div className="flex items-center gap-2">
+              <span className="text-white text-2xl font-bold tracking-wide">Data</span>
+              
+              {/* Toggle animé */}
+              <div className="relative w-12 h-6 bg-white/20 rounded-full border border-white/30">
+                <div 
+                  className="absolute top-0.5 w-5 h-5 bg-primary-turquoise rounded-full transition-all duration-300 ease-out shadow-lg"
+                  style={{ 
+                    left: `${2 + toggleProgress * 22}px` // De 2px à 24px (22px de mouvement)
+                  }}
+                >
+                  <div className="w-full h-full bg-primary-turquoise rounded-full animate-pulse"></div>
+                </div>
               </div>
-              <div className="absolute -top-1 -right-1 w-2 h-2 bg-primary-turquoise rounded-full animate-pulse"></div>
+              
+              <span className="text-white text-2xl font-bold tracking-wide">Journey</span>
             </div>
           </motion.div>
 
