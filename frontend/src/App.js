@@ -1,6 +1,7 @@
-import React from "react";
+import React, { Suspense } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { LanguageProvider } from './contexts/LanguageContext';
 
 // Import components
 import Header from './components/Header';
@@ -13,6 +14,7 @@ import Portfolio from './components/Portfolio';
 import Blog from './components/Blog';
 import LeadMagnet from './components/LeadMagnet';
 import Contact from './components/Contact';
+import CalendlyModal from './components/CalendlyModal';
 
 // Import pages
 import ServicesPage from './pages/ServicesPage';
@@ -38,17 +40,32 @@ const Home = () => {
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/portfolio" element={<PortfolioPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/about" element={<AboutPage />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+      <Suspense fallback={<div className="min-h-screen bg-neutral-50 flex items-center justify-center">
+        <div className="text-xl">Loading...</div>
+      </div>}>
+        <BrowserRouter>
+          <LanguageProvider>
+            <Header />
+            <Routes>
+              {/* French routes */}
+              <Route path="/" element={<Home />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/portfolio" element={<PortfolioPage />} />
+              <Route path="/blog" element={<BlogPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              
+              {/* English routes */}
+              <Route path="/en" element={<Home />} />
+              <Route path="/en/services" element={<ServicesPage />} />
+              <Route path="/en/portfolio" element={<PortfolioPage />} />
+              <Route path="/en/blog" element={<BlogPage />} />
+              <Route path="/en/about" element={<AboutPage />} />
+            </Routes>
+            <Footer />
+            <CalendlyModal />
+          </LanguageProvider>
+        </BrowserRouter>
+      </Suspense>
     </div>
   );
 }
