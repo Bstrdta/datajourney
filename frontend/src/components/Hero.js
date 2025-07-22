@@ -199,30 +199,125 @@ const Hero = () => {
             <AnimatedText words={alternatingWords} className="text-primary-turquoise" />
           </motion.h1>
 
-          {/* Logo DataJourney avec toggle animé */}
+          {/* Brand Intro Animation */}
           <motion.div
-            className="flex justify-center mb-6"
+            className="flex justify-center mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.05, ease: "easeOut" }}
+            onAnimationComplete={() => {
+              // Start the logo animation sequence after the initial fade-in
+              setTimeout(() => {
+                document.getElementById('logo-animation')?.classList.add('animate-sequence');
+              }, 500);
+            }}
           >
-            <div className="flex items-center gap-3">
-              <span className="text-white text-4xl font-bold tracking-wide">Data</span>
+            <div 
+              id="logo-animation"
+              className="flex items-center gap-3 text-6xl font-bold"
+              style={{
+                '--data-highlight': 'rgba(26, 188, 156, 0.8)',
+                '--journey-highlight': 'rgba(26, 188, 156, 0.8)',
+              }}
+            >
+              {/* Data part - starts highlighted */}
+              <motion.span 
+                className="text-white"
+                initial={{ 
+                  textShadow: '0 0 20px var(--data-highlight), 0 0 40px var(--data-highlight)',
+                  scale: 1.1 
+                }}
+                animate={{ 
+                  textShadow: scrollY > 100 ? '0 0 0px transparent' : '0 0 20px var(--data-highlight), 0 0 40px var(--data-highlight)',
+                  scale: scrollY > 100 ? 1 : 1.1
+                }}
+                transition={{ duration: 0.6 }}
+              >
+                Data
+              </motion.span>
               
-              {/* Toggle animé - plus grand */}
-              <div className="relative w-16 h-8 bg-white/20 rounded-full border border-white/30">
-                <div 
-                  className="absolute top-0.5 w-7 h-7 bg-primary-turquoise rounded-full transition-all duration-300 ease-out shadow-lg"
-                  style={{ 
-                    left: `${2 + toggleProgress * 30}px` // De 2px à 32px (30px de mouvement)
+              {/* Toggle/Transition Effect */}
+              <div className="relative w-20 h-10 bg-white/20 rounded-full border border-white/30 flex items-center px-2">
+                <motion.div 
+                  className="w-6 h-6 bg-primary-turquoise rounded-full shadow-lg"
+                  initial={{ x: 0, boxShadow: '0 0 15px rgba(26, 188, 156, 0.6)' }}
+                  animate={{ 
+                    x: scrollY > 50 ? 48 : 0,
+                    boxShadow: scrollY > 50 ? '0 0 25px rgba(26, 188, 156, 0.8)' : '0 0 15px rgba(26, 188, 156, 0.6)'
+                  }}
+                  transition={{ duration: 0.8, ease: "easeInOut" }}
+                  onAnimationComplete={(definition) => {
+                    if (definition.x === 48) {
+                      // Animation vers Journey complétée, déclencher la shrink animation
+                      setTimeout(() => {
+                        if (window.completeLogoAnimation) {
+                          window.completeLogoAnimation();
+                        }
+                      }, 500);
+                    }
                   }}
                 >
                   <div className="w-full h-full bg-primary-turquoise rounded-full animate-pulse"></div>
-                </div>
+                </motion.div>
+                
+                {/* Trail effect */}
+                <motion.div
+                  className="absolute w-6 h-6 bg-primary-turquoise/40 rounded-full"
+                  style={{ left: 8 }}
+                  animate={{ 
+                    x: scrollY > 50 ? 48 : 0,
+                    opacity: scrollY > 50 ? [0, 0.6, 0] : 0
+                  }}
+                  transition={{ duration: 0.8, ease: "easeInOut", delay: 0.1 }}
+                />
               </div>
               
-              <span className="text-white text-4xl font-bold tracking-wide">Journey</span>
+              {/* Journey part - gets highlighted when toggle reaches it */}
+              <motion.span 
+                className="text-white"
+                initial={{ 
+                  textShadow: '0 0 0px transparent',
+                  scale: 1 
+                }}
+                animate={{ 
+                  textShadow: scrollY > 50 ? '0 0 20px var(--journey-highlight), 0 0 40px var(--journey-highlight)' : '0 0 0px transparent',
+                  scale: scrollY > 50 ? 1.1 : 1
+                }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                Journey
+              </motion.span>
             </div>
+            
+            {/* Shrink and move to header animation */}
+            <motion.div
+              className="absolute inset-0 pointer-events-none"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: scrollY > 200 ? 1 : 0 }}
+              transition={{ duration: 0.4 }}
+            >
+              <motion.div
+                className="flex items-center gap-2 text-2xl font-bold text-white"
+                initial={{ scale: 1, y: 0 }}
+                animate={{ 
+                  scale: scrollY > 200 ? 0.4 : 1,
+                  y: scrollY > 200 ? -400 : 0,
+                  x: scrollY > 200 ? -600 : 0
+                }}
+                transition={{ duration: 1, ease: "easeInOut" }}
+                onAnimationComplete={() => {
+                  if (scrollY > 200 && window.showHeaderLogo) {
+                    window.showHeaderLogo();
+                  }
+                }}
+              >
+                <span>Data</span>
+                <div className="w-12 h-6 bg-white/20 rounded-full flex items-center px-1">
+                  <div className="w-4 h-4 bg-primary-turquoise rounded-full transform translate-x-5"></div>
+                </div>
+                <span>Journey</span>
+              </motion.div>
+            </motion.div>
           </motion.div>
 
           {/* Minimalist Badge */}
