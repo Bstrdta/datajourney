@@ -141,13 +141,13 @@ const Blog = () => {
                   
                   {/* Read Article Button */}
                   <div className="mt-4">
-                    <motion.button 
-                      className="inline-flex items-center gap-2 text-primary-turquoise font-semibold hover:text-green-600 transition-colors duration-300"
+                    <motion.span 
+                      className="inline-flex items-center gap-2 text-primary-turquoise font-semibold hover:text-green-600 transition-colors duration-300 cursor-pointer"
                       whileHover={{ x: 4 }}
                     >
                       {currentLang === 'en' ? 'Read article' : 'Lire l\'article'}
                       <ArrowRight size={16} />
-                    </motion.button>
+                    </motion.span>
                   </div>
                 </div>
               </motion.article>
