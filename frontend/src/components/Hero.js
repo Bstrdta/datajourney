@@ -200,6 +200,24 @@ const Hero = () => {
             <AnimatedText words={alternatingWords} className="text-primary-turquoise" />
           </motion.h1>
 
+          {/* Logo DataJourney avec animation de scroll */}
+          <motion.div
+            className="flex justify-center mb-6 overflow-hidden"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.05, ease: "easeOut" }}
+          >
+            <div 
+              className="relative w-full max-w-md h-16 flex items-center justify-center"
+              style={{ transform: logoTransform, transition: 'transform 0.1s ease-out' }}
+            >
+              <div className="bg-gradient-to-r from-primary-turquoise to-blue-400 bg-clip-text text-transparent text-2xl font-bold tracking-wide">
+                DataJourney
+              </div>
+              <div className="absolute -top-1 -right-1 w-2 h-2 bg-primary-turquoise rounded-full animate-pulse"></div>
+            </div>
+          </motion.div>
+
           {/* Minimalist Badge */}
           <motion.div
             className="flex justify-center mb-8"
