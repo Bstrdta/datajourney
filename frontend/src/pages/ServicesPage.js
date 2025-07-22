@@ -37,6 +37,15 @@ const ServicesPage = () => {
         'Guide de style & documentation',
         'Formation équipe (4h)',
         'Support 3 mois inclus'
+      ],
+      deliverables: [
+        'Rapport d\'audit UX/UI (PDF)',
+        'Prototype interactif Figma',
+        'Rapport Power BI optimisé (PBIX)',
+        'Documentation technique (DAX, modèle, sécurité)',
+        'Kit de formation & bonnes pratiques',
+        'Rapport de tests utilisateurs',
+        'Suivi post-livraison (usage, ROI, adoption)'
       ]
     },
     {
