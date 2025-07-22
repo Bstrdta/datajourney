@@ -137,13 +137,17 @@ const Blog = () => {
                         <span>{article.readTime}</span>
                       </div>
                     </div>
-                    
-                    <motion.div
-                      className="w-8 h-8 bg-neutral-100 rounded-full flex items-center justify-center group-hover:bg-primary-turquoise group-hover:text-white transition-all duration-300"
-                      whileHover={{ scale: 1.1 }}
+                  </div>
+                  
+                  {/* Read Article Button */}
+                  <div className="mt-4">
+                    <motion.button 
+                      className="inline-flex items-center gap-2 text-primary-turquoise font-semibold hover:text-green-600 transition-colors duration-300"
+                      whileHover={{ x: 4 }}
                     >
+                      {currentLang === 'en' ? 'Read article' : 'Lire l\'article'}
                       <ArrowRight size={16} />
-                    </motion.div>
+                    </motion.button>
                   </div>
                 </div>
               </motion.article>
