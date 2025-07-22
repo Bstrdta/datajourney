@@ -199,6 +199,18 @@ const Hero = () => {
             <AnimatedText words={alternatingWords} className="text-primary-turquoise" />
           </motion.h1>
 
+          {/* Specialist description */}
+          <motion.p 
+            className="text-xl text-neutral-300 mb-8 font-light leading-relaxed text-center max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
+          >
+            {t('language.current') === 'English' 
+              ? 'Specialists in Power BI UX/UI report redesign to make your data irresistible and your decisions obvious.'
+              : 'Spécialistes de la refonte UX/UI de rapports Power BI pour rendre vos données irrésistibles et vos décisions évidentes.'}
+          </motion.p>
+
           {/* Brand Intro Animation */}
           <motion.div
             className="flex justify-center mb-8"
