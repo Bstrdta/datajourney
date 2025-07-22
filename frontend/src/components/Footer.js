@@ -6,6 +6,8 @@ import { useTranslation } from 'react-i18next';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Footer = () => {
+  const { t } = useTranslation('common');
+  const { currentLang } = useLanguage();
   const footerLinks = {
     services: [
       { name: 'Refonte UX Power BI', path: '/services#refonte' },
