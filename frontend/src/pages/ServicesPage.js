@@ -260,6 +260,26 @@ const ServicesPage = () => {
                         </div>
                       </div>
 
+                      {/* Deliverables */}
+                      <div className="mb-8">
+                        <h3 className="text-xl font-semibold text-primary-dark mb-4 flex items-center gap-2">
+                          <Award className="text-primary-turquoise" size={20} />
+                          Livrables inclus
+                        </h3>
+                        <div className="bg-neutral-50 rounded-2xl p-6">
+                          <div className="grid grid-cols-1 gap-3">
+                            {service.deliverables.map((deliverable, idx) => (
+                              <div key={idx} className="flex items-start gap-3">
+                                <div className="w-6 h-6 bg-primary-turquoise rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                  <span className="text-white text-xs font-bold">{idx + 1}</span>
+                                </div>
+                                <span className="text-neutral-800 font-medium leading-relaxed">{deliverable}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+
                       {/* Pricing */}
                       <div className="flex flex-wrap gap-6 mb-8">
                         <div className="flex items-center gap-2">
