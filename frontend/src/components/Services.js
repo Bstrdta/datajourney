@@ -116,17 +116,16 @@ const Services = () => {
                     </div>
 
                     {/* CTA */}
-                    <motion.button 
+                    <Link 
+                      to="/services" 
                       className="group/btn inline-flex items-center gap-2 bg-primary-turquoise text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-600 transition-colors duration-300"
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
                     >
                       Découvrir ce service
                       <ArrowRight 
                         size={16} 
                         className="group-hover/btn:translate-x-1 transition-transform duration-300"
                       />
-                    </motion.button>
+                    </Link>
                   </div>
 
                   {/* Image Side */}
