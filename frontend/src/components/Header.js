@@ -97,6 +97,7 @@ const Header = () => {
           {/* CTA Button Desktop */}
           <div className="hidden lg:block">
             <motion.button
+              onClick={() => setIsCalendlyOpen(true)}
               className="bg-primary-turquoise text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl hover:bg-green-600 transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
