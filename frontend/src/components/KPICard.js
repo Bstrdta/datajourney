@@ -24,9 +24,9 @@ const KPISlideshow = () => {
     },
     {
       id: 3,
-      type: 'completion',
-      title: currentLang === 'en' ? 'Completion Rate' : 'Taux de Completion',
-      theme: 'light'
+      type: 'gauge',
+      title: currentLang === 'en' ? 'Performance Gauge' : 'Jauge de Performance',
+      theme: 'gradient'
     },
     {
       id: 4,
