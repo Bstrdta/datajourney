@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../contexts/LanguageContext';
 import CalendlyModal from './CalendlyModal';
 
 const Header = () => {
+  const { t } = useTranslation('common');
+  const { currentLang, switchLanguage, isInitialized } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
@@ -20,14 +24,23 @@ const Header = () => {
   }, []);
 
   const menuItems = [
-    { name: 'Accueil', path: '/' },
-    { name: 'Services', path: '/services' },
-    { name: 'Portfolio', path: '/portfolio' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'À propos', path: '/about' }
+    { name: t('nav.home'), path: currentLang === 'en' ? '/en' : '/' },
+    { name: t('nav.services'), path: currentLang === 'en' ? '/en/services' : '/services' },
+    { name: t('nav.portfolio'), path: currentLang === 'en' ? '/en/portfolio' : '/portfolio' },
+    { name: t('nav.blog'), path: currentLang === 'en' ? '/en/blog' : '/blog' },
+    { name: t('nav.about'), path: currentLang === 'en' ? '/en/about' : '/about' }
   ];
 
   const isActive = (path) => location.pathname === path;
+
+  const handleLanguageSwitch = () => {
+    const newLang = currentLang === 'fr' ? 'en' : 'fr';
+    switchLanguage(newLang);
+  };
+
+  if (!isInitialized) {
+    return null; // or a loading spinner
+  }
 
   return (
     <motion.header
@@ -44,7 +57,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
+          <Link to={currentLang === 'en' ? '/en' : '/'} className="flex items-center gap-3 group">
             <div className="flex items-center gap-1">
               <span className={`text-2xl font-bold transition-colors duration-300 ${
                 isScrolled ? 'text-primary-dark' : 'text-white'
@@ -94,15 +107,33 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button Desktop */}
-          <div className="hidden lg:block">
+          {/* Desktop Actions */}
+          <div className="hidden lg:flex items-center gap-4">
+            {/* Language Switch Button */}
+            <motion.button
+              onClick={handleLanguageSwitch}
+              className={`flex items-center gap-2 px-3 py-2 rounded-lg font-medium transition-all duration-300 ${
+                isScrolled
+                  ? 'text-neutral-700 hover:bg-neutral-100'
+                  : 'text-white hover:bg-white/10'
+              }`}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Globe size={18} />
+              <span className="text-sm">
+                {currentLang === 'fr' ? '🇫🇷 FR' : '🇬🇧 EN'}
+              </span>
+            </motion.button>
+
+            {/* CTA Button */}
             <motion.button
               onClick={() => setIsCalendlyOpen(true)}
               className="bg-primary-turquoise text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl hover:bg-green-600 transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Réservez un audit gratuit
+              {t('buttons.book_audit')}
             </motion.button>
           </div>
 
@@ -145,6 +176,21 @@ const Header = () => {
                   </Link>
                 ))}
                 
+                {/* Mobile Language Switch */}
+                <motion.button
+                  onClick={() => {
+                    handleLanguageSwitch();
+                    setIsMenuOpen(false);
+                  }}
+                  className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-medium text-neutral-700 hover:bg-neutral-50 transition-colors duration-300"
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Globe size={18} />
+                  <span>
+                    {currentLang === 'fr' ? '🇬🇧 Switch to English' : '🇫🇷 Passer au français'}
+                  </span>
+                </motion.button>
+                
                 {/* Mobile CTA */}
                 <motion.button
                   onClick={() => {
@@ -154,7 +200,7 @@ const Header = () => {
                   className="w-full mt-4 bg-primary-turquoise text-white px-6 py-3 rounded-xl font-semibold shadow-lg"
                   whileTap={{ scale: 0.95 }}
                 >
-                  Réservez un audit gratuit
+                  {t('buttons.book_audit')}
                 </motion.button>
               </nav>
             </motion.div>
