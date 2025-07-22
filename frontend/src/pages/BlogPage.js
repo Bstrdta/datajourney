@@ -35,17 +35,6 @@ const BlogPage = () => {
     
     return matchesSearch && matchesCategory;
   });
-      likes: '112'
-    }
-  ];
-
-  const filteredArticles = articles.filter(article => {
-    const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory;
-    const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         article.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         article.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
 
   const featuredArticles = articles.filter(article => article.featured);
   const recentArticles = articles.slice(0, 3);
