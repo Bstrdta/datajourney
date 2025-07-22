@@ -180,9 +180,9 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            Vous avez des données.
+            {t('hero.title')}
             <br />
-            Nous les transformons en{' '}
+            {t('language.current') === 'English' ? 'We transform them into' : 'Nous les transformons en'}{' '}
             <AnimatedText words={alternatingWords} className="text-primary-turquoise" />
           </motion.h1>
 
