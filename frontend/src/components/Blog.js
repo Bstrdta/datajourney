@@ -6,6 +6,8 @@ import { useLanguage } from '../contexts/LanguageContext';
 import ScrollReveal from './ScrollReveal';
 
 const Blog = () => {
+  const { t } = useTranslation('home');
+  const { currentLang } = useLanguage();
   const articles = [
     {
       title: 'Les 5 erreurs UX fatales dans Power BI',
