@@ -7,6 +7,8 @@ import { useLanguage } from '../contexts/LanguageContext';
 import ScrollReveal from './ScrollReveal';
 
 const Services = () => {
+  const { t } = useTranslation('home');
+  const { currentLang } = useLanguage();
   const services = [
     {
       icon: RefreshCw,
