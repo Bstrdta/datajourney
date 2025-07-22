@@ -171,7 +171,7 @@ const Header = () => {
             className={`lg:hidden p-2 rounded-lg transition-colors duration-300 ${
               isScrolled 
                 ? 'text-primary-dark hover:bg-neutral-100' 
-                : 'text-primary-dark hover:bg-white/10'
+                : 'text-white hover:bg-white/20'
             }`}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
