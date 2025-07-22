@@ -55,6 +55,7 @@ function App() {
                 <Route path="/services" element={<ServicesPage />} />
                 <Route path="/portfolio" element={<PortfolioPage />} />
                 <Route path="/blog" element={<BlogPage />} />
+                <Route path="/blog/:slug" element={<ArticleDetailPage />} />
                 <Route path="/about" element={<AboutPage />} />
                 
                 {/* English routes */}
@@ -62,6 +63,7 @@ function App() {
                 <Route path="/en/services" element={<ServicesPage />} />
                 <Route path="/en/portfolio" element={<PortfolioPage />} />
                 <Route path="/en/blog" element={<BlogPage />} />
+                <Route path="/en/blog/:slug" element={<ArticleDetailPage />} />
                 <Route path="/en/about" element={<AboutPage />} />
               </Routes>
               <Footer />
