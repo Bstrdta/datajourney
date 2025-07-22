@@ -236,6 +236,20 @@ test_plan:
   test_all: false
   test_priority: "high_first"
 
+  - task: "Replace hero section background image"
+    implemented: true
+    working: true
+    file: "frontend/src/components/Hero.js"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Successfully replaced the hero section background image from https://i.ibb.co/RTSPQyb/image.png to https://i.ibb.co/Xx4pF8Lp/Capture-d-cran-2025-07-22-230712.png as requested by user. Image displays properly with opacity-5 styling."
+
 agent_communication:
   - agent: "main"
     message: "✅ BILINGUAL IMPLEMENTATION COMPLETED: Core bilingual functionality fully working. Infrastructure, language switching, routing (/en URLs), header translation, homepage components (Hero, Services, Comparison, Pillars, Portfolio, Blog) successfully translated. Calendly modal integration working with translations. System ready for production use. Additional pages can be translated incrementally as needed."
+  - agent: "main"
+    message: "✅ HERO IMAGE REPLACEMENT COMPLETED: Successfully replaced the hero section background image with user-provided image from ibb.co. Direct image URL extracted and applied. Change visible on homepage with proper styling and opacity maintained."
