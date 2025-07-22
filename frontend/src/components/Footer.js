@@ -42,16 +42,21 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-12">
           <div className="text-center max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold mb-4">
-              Restez informé des dernières{' '}
-              <span className="text-primary-turquoise">tendances Power BI</span>
+              {currentLang === 'en' ? 'Stay informed about the latest' : 'Restez informé des dernières'}{' '}
+              <span className="text-primary-turquoise">
+                {currentLang === 'en' ? 'Power BI trends' : 'tendances Power BI'}
+              </span>
             </h3>
             <p className="text-neutral-300 mb-8">
-              Recevez nos conseils UX, guides pratiques et retours d'expérience directement dans votre boîte mail.
+              {currentLang === 'en' 
+                ? 'Receive our UX tips, practical guides and experience feedback directly in your mailbox.'
+                : 'Recevez nos conseils UX, guides pratiques et retours d\'expérience directement dans votre boîte mail.'
+              }
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
-                placeholder="votre.email@entreprise.com"
+                placeholder={currentLang === 'en' ? 'your.email@company.com' : 'votre.email@entreprise.com'}
                 className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-neutral-400 focus:border-primary-turquoise focus:outline-none"
               />
               <motion.button
@@ -59,7 +64,7 @@ const Footer = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                S'abonner
+                {currentLang === 'en' ? 'Subscribe' : 'S\'abonner'}
                 <ArrowRight size={16} />
               </motion.button>
             </div>
