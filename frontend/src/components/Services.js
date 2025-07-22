@@ -12,34 +12,40 @@ const Services = () => {
   const services = [
     {
       icon: RefreshCw,
-      title: 'Refonte UX de rapports Power BI',
-      subtitle: 'Revalorisation de rapports existants',
-      description: 'Audit complet de vos dashboards actuels, conception UX/UI sur Figma, puis implémentation technique optimisée.',
-      process: ['Audit UX/UI approfondi', 'Conception sur Figma', 'Développement Power BI', 'Formation équipe'],
-      duration: '4-8 semaines',
-      price: 'À partir de 5 000€',
+      title: t('services.service1.title'),
+      subtitle: currentLang === 'en' ? 'Existing reports enhancement' : 'Revalorisation de rapports existants',
+      description: t('services.service1.description'),
+      process: currentLang === 'en' 
+        ? ['Comprehensive UX/UI audit', 'Figma design', 'Power BI development', 'Team training']
+        : ['Audit UX/UI approfondi', 'Conception sur Figma', 'Développement Power BI', 'Formation équipe'],
+      duration: currentLang === 'en' ? '4-8 weeks' : '4-8 semaines',
+      price: t('services.service1.price'),
       image: 'https://images.unsplash.com/photo-1661028191560-3aa1f664f397?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwzfHxhbmFseXRpY3MlMjBpbnRlcmZhY2V8ZW58MHx8fGJsdWV8MTc1MzE3NzU3M3ww&ixlib=rb-4.1.0&q=85',
       color: 'from-blue-500 to-primary-dark'
     },
     {
       icon: Plus,
-      title: 'Création complète de dashboards',
-      subtitle: 'De la modélisation à la visualisation',
-      description: 'Cadrage métier, définition des KPIs, architecture des données, conception UX et mise en production complète.',
-      process: ['Cadrage métier & KPIs', 'Architecture de données', 'Design UX complet', 'Déploiement & monitoring'],
-      duration: '6-12 semaines',
-      price: 'À partir de 8 000€',
+      title: t('services.service2.title'),
+      subtitle: currentLang === 'en' ? 'From modeling to visualization' : 'De la modélisation à la visualisation',
+      description: t('services.service2.description'),
+      process: currentLang === 'en'
+        ? ['Business scoping & KPIs', 'Data architecture', 'Complete UX design', 'Deployment & monitoring']
+        : ['Cadrage métier & KPIs', 'Architecture de données', 'Design UX complet', 'Déploiement & monitoring'],
+      duration: currentLang === 'en' ? '6-12 weeks' : '6-12 semaines',
+      price: t('services.service2.price'),
       image: 'https://images.unsplash.com/photo-1648134859182-98df6e93ef58?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxkYXRhJTIwZGFzaGJvYXJkfGVufDB8fHxibHVlfDE3NTMxNzc1NjZ8MA&ixlib=rb-4.1.0&q=85',
       color: 'from-primary-turquoise to-green-500'
     },
     {
       icon: Users,
-      title: 'Coaching UX',
-      subtitle: 'Accompagnement d\'équipes internes',
-      description: 'Formation de vos équipes aux bonnes pratiques UX Power BI, co-design et mise en place de guidelines.',
-      process: ['Audit des pratiques', 'Formation équipe', 'Co-design guidé', 'Guidelines & documentation'],
-      duration: '2-4 semaines',
-      price: 'À partir de 3 000€',
+      title: t('services.service3.title'),
+      subtitle: currentLang === 'en' ? 'Internal teams coaching' : 'Accompagnement d\'équipes internes',
+      description: t('services.service3.description'),
+      process: currentLang === 'en'
+        ? ['Practice audit', 'Team training', 'Guided co-design', 'Guidelines & documentation']
+        : ['Audit des pratiques', 'Formation équipe', 'Co-design guidé', 'Guidelines & documentation'],
+      duration: currentLang === 'en' ? '2-4 weeks' : '2-4 semaines',
+      price: t('services.service3.price'),
       image: 'https://images.unsplash.com/photo-1532102235608-dc8fc689c9ab?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwxfHxkYXRhJTIwZGFzaGJvYXJkfGVufDB8fHxibHVlfDE3NTMxNzc1NjZ8MA&ixlib=rb-4.1.0&q=85',
       color: 'from-purple-500 to-pink-500'
     }
