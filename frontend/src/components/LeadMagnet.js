@@ -82,7 +82,7 @@ const LeadMagnet = () => {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-br from-primary-turquoise/10 via-blue-50 to-primary-dark/5">
+    <section id="lead-magnet" className="py-20 bg-gradient-to-br from-primary-turquoise/10 via-blue-50 to-primary-dark/5">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
           
