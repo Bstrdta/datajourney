@@ -35,7 +35,6 @@ const ServicesPage = () => {
         { step: 'Formation équipe', detail: 'Accompagnement change management et bonnes pratiques' }
       ],
       duration: currentLang === 'en' ? '4-8 weeks' : '4-8 semaines',
-      price: currentLang === 'en' ? 'Starting from €5,000' : 'À partir de 5 000€',
       image: 'https://images.unsplash.com/photo-1661028191560-3aa1f664f397?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwzfHxhbmFseXRpY3MlMjBpbnRlcmZhY2V8ZW58MHx8fGJsdWV8MTc1MzE3NzU3M3ww&ixlib=rb-4.1.0&q=85',
       color: 'from-blue-500 to-primary-dark',
       benefits: currentLang === 'en' ? [
