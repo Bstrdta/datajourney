@@ -38,27 +38,27 @@ const Comparison = () => {
         </ScrollReveal>
 
         {/* Before/After Slider */}
-        <ScrollReveal className="mb-16">
+        <ScrollReveal className="mb-12">
           <BeforeAfterSlider 
-            beforeImage="https://images.unsplash.com/photo-1662460149539-5d37b87e2f92?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwyfHxhbmFseXRpY3MlMjBpbnRlcmZhY2V8ZW58MHx8fGJsdWV8MTc1MzE3NzU3M3ww&ixlib=rb-4.1.0&q=85"
-            afterImage="https://images.unsplash.com/photo-1662460149857-2759c9b2c6f5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwxfHxhbmFseXRpY3MlMjBpbnRlcmZhY2V8ZW58MHx8fGJsdWV8MTc1MzE3NzU3M3ww&ixlib=rb-4.1.0&q=85"
-            beforeAlt="Dashboard avant refonte - interface complexe"
-            afterAlt="Dashboard après refonte - interface claire"
+            beforeImage="https://images.unsplash.com/photo-1529078155058-5d716f45d604?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85"
+            afterImage="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85"
+            beforeAlt="Rapport Excel complexe et surchargé"
+            afterAlt="Dashboard Power BI moderne et intuitif"
           />
         </ScrollReveal>
 
         {/* Comparison Grid */}
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Before Column */}
           <ScrollReveal direction="left" delay={0.2}>
-            <div className="bg-red-50 rounded-3xl p-8 border border-red-100">
-              <div className="flex items-center gap-3 mb-8">
-                <div className="w-12 h-12 bg-red-500 rounded-2xl flex items-center justify-center">
-                  <X className="text-white" size={24} />
+            <div className="bg-red-50 rounded-2xl p-6 border border-red-100">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 bg-red-500 rounded-xl flex items-center justify-center">
+                  <X className="text-white" size={20} />
                 </div>
-                <h3 className="text-2xl font-bold text-red-700">AVANT</h3>
+                <h3 className="text-xl font-bold text-red-700">AVANT</h3>
               </div>
-              <ul className="space-y-4">
+              <ul className="space-y-3">
                 {beforeItems.map((item, index) => (
                   <motion.li 
                     key={index}
@@ -68,8 +68,8 @@ const Comparison = () => {
                     transition={{ delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <item.icon className={item.color} size={20} />
-                    <span className="font-medium">{item.text}</span>
+                    <item.icon className={item.color} size={16} />
+                    <span className="font-medium text-sm">{item.text}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -78,14 +78,14 @@ const Comparison = () => {
 
           {/* After Column */}
           <ScrollReveal direction="right" delay={0.4}>
-            <div className="bg-green-50 rounded-3xl p-8 border border-green-100">
-              <div className="flex items-center gap-3 mb-8">
-                <div className="w-12 h-12 bg-green-500 rounded-2xl flex items-center justify-center">
-                  <Check className="text-white" size={24} />
+            <div className="bg-green-50 rounded-2xl p-6 border border-green-100">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center">
+                  <Check className="text-white" size={20} />
                 </div>
-                <h3 className="text-2xl font-bold text-green-700">APRÈS</h3>
+                <h3 className="text-xl font-bold text-green-700">APRÈS</h3>
               </div>
-              <ul className="space-y-4">
+              <ul className="space-y-3">
                 {afterItems.map((item, index) => (
                   <motion.li 
                     key={index}
@@ -95,8 +95,8 @@ const Comparison = () => {
                     transition={{ delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <item.icon className={item.color} size={20} />
-                    <span className="font-medium">{item.text}</span>
+                    <item.icon className={item.color} size={16} />
+                    <span className="font-medium text-sm">{item.text}</span>
                   </motion.li>
                 ))}
               </ul>
