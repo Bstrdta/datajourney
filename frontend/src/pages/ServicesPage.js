@@ -7,7 +7,9 @@ import { useCalendly } from '../contexts/CalendlyContext';
 import ScrollReveal from '../components/ScrollReveal';
 
 const ServicesPage = () => {
-  const [isCalendlyOpen, setIsCalendlyOpen] = React.useState(false);
+  const { t } = useTranslation('services');
+  const { openCalendly } = useCalendly();
+  const { currentLang } = useLanguage();
   const services = [
     {
       id: 'refonte',
