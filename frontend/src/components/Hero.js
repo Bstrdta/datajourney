@@ -66,7 +66,7 @@ const Hero = () => {
 
           {/* Full Screen Logo */}
           <motion.div
-            className="flex items-center gap-8 text-white"
+            className="flex items-center gap-4 sm:gap-8 text-white px-4 sm:px-0"
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ 
               scale: introComplete ? 0.15 : 1, 
@@ -84,7 +84,13 @@ const Hero = () => {
             <motion.span 
               className="font-bold tracking-wide"
               style={{
-                fontSize: introComplete ? "2rem" : "8rem"
+                fontSize: introComplete 
+                  ? "2rem" 
+                  : window.innerWidth < 640 
+                    ? "4rem" 
+                    : window.innerWidth < 1024 
+                      ? "6rem" 
+                      : "8rem"
               }}
               initial={{ 
                 textShadow: '0 0 30px rgba(26, 188, 156, 0.8), 0 0 60px rgba(26, 188, 156, 0.6)',
@@ -106,13 +112,29 @@ const Hero = () => {
               Data
             </motion.span>
             
-            {/* Toggle animé */}
+            {/* Toggle animé - responsive */}
             <motion.div 
               className="relative bg-white/20 rounded-full border-2 border-white/30 flex items-center"
               style={{
-                width: introComplete ? "3rem" : "8rem",
-                height: introComplete ? "1.5rem" : "4rem",
-                padding: introComplete ? "0.25rem" : "0.75rem"
+                width: introComplete 
+                  ? "3rem" 
+                  : window.innerWidth < 640 
+                    ? "4rem" 
+                    : window.innerWidth < 1024 
+                      ? "6rem" 
+                      : "8rem",
+                height: introComplete 
+                  ? "1.5rem" 
+                  : window.innerWidth < 640 
+                    ? "2rem" 
+                    : window.innerWidth < 1024 
+                      ? "3rem" 
+                      : "4rem",
+                padding: introComplete 
+                  ? "0.25rem" 
+                  : window.innerWidth < 640 
+                    ? "0.5rem" 
+                    : "0.75rem"
               }}
               transition={{ 
                 width: { duration: 0.8 },
@@ -123,12 +145,30 @@ const Hero = () => {
               <motion.div 
                 className="bg-primary-turquoise rounded-full shadow-2xl"
                 style={{
-                  width: introComplete ? "1rem" : "2.5rem",
-                  height: introComplete ? "1rem" : "2.5rem"
+                  width: introComplete 
+                    ? "1rem" 
+                    : window.innerWidth < 640 
+                      ? "1.25rem" 
+                      : window.innerWidth < 1024 
+                        ? "1.75rem" 
+                        : "2.5rem",
+                  height: introComplete 
+                    ? "1rem" 
+                    : window.innerWidth < 640 
+                      ? "1.25rem" 
+                      : window.innerWidth < 1024 
+                        ? "1.75rem" 
+                        : "2.5rem"
                 }}
                 initial={{ x: 0, boxShadow: '0 0 25px rgba(26, 188, 156, 0.8)' }}
                 animate={{ 
-                  x: introComplete ? "1.25rem" : [0, "4.75rem", 0], // Position finale pour le header
+                  x: introComplete 
+                    ? "1.25rem" 
+                    : window.innerWidth < 640 
+                      ? [0, "2.25rem", 0]
+                      : window.innerWidth < 1024 
+                        ? [0, "3.5rem", 0]
+                        : [0, "4.75rem", 0],
                   boxShadow: introComplete 
                     ? '0 0 10px rgba(26, 188, 156, 0.6)'
                     : [
@@ -154,17 +194,29 @@ const Hero = () => {
                 <div className="w-full h-full bg-primary-turquoise rounded-full animate-pulse"></div>
               </motion.div>
               
-              {/* Trail effect - disparaît pendant la transition */}
+              {/* Trail effect - responsive */}
               {!introComplete && (
                 <motion.div
                   className="absolute bg-primary-turquoise/60 rounded-full"
                   style={{ 
-                    left: "0.75rem",
-                    width: "2.5rem", 
-                    height: "2.5rem" 
+                    left: window.innerWidth < 640 ? "0.5rem" : "0.75rem",
+                    width: window.innerWidth < 640 
+                      ? "1.25rem" 
+                      : window.innerWidth < 1024 
+                        ? "1.75rem" 
+                        : "2.5rem", 
+                    height: window.innerWidth < 640 
+                      ? "1.25rem" 
+                      : window.innerWidth < 1024 
+                        ? "1.75rem" 
+                        : "2.5rem"
                   }}
                   animate={{ 
-                    x: [0, "4.75rem", 0],
+                    x: window.innerWidth < 640 
+                      ? [0, "2.25rem", 0]
+                      : window.innerWidth < 1024 
+                        ? [0, "3.5rem", 0]
+                        : [0, "4.75rem", 0],
                     opacity: [0, 0.8, 0]
                   }}
                   transition={{ 
@@ -181,7 +233,13 @@ const Hero = () => {
             <motion.span 
               className="font-bold tracking-wide"
               style={{
-                fontSize: introComplete ? "2rem" : "8rem"
+                fontSize: introComplete 
+                  ? "2rem" 
+                  : window.innerWidth < 640 
+                    ? "4rem" 
+                    : window.innerWidth < 1024 
+                      ? "6rem" 
+                      : "8rem"
               }}
               initial={{ 
                 textShadow: '0 0 20px rgba(26, 188, 156, 0.4)',
