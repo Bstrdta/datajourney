@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Comparison from './components/Comparison';
 import KPISlideshow from './components/KPICard';
+import DashboardShowcase from './components/DashboardShowcase';
 import Pillars from './components/Pillars';
 import Services from './components/Services';
 import ProcessFlow from './components/ProcessFlow';
