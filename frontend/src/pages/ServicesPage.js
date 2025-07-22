@@ -388,20 +388,12 @@ const ServicesPage = () => {
                       <div className="flex flex-col sm:flex-row gap-4">
                         <motion.button 
                           onClick={openCalendly}
-                          className="flex-1 bg-primary-turquoise text-white px-8 py-4 rounded-xl font-semibold hover:bg-green-600 transition-colors duration-300 flex items-center justify-center gap-2"
+                          className="bg-primary-turquoise text-white px-8 py-4 rounded-xl font-semibold hover:bg-green-600 transition-colors duration-300 flex items-center justify-center gap-2"
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
                         >
                           {currentLang === 'en' ? 'Discover this service' : 'Découvrir ce service'}
                           <ArrowRight size={18} />
-                        </motion.button>
-                        <motion.button 
-                          onClick={openCalendly}
-                          className="flex-1 bg-white border-2 border-primary-turquoise text-primary-turquoise px-8 py-4 rounded-xl font-semibold hover:bg-primary-turquoise hover:text-white transition-all duration-300"
-                          whileHover={{ scale: 1.02 }}
-                          whileTap={{ scale: 0.98 }}
-                        >
-                          {currentLang === 'en' ? 'Free audit' : 'Audit gratuit'}
                         </motion.button>
                       </div>
                     </div>
