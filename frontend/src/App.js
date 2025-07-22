@@ -22,6 +22,7 @@ import ServicesPage from './pages/ServicesPage';
 import PortfolioPage from './pages/PortfolioPage';
 import BlogPage from './pages/BlogPage';
 import AboutPage from './pages/AboutPage';
+import ArticleDetailPage from './pages/ArticleDetailPage';
 
 const Home = () => {
   return (
