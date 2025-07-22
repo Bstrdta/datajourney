@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { X, Check, TrendingUp, Users, Navigation, Palette, Heart } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../contexts/LanguageContext';
 import ScrollReveal from './ScrollReveal';
 import BeforeAfterSlider from './BeforeAfterSlider';
 
