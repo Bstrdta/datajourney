@@ -43,16 +43,28 @@ const Header = () => {
           
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary-turquoise to-green-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <span className="text-white font-bold text-xl">DJ</span>
-            </div>
-            <div className="hidden sm:block">
+            <div className="flex items-center gap-1">
               <span className={`text-2xl font-bold transition-colors duration-300 ${
                 isScrolled ? 'text-primary-dark' : 'text-white'
               }`}>
-                Data Journey
+                data
               </span>
-              <div className="text-sm font-medium transition-colors duration-300 text-primary-turquoise">
+              {/* Toggle Button */}
+              <div className={`relative w-12 h-6 rounded-full transition-all duration-300 ${
+                isScrolled ? 'bg-primary-dark/20' : 'bg-white/20'
+              } flex items-center px-1`}>
+                <div className={`w-4 h-4 rounded-full transition-all duration-300 ${
+                  isScrolled ? 'bg-primary-turquoise' : 'bg-white'
+                } transform translate-x-5`}></div>
+              </div>
+              <span className={`text-2xl font-bold transition-colors duration-300 ${
+                isScrolled ? 'text-primary-dark' : 'text-white'
+              }`}>
+                journey
+              </span>
+            </div>
+            <div className="hidden lg:block">
+              <div className="text-sm font-medium transition-colors duration-300 text-primary-turquoise ml-3">
                 Power BI UX Experts
               </div>
             </div>
