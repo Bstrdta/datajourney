@@ -71,6 +71,7 @@ function App() {
                 </Routes>
                 <Footer />
                 <CalendlyModal />
+                <MouseFollower />
               </LogoAnimationProvider>
             </CalendlyProvider>
           </LanguageProvider>
