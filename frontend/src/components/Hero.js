@@ -206,22 +206,22 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.05, ease: "easeOut" }}
           >
-            <div className="flex items-center gap-2">
-              <span className="text-white text-2xl font-bold tracking-wide">Data</span>
+            <div className="flex items-center gap-3">
+              <span className="text-white text-4xl font-bold tracking-wide">Data</span>
               
-              {/* Toggle animé */}
-              <div className="relative w-12 h-6 bg-white/20 rounded-full border border-white/30">
+              {/* Toggle animé - plus grand */}
+              <div className="relative w-16 h-8 bg-white/20 rounded-full border border-white/30">
                 <div 
-                  className="absolute top-0.5 w-5 h-5 bg-primary-turquoise rounded-full transition-all duration-300 ease-out shadow-lg"
+                  className="absolute top-0.5 w-7 h-7 bg-primary-turquoise rounded-full transition-all duration-300 ease-out shadow-lg"
                   style={{ 
-                    left: `${2 + toggleProgress * 22}px` // De 2px à 24px (22px de mouvement)
+                    left: `${2 + toggleProgress * 30}px` // De 2px à 32px (30px de mouvement)
                   }}
                 >
                   <div className="w-full h-full bg-primary-turquoise rounded-full animate-pulse"></div>
                 </div>
               </div>
               
-              <span className="text-white text-2xl font-bold tracking-wide">Journey</span>
+              <span className="text-white text-4xl font-bold tracking-wide">Journey</span>
             </div>
           </motion.div>
 
