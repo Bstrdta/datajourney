@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, ArrowRight, Clock, Tag } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from '../contexts/LanguageContext';
+import { blogArticles } from '../data/blogArticles';
 import ScrollReveal from './ScrollReveal';
 
 const Blog = () => {
