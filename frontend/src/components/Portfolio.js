@@ -96,11 +96,10 @@ const Portfolio = () => {
         <ScrollReveal>
           <div className="text-center mb-16">
             <h2 className="text-display font-bold text-primary-dark mb-6">
-              Nos réalisations qui{' '}
-              <span className="text-primary-turquoise">transforment</span>
+              {t('portfolio.title')}
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-              Découvrez comment nous avons aidé nos clients à révolutionner leur approche de la data avec des résultats mesurables.
+              {t('portfolio.subtitle')}
             </p>
           </div>
         </ScrollReveal>
