@@ -256,6 +256,12 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
+
+      {/* Calendly Modal */}
+      <CalendlyModal 
+        isOpen={isCalendlyOpen} 
+        onClose={() => setIsCalendlyOpen(false)} 
+      />
     </section>
   );
 };
