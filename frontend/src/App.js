@@ -12,6 +12,7 @@ import Hero from './components/Hero';
 import Comparison from './components/Comparison';
 import Pillars from './components/Pillars';
 import Services from './components/Services';
+import ProcessFlow from './components/ProcessFlow';
 import Portfolio from './components/Portfolio';
 import Blog from './components/Blog';
 import LeadMagnet from './components/LeadMagnet';
