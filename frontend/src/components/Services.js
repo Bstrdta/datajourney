@@ -31,7 +31,6 @@ const Services = () => {
         ? ['Business scoping & KPIs', 'Data architecture', 'Complete UX design', 'Deployment & monitoring']
         : ['Cadrage métier & KPIs', 'Architecture de données', 'Design UX complet', 'Déploiement & monitoring'],
       duration: currentLang === 'en' ? '6-12 weeks' : '6-12 semaines',
-      price: t('services.service2.price'),
       image: 'https://images.unsplash.com/photo-1648134859182-98df6e93ef58?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxkYXRhJTIwZGFzaGJvYXJkfGVufDB8fHxibHVlfDE3NTMxNzc1NjZ8MA&ixlib=rb-4.1.0&q=85',
       color: 'from-primary-turquoise to-green-500'
     },
