@@ -47,21 +47,13 @@ const Header = () => {
               <span className="text-white font-bold text-xl">DJ</span>
             </div>
             <div className="hidden sm:block">
-              <div className="flex items-center gap-3">
-                <div>
-                  <span className={`text-2xl font-bold transition-colors duration-300 ${
-                    isScrolled ? 'text-primary-dark' : 'text-white'
-                  }`}>
-                    Data Journey
-                  </span>
-                  <div className="text-sm font-medium transition-colors duration-300 text-primary-turquoise">
-                    Power BI UX Experts
-                  </div>
-                </div>
-                {/* Power BI Certified Badge */}
-                <div className="bg-gradient-to-r from-green-400 to-green-500 text-white px-3 py-1 rounded-lg text-xs font-bold shadow-lg animate-pulse">
-                  ✓ POWER BI CERTIFIED
-                </div>
+              <span className={`text-2xl font-bold transition-colors duration-300 ${
+                isScrolled ? 'text-primary-dark' : 'text-white'
+              }`}>
+                Data Journey
+              </span>
+              <div className="text-sm font-medium transition-colors duration-300 text-primary-turquoise">
+                Power BI UX Experts
               </div>
             </div>
           </Link>
