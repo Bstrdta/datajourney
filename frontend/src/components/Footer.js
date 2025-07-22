@@ -208,7 +208,7 @@ const Footer = () => {
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
                   <button
-                    onClick={link.action}
+                    onClick={() => handleNavigation(link.type, link.target)}
                     className="text-neutral-300 hover:text-primary-turquoise transition-colors duration-300 flex items-center gap-2 group text-left"
                   >
                     <span>{link.name}</span>
@@ -226,7 +226,7 @@ const Footer = () => {
               {footerLinks.ressources.map((link) => (
                 <li key={link.name}>
                   <button
-                    onClick={link.action}
+                    onClick={() => handleNavigation(link.type, link.target)}
                     className="text-neutral-300 hover:text-primary-turquoise transition-colors duration-300 flex items-center gap-2 group text-left"
                   >
                     <span>{link.name}</span>
@@ -244,7 +244,7 @@ const Footer = () => {
               {footerLinks.entreprise.map((link) => (
                 <li key={link.name}>
                   <button
-                    onClick={link.action}
+                    onClick={() => handleNavigation(link.type, link.target)}
                     className="text-neutral-300 hover:text-primary-turquoise transition-colors duration-300 flex items-center gap-2 group text-left"
                   >
                     <span>{link.name}</span>
